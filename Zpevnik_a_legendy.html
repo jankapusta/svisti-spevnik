@@ -11,6 +11,12 @@
 .titlepage { page: cover; }
 @page toc { margin-bottom: 5mm; @bottom-center { content: none; } }
 .contents { page: toc; }
+@media print {
+  /* binding gutter: inner margin bigger, outer smaller (total kept at 20mm) */
+  @page :left  { margin-left: 8mm;  margin-right: 14mm; }   /* even/left page: binding on right */
+  @page :right { margin-left: 14mm; margin-right: 8mm; }    /* odd/right page: binding on left */
+  @page cover  { margin-left: 11mm; margin-right: 11mm; }   /* title page stays symmetric */
+}
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Georgia, "Times New Roman", serif;
        color: #1a1a1a; line-height: 1.4; }
@@ -84,10 +90,6 @@ section.song, section.legend { break-before: page; }
   body { background: #e7e7e7; padding: 20px; }
   body > section, body > .titlepage { background: #fff; width: 148mm; min-height: 210mm;
     margin: 0 auto 16px; padding: 12mm 10mm; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
-}
-
-@media print {
-    body > section, body > .titlepage {  padding: 0mm 5mm; }
 }
 </style>
 </head>
@@ -1049,7 +1051,7 @@ R: Tak nechte mě plout...</pre>
 
 <section class="legend" id="l-legenda-o-prchajici-lavce-a-jak-se-ucime-z-neuspechu">
 <h2 class="legend-title">Legenda o Prchající Lávce a Jak se Učíme z Neúspěchů</h2>
-<p class="legend-meta">7. přespávačka v klubovně a stavba 1. (25.2.2023), 2. (28.11.2023), 3. (16.11.2024), lávky přes potok] https://mapy.com/s/jokuzologu</p>
+<p class="legend-meta">7. přespávačka v klubovně, stavba 1. (25.2.2023), 2. (28.11.2023), 3. (16.11.2024), lávky přes potok] https://mapy.com/s/jokuzologu</p>
 <p>Dvakrát nás potok porazil.</p>
 <p>Napotřetí jsme vyhráli. Zatím.</p>
 <p>Košíkovský potok na cestě ze Slunečného vršku do lesoparku byl roky noční můrou každého, kdo ho chtěl přeskočit. Mnozí Svišti tu skákali přes vodu poprvé v životě. A brzy jsme si všimli, že úplně stejně riskují i lidé ze sídliště.</p>
@@ -1061,7 +1063,7 @@ R: Tak nechte mě plout...</pre>
 <p>Netrvalo dlouho a přišla velká voda. Potok se změnil v hnědé monstrum a lávku spláchl do neznáma.</p>
 <p>Svišti to nevzdali.</p>
 <p>Nažhavili jsme pily, nařezali desky z palet a na podzim, zase v noci, postavili <b>Druhou lávku</b>. Širší. Vyšší. Pevnější. Ještě během stavby ji nadšeně testovali lidé ze sídliště. Objevila se dokonce na Mapy.cz pod hrdým jménem „Skautská lávka&quot;.</p>
-    <p class="page-break">Byli jsme na sebe pyšní až po koruny stromů.</p>
+    <p >Byli jsme na sebe pyšní až po koruny stromů.</p>
 <p>Pak přišla další bouřka. Voda stoupla výš než kdy předtím a s řevem odnesla i druhou lávku.</p>
 <p>Dvě nula pro potok.</p>
 <p>Tady by to běžný smrtelník vzdal.</p>
