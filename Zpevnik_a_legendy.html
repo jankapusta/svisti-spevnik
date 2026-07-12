@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Zpěvník a Legendy Svišťů</title>
+<style>
+@page { size: 148mm 210mm; margin: 12mm 10mm; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, "Times New Roman", serif;
+       color: #1a1a1a; line-height: 1.4; }
+h1 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 30pt;
+     text-align: center; margin: 0.3em 0; }
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+.titlepage { text-align: center; break-after: page; padding-top: 10mm; }
+.titlepage img.cover { max-width: 100%; max-height: 150mm; display: block; margin: 0 auto 8mm; }
+.edition { text-align: center; color: #555; font-style: italic; margin: 2px 0; }
+
+/* printed contents page */
+.contents { break-after: page; }
+.contents h1 { font-size: 22pt; margin: 0 0 6px; }
+.c-head { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13pt;
+          margin: 12px 0 4px; color: #7a3b12; }
+.c-list { columns: 2; column-gap: 8mm; margin: 0; padding-left: 1.3em;
+          font-size: 9.5pt; line-height: 1.35; }
+.c-list li { break-inside: avoid; margin: 0 0 2px; padding-left: 2px; }
+.c-legends { font-size: 9pt; }
+
+section.song, section.legend { break-before: page; }
+
+/* manual page break: put on the element that should START a new page,
+   or drop <div class="page-break"></div> where you want the split */
+.page-break { break-before: page; }
+.avoid-break { break-inside: avoid; }   /* keep an image+caption or a block together */
+
+/* songs */
+
+.song pre { font-family: Consolas, "DejaVu Sans Mono", "Courier New", monospace;
+            white-space: pre; margin: 0; line-height: 1.12;
+            font-variant-ligatures: none; }
+.song pre b { font-weight: 700; }
+
+/* legends */
+.song-title , .legend-title { font-family: "Helvetica Neue", Arial, sans-serif;
+                font-size: 15pt; margin: 0 0 0px; color: #7a3b12; }
+.artist, .legend-meta { color: #666; font-style: italic; font-size: 10pt; margin: 0 0 8px; }
+
+.legend h3 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12.5pt;
+             margin: 14px 0 4px; color: #33691e; }
+.legend p { margin: 0 0 7px; text-align: justify; hyphens: auto; font-size: 12pt; }
+.legend img { max-width: 100%; height: auto; display: block; margin: 10px auto; border-radius: 4px; }
+
+/* Poučení = boxed lesson; Výzva flows naturally after the box */
+.learning { background: #f1f7ec; border: 1px solid #cfe3c0;
+            border-left: 4px solid #33691e; border-radius: 6px;
+            padding: 6px 12px; margin: 12px 0; break-inside: avoid; }
+.learning h3 { margin-top: 2px; }
+.learning p:last-child { margin-bottom: 0; }
+.challange { margin-top: 10px; }
+
+/* on-screen: show page-like cards */
+@media screen {
+  body { background: #e7e7e7; padding: 20px; }
+  section, .titlepage { background: #fff; width: 148mm; min-height: 210mm;
+    margin: 0 auto 16px; padding: 12mm 10mm; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
+}
+
+@media print {
+    section, .titlepage {  padding: 0mm 5mm; }
+}
+</style>
+</head>
+<body>
+
+
+
+<section class="titlepage">
+<img src="legend_images/img01.png" alt="" width="160px">
+<h1>Písničky a Legendy Svišťů</h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+<p class="edition">1. vydání ze dne: 11. 7. 2026</p>
+<p class="edition">sestavil: Samuel Zubo - Jaso</p>
+<p class="edition">technické spracování: Jan Kapusta - Flym</p>
+</section>
+
+
+
+<section class="contents">
+<h1>Obsah</h1>
+<h2 class="c-head">Písně</h2>
+<ol class="c-list c-songs">
+<li>Bedna od whisky</li>
+<li>Červená řeka</li>
+<li>Dobrú noc, má milá</li>
+<li>František</li>
+<li>Grónská písnička</li>
+<li>Hlídač krav</li>
+<li>Ho ho Watanay</li>
+<li>Holky z naší školky</li>
+<li>Hrobař</li>
+<li>Hudsonský šífy</li>
+<li>Chodím po Broadwayi</li>
+<li>Jožin z bažin</li>
+<li>Když si báječnou ženskou...</li>
+<li>Loď John B</li>
+<li>Mezi horami</li>
+<li>Mrazík</li>
+<li>Proměny</li>
+<li>Sedm dostavníků</li>
+<li>Severní vítr</li>
+<li>Stánky</li>
+<li>Tři kříže</li>
+<li>Tisíc mil</li>
+<li>Tři čuníci</li>
+<li>Za svou pravdou stát</li>
+</ol>
+<h2 class="c-head">Legendy</h2>
+<ol class="c-list c-legends">
+<li>Legenda o Tímovkovi a Armádě Štyřiceti Klíšťat</li>
+<li>Legenda o Pyromanovi Jakubovi a Plastovém Koši</li>
+<li>Legenda o Prvních Nožích a Zkoušce Ostří</li>
+<li>Legenda o Tajemství Sudetského Podzemí a Odvaze Průzkumníka Tjutjua</li>
+<li>Legenda o Vyhasnutém Oku a Nočním Výkřiku</li>
+<li>Legenda o Kluzkých skalách a Prokletí Drifťáků</li>
+<li>Legenda o Spáčovi a Útoku Hromů na Vlčích Pramench</li>
+<li>Legenda o Prokletí Ledového Diamantu a Nezlomném Háděti</li>
+<li>Legenda o Prchající Lávce a Jak se Učíme z Neúspěchů</li>
+<li>Legenda o Velkém Pátrání po Ztracené Pandě a Vrtulníku</li>
+<li>Legenda o Šílenství na Korzárské louce a Ztracené Cti</li>
+<li>Legenda o Ztraceném Čase a Prokletí Broadwaye</li>
+<li>Legenda o Nočních Lovcích a Souboji o Pandin Batoh</li>
+<li>Legenda o Osím Masakru při Hře Káně</li>
+<li>Legenda o Bivaku pod Bralem, Odhodlané Alici a Vajíčku</li>
+</ol>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Bedna od whisky</h2>
+<p class="artist">Hoboes</p>
+<pre style="font-size:10.5pt">    <b>Ami</b>          <b>C</b>        <b>Ami</b>            <b>E</b>
+1. Dneska už mně fóry ňák nejdou přes pysky,
+    <b>Ami</b>              <b>C</b>          <b>Ami</b>   <b>E</b>       <b>Ami</b>
+   stojím s dlouhou kravatou na bedně vod whisky,
+                    <b>C</b>        <b>Ami</b>          <b>E</b>
+   stojím s dlouhým vobojkem jak stájovej pinč,
+       <b>Ami</b>        <b>C</b>         <b>Ami</b>     <b>E</b>      <b>Ami</b>   <b>A</b>
+   tu kravatu, co nosím, mi navlík&#x27; soudce Lynč.
+        <b>A</b>          <b>D</b>         <b>E</b>           <b>A</b>
+R.:Tak kopni do tý bedny, ať panstvo nečeká,
+                      <b>D</b>           <b>E</b>        <b>A</b>
+   jsou dlouhý schody do nebe a štreka daleká
+                <b>D</b>        <b>E</b>            <b>A</b>
+   do nebeskýho baru, já sucho v krku mám,
+                   <b>D</b>         <b>E</b>           <b>A</b>   <b>Ami</b>
+   tak kopni do tý bedny, ať na cestu se dám.
+2. Mít tak všechny bedny od whisky vypitý,
+   postavil bych malej dům na louce ukrytý,
+   postavil bych malej dům a z vokna koukal ven
+   a chlastal bych tam s Bilem a chlastal by tam Ben.
+R:
+3. Kdyby jsi se, hochu, jen porád nechtěl rvát,
+   nemusel jsi dneska na týhle bedně stát,
+   moh&#x27; jsi někde v suchu tu svoji whisku pít,
+   nemusel jsi dneska na krku laso mít.
+R:
+4. Až kopneš do tý bedny, jak se to dělává,
+   do krku mi zvostane jen dírka mrňavá,
+   jenom dírka mrňavá a k smrti jenom krok,
+   má to smutnej konec a whisky ani lok.
+R:  .... tak kopni do tý bedny.</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Červená řeka</h2>
+<p class="artist">táborové písně</p>
+<pre style="font-size:10.5pt">           <b>D</b>                      <b>G</b>
+1. Pod tou skálou, kde proud řeky syčí
+         <b>D</b>               <b>A</b>
+   a kde ční červený kamení,
+        <b>D</b>          <b>D7</b>         <b>G</b>
+   žije ten, co mi jen srdce ničí,
+         <b>D</b>       <b>A</b>            <b>D</b>
+   koho já ráda mám k zbláznění.
+           <b>D</b>                     <b>G</b>
+2. Vím, že lásku jak trám lehce slíbí,
+          <b>D</b>                 <b>A</b>
+   já ho znám, srdce má děravý,
+        <b>D</b>         <b>D7</b>           <b>G</b>
+   ale já ho chci mít, mně se líbí,
+            <b>D</b>         <b>A</b>       <b>D</b>
+   bez něj žít už mě dál nebaví.
+           <b>D</b>                     <b>G</b>
+3. Často k nám jezdívá s kytkou růží,
+         <b>D</b>                 <b>A</b>
+   nejhezčí z kovbojů v okolí,
+         <b>D</b>       <b>D7</b>         <b>G</b>
+   vestu má ušitou z hadích k ůží,
+         <b>D</b>           <b>A</b>        <b>D</b>
+   bitej pás, na něm pár pistolí.
+            <b>D</b>                       <b>G</b>
+4. Hned se ptá, jak se mám, jak se daří,
+          <b>D</b>                    <b>A</b>
+   kdy mu prý už to svý srdce dám,
+       <b>D</b>         <b>D7</b>        <b>G</b>
+   ale já odpovím, že čas maří,
+          <b>D</b>           <b>A</b>     <b>D</b>
+   srdce blíž Červený řeky mám.
+Mezihra: jako sloka
+           <b>E</b>                       <b>A</b>
+5. Když je tma a jdu spát, noc je černá,
+          <b>E</b>               <b>H</b>
+   hlavu mám bolavou závratí,
+        <b>E</b>                 <b>A</b>
+   ale já přesto dál budu věrná,
+         <b>E</b>             <b>H</b>        <b>E</b>
+   dokud sám se zas k nám nevrátí.</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Dobrú noc, má milá</h2>
+<p class="artist">lidové písně</p>
+<pre style="font-size:10.5pt">   <b>Ami</b>        <b>Dmi</b>     <b>Ami</b>  <b>E</b>  <b>Ami</b>
+1. Dobrú noc, má milá, dobrú noc,
+   <b>Ami</b>        <b>Dmi</b>       <b>Ami</b>   <b>E</b>  <b>Ami</b>
+   nech ti je sám Pánboh na  pomoc!
+      <b>C</b>  <b>G</b>   <b>C</b>  <b>Emi</b>  <b>G7</b>   <b>C</b>   <b>E</b>
+   |: Dobrú noc, dobre   spi,
+   <b>Ami</b>        <b>Dmi</b>    <b>Ami</b>   <b>E</b>  <b>Ami</b>
+   nech sa ti snívajú sladké  sny. :|
+2. Dobrú noc, má milá, dobrú noc,
+   nech je ti sám Pánboh na pomoc!
+   Dobrú noc, dobre spi,
+   nechsa ti snívajú o mne sny.</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Tímovkovi a Armádě Štyřiceti Klíšťat</h2>
+<p class="legend-meta">[47. oddílová schůzka, 4.6.2021]</p>
+<p>Čtyřicet.</p>
+<p>Tolik klíšťat se toho dne zakouslo do jednoho jediného skauta. A on o tom celou hodinu neměl ani tušení.</p>
+<p>Bylo to v pátek 4. června 2021 v Hostivařském lesoparku. Oddíl tehdy hrál oblíbené outdoorové hry Schovej se u cesty a MayDay, při kterých se skauti museli maskovat v terénu a navigovat se se zavázanýma očima. Tímovka to vzal vážně. Smrtelně vážně. Vybral si nejhustší křoví, jaké v parku existovalo. Vysoká tráva, mokro, zeleno. Vlezl dovnitř, lehl si a na moment v něm nehybně zmizel. Kamufláž to byla dokonalá – nikdo ho nenašel. Jenže on sám se stal kořistí.</p>
+<p>Vedoucí ho prohlédli. A pak ztichli. Dvacet klíšťat. Přímo na schůzce jich z něj vytáhli dvacet. </p>
+<p>Oddíl si myslel, že tenhle rekord nikdo nikdy nepřekoná. Mýlil se. Překonal ho ten samý večer Tímovka sám.</p>
+<p>Doma se ho totiž ujala maminka. A ta našla dalších dvacet.</p>
+    <img src="legend_images/img02.png" alt="">
+<div class="learning page-break">
+    <h3>Poučení z klíšťové Invaze</h3>
+    <p><b>Sviští pravidlo č.1: Nelehej si tam, kam by si lehla srnka.</b></p>
+    <p>Vysoká mokrá tráva je pro klíšťata pětihvězdičkový hotel. Když v ní najdeš pomačkané místo, kde vypadá, že si někdo udělal pelíšek – srnka, divočák, prase – obejdi ho velkým obloukem. Ti mají klíšťat plnou srst a rozdávají je zadarmo.</p>
+    <p>Chceš si lehnout? Najdi posekané, suché místo na slunci. Tam klíšťata do pár minut uschnou.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Po nejbližší výpravě se doma pořádně zkontroluj. Kdo najde klíště, hlásí to na schůzce. Tímovkův rekord je 40 – a ten fakt nechceš překonat.</p>
+</div>
+
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Pyromanovi Jakubovi a Plastovém Koši</h2>
+<p class="legend-meta">[16. oddílová schůzka, Hostivařský lesopark, 11.9.2020]</p>
+<p>Jaso ho zahlídl úplně náhodou. Malý kluk, v ruce žhnoucí větev, na tváři naprosto klidný úsměv – a míří rovnou k odpadkovému koši. Zbývaly asi tři vteřiny. Ale popořádku.</p>
+<p>Tenkrát jsme se učili to nejzákladnější, co musí umět každý zálesák: rozdělat oheň.</p>
+<p>Jaso ukazoval, jak březová kůra hoří, i když je úplně mokrá. Jak se z tenkých jehličnatých větviček staví základ, ze kterého se rozhoří plamen.</p>
+<p>Každý dostal svoje místo. Každý si vyskládal ohniště z kamenů. Každý křesal svou vlastní jiskru.</p>
+<p>Mezi dětmi byl i malý <b>Jakub</b> – ten, který později dostal přezdívky Tímovka, Colombo a Krisli.</p>
+<p>Jakub se do plamenů zadíval. A v očích se mu něco rozsvítilo.</p>
+<p>Ostatní hlídali svá ohniště. Jakub dostal nápad.</p>
+<p>Vytáhl z ohně rozžhavenou větev, otočil se a klidným krokem vyrazil pryč z bezpečného kruhu. Nespěchal. Neschovával se. Prostě si to namířil.</p>
+<p>Cíl byl jasný: velký plastový odpadkový koš na kraji lesní cesty.</p>
+    <img src="legend_images/img03.png" alt="">
+
+    <p class="page-break"><b>Co myslíš, že se stane, když se rozžhavené dřevo potká s plastem?</b></p>
+<p>Jakub to chtěl vědět taky.</p>
+<p>Nezjistil to. Jaso po něm skočil a zastavil ho krok před košem.</p>
+<p>Od té doby platilo v oddíle nepsané pravidlo: když se pracuje s ohněm, na Jakuba se dává trojnásobný pozor.</p>
+<div class="learning">
+    <h3>Poučení z ohňové schůzky</h3>
+    <p><b>Sviští pravidlo č. 2: Oheň zůstává v ohništi. Vždycky.</b></p>
+    <p>Oheň se zakládá jen na schváleném ohništi obloženém kameny. Nenosí se v ruce. Neroznáší se po lese. A rozhodně se s ním nechodí k ničemu, co může chytit – k suché trávě, k jehličí, ke stromům, k plastovému koši.</p>
+    <p>Jeden krok s hořící větví může zapálit celý park.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Až budeš příště zakládat oheň, ukaž vedoucímu své ohniště dřív, než škrtneš sirkou. Kdo to udělá, ten ohni rozumí.</p>
+</div>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">František</h2>
+<p class="artist">Buty</p>
+<pre style="font-size:10.5pt">    <b>G,</b> <b>C,</b> <b>G,</b> <b>C</b>
+   <b>G</b>                              <b>C</b>
+1. Na hladinu rybníka svítí sluníčko
+   <b>Emi</b>                          <b>G</b>
+   a kolem stojí v hustém kruhu topoly,
+   <b>Ami</b>                           <b>Hmi</b>
+   které tam zasadil jeden hodný člověk,
+   <b>Ami</b>                   <b>D</b>
+   jmenoval se František Dobrota.
+   <b>G</b>                                 <b>C</b>
+2. František Dobrota, rodák z blízké vesnice,
+   <b>Emi</b>                           <b>G</b>
+   měl hodně dětí a jednu starou babičku,
+   <b>Ami</b>                               <b>Hmi</b>
+   která když umírala, tak mu řekla: Františku,
+   <b>Ami</b>                                  <b>D</b>
+   teď dobře poslouchej, co máš všechno udělat.
+     <b>C</b>                     <b>D</b>
+Ref: Balabambam, balabambam....
+     <b>C</b>                     <b>D</b>
+     balabambam, balabambam....
+     <b>C</b>                     <b>D</b>
+     balabambam, balabambam....
+     <b>Ami</b>                             <b>D</b>
+     a kolem rybníka nahusto nasázet topoly.
+   <b>G</b>                                  <b>C</b>
+3. František udělal všechno, co mu řekla,
+   <b>C</b>
+   balabambam, balabambam
+   <b>Emi</b>                         <b>G</b>
+   a po snídani poslal děti do školy,
+   <b>Ami</b>                                    <b>Hmi</b>
+   žebřiňák s nářadím dotáhl od chalupy k rybníku,
+   <b>Ami</b>                    <b>D</b>
+   vykopal díry a zasadil topoly.
+   <b>G</b>                               <b>C</b>
+4. Od té doby vítr na hladinu nefouká,
+   <b>Emi</b>                         <b>G</b>
+   takže je klidná, jako velké zrcadlo,
+   <b>Ami</b>                             <b>Hmi</b>
+   sluníčko tam svítí, vždycky rádo
+   <b>Ami</b>                             <b>D</b>
+   protože v něm vidí, Františkovu babičku.
+   Outro 2x
+   <b>G,</b> <b>C,</b> <b>Emi,</b> <b>G</b>
+   <b>Ami,</b> <b>Hmi,</b> <b>Ami,</b> <b>D</b></pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Grónská písnička</h2>
+<p class="artist">Jaromír Nohavica</p>
+<pre style="font-size:10.5pt">    <b>D</b>      <b>Emi</b>       <b>A7</b>         <b>D</b>
+1. Daleko na severu je Grónská zem,
+    <b>D</b>       <b>Emi</b>         <b>A7</b>     <b>D</b>
+   žije tam Eskymačka s Eskymákem,
+                <b>Emi</b>          <b>G</b>      <b>D</b>
+   [: my bychom umrzli, jim není zima,
+               <b>Emi</b>   <b>A7</b>     <b>D</b>
+      snídají nanuky a eskima. :]
+2. Mají se bezvadně, vyspí se moc,
+   půl roku trvá tam polární noc,
+   [: na jaře vzbudí se a vyběhnou ven,
+      půl roku trvá tam polární den. :]
+3. Když sněhu napadne nad kotníky,
+   hrávají s medvědy na četníky,
+   [: medvědi těžko jsou k poražení,
+      neboť medvědy ve sněhu vidět není. :]
+4. Pokaždé ve středu, přesně ve dvě
+   zaklepe na na íglů hlavní medvěd:
+   [: &quot;Dobrý den, mohu dál na vteřinu?
+      Nesu vám trochu ryb na svačinu.&quot; :]
+5. V kotlíku bublá čaj, kamna hřejí,
+   psi venku hlídají před zloději,
+   [: smíchem se otřásá celé íglů,
+      neboť medvěd jim předvádí spoustu fíglů. :]
+6. Tak žijou vesele na severu,
+   srandu si dělají z teploměrů,
+   [: my bychom umrzli, jim není zima,
+      neboť jsou doma a mezi svýma. :]</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Hlídač krav</h2>
+<p class="artist">Jaromír Nohavica</p>
+<pre style="font-size:9.75pt">Ref: <b>D</b> <b>G</b> <b>A</b> <b>D</b>
+2x
+   <b>D</b>
+1. Když jsem byl malý, říkali mi naši,
+   dobře se uč a jez chytrou kaši,
+   <b>G</b>                   <b>A</b>              <b>D</b>
+   až jednou vyrosteš, budeš doktorem práv.
+   <b>D</b>
+   Takový doktor si sedí pěkně v suchu,
+   bere velký peníze a škrábe se v uchu,
+   <b>G</b>                      <b>A</b>                <b>D</b>
+   já jim ale na to řek, chci být hlídačem krav.&quot;
+     <b>D</b>
+Ref: Já chci mít čapku s bambulí nahoře,
+     jíst kaštany, mýt se v lavoře,
+     <b>G</b>               <b>A</b>             <b>D</b>
+     od rána po celý den zpívat si jen.
+                <b>D</b>
+     Zpívat si: Pam, pam, pa, dam, pam, pa, dada,
+                                                        <b>G</b>
+                pam, pam, pa, dam, pam, pa, dada, dada, dadam,
+                      <b>A</b>          <b>D</b>
+                padadadam, padadadam.
+   <b>D</b>
+2. K vánocům mi kupovali hromady knih,
+   co jsem ale vědět chtěl, to nevyčet&#x27; jsem z nich,
+   <b>G</b>                         <b>A</b>              <b>D</b>
+   nikde jsem se nedozvěděl, jak se hlídají krávy.
+   <b>D</b>
+   Ptal jsem se starších a ptal jsem se všech,
+   každý na mě hleděl jako na pytel blech,
+   <b>G</b>                   <b>A</b>             <b>D</b>
+   každý se mě opatrně tázal na moje zdraví.
+Ref:
+   <b>D</b>
+3. Dnes už jsem starší a vím, co vím,
+   mnohé věci nemůžu a mnohé smím,
+   <b>G</b>                          <b>A</b>                 <b>D</b>
+   a když je mi velmi smutno, lehnu si do mokré trávy.
+   <b>D</b>
+   S nohama křížem a s rukama za hlavou,
+   koukám nahoru na oblohu modravou,
+   <b>G</b>                      <b>A</b>             <b>D</b>
+   kde se mezi mraky honí moje strakaté krávy. (+ Ref: 2x)
+</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Prvních Nožích a Zkoušce Ostří</h2>
+<p class="legend-meta">[54. oddílovka, 28.9.2021]</p>
+<p>„Tohle jsou opravdové nože. Jsou hrozně ostré. Nikdy nesahejte na ostří prstem!&quot; Jaso to dořekl. Uběhly dvě vteřiny.</p>
+<p><i>Syk.</i></p>
+<p>Ale popořádku. Byl podzim 2021 a rodiče dostali s předstihem úkol: pořídit dětem jejich úplně první skautský nůž. Bez nože není zálesák. Děti si je přinesly na schůzku v pouzdrech a v kapsách, hrdé jako rytíři s mečem.</p>
+<p>Nastal ten velký okamžik. Vedoucí <b>Jaso</b> si vzal slovo, aby ukázal, jak se s čepelí zachází bezpečně. To hlavní pravidlo vyslovil pomalu a důrazně. A přesně v tu chvíli se v hlavách <b>Veverky</b> a <b>Kalimera</b> zapnula ta nejnebezpečnější věc na světě: dětská zvědavost.</p>
+<p><i>„Fakt je tak ostrý?&quot;</i></p>
+<p>Vytáhli nože. Přejeli prstem po čepeli. Jen tak. Pro jistotu. Ověřit si, jestli Jaso nekecá. </p>
+<p>Nekecal. Ozvalo se tiché syknutí. Pak druhé. Jaso s Trixi vytáhli KPZky, rány vydezinfikovali a zalepili. Vyřezávání z lipových klacíků toho dne skončilo pro Kalimera a Veverku dřív, než pořádně začalo. Jaso od té doby přemýšlí nad jedinou otázkou: jak dětem vysvětlit, že se pravda nemusí ověřovat vlastním prstem.</p>
+    <img src="legend_images/img04.png" alt="">
+    <div class="learning page-break">
+    <h3>Poučení o prvních nožích</h3>
+    <p><b>Sviští pravidlo č. 3: Když vedoucí řekne „ostré&quot;, věř mu napoprvé.</b></p>
+    <p>Nůž není hračka. Je to nástroj dospělých. Dostal jsi ho, protože ti věří rodiče i vedoucí. S tou důvěrou přichází jediná povinnost: poslouchat pokyny a nedělat pravý opak. Ušetříš si náplast – a dokážeš, že nůž nosit můžeš.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Poznáš tupý nůž od ostrého, aniž bys na něj sáhl? Zkus to na papíru, ne na prstu. Zeptej se vedoucího, jak se to pozná.</p>
+</div>
+
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Tajemství Sudetského Podzemí a Odvaze Průzkumníka Tjutjua</h2>
+<p class="legend-meta">[2. tábor Svišťů, Šluknov, 1.7.2022]</p>
+<p>Lopatka narazila na něco tvrdého.</p>
+<p><i>KŘÁP!</i></p>
+<p>Kluci ztuhli. To nebyl kámen. Kameny takhle nezní.</p>
+<p>Byl červenec 2022, letní tábor u <b>Šluknova</b>, líné odpoledne a osobní volno. Naše stany stály na klidné louce.</p>
+<p>Nikdo netušil, že přímo pod nimi něco je.</p>
+<p>Kdysi tu stával velký sudetoněmecký kamenný dům. Válka a čas ho srovnaly se zemí. Aspoň si to všichni mysleli.</p>
+<p>Při toulkách po okraji tábořiště kluci našli díru v zemi. Hlubokou.</p>
+<p><i>„To je nora od jezevce,&quot;</i> prohlásil někdo. <i>„Stopro.&quot;</i></p>
+<p>Jenže skautská zvědavost je silnější než jakýkoliv jezevec. Klukům to nedalo. Vzali si polní lopatky a začali kopat.</p>
+<p>Díra se zvětšovala. Hlína ubývala.</p>
+<p>A pak přišlo to KŘÁP.</p>
+<p>Posvítili baterkou dolů do tmy – a zatajil se jim dech. V hloubce se rýsovaly rovné, opracované kamenné stěny. Postavené lidskou rukou.</p>
+    <img src="legend_images/img05.png" alt="">
+
+    <p class="page-break"><b>Co bys udělal ty? Skočil dolů – nebo běžel pro vedoucího?</b></p>
+<p>Kluci se rozhodli správně. Rozběhli se s křikem za vedoucími:</p>
+<p><i>„Objevili jsme podzemí! Skutečné podzemí! Můžeme tam jít?!&quot;</i></p>
+<p>Nastal čas na pořádnou průzkumnou operaci.</p>
+<p>Právo prvního vstupu dostal ten, kdo kopal nejvíc – a byl zároveň nejmenší a nejodvážnější: <b>Tjutju</b>.</p>
+<p>Vedoucí ho nenechali riskovat. Rukavice. Čelovka. Horolezecké lano kolem pasu. Ostatní drželi lano napnuté a Tjutju se pomalu spouštěl dolů, do chladu, který voněl vlhkem a osmdesáti lety ticha.</p>
+<p>Nohy se dotkly země. Tjutju zvedl hlavu a čelovka prořízla tmu.</p>
+<p>Stál v kamenné chodbě. Nad ním se klenul těžký strop. A o kus dál se chodba stáčela doleva – do naprosté černé tmy.</p>
+<p>A přesně tehdy ho to napadlo: <i>co když za tím rohem něco je?</i></p>
+<p>Ze šachty vyletěl ven jako blesk.</p>
+<p><i>„Ono to tam pokračuje!&quot;</i> lapal po dechu. <i>„Jde to dál! Jsou tam obří prostory!&quot;</i></p>
+<p>Dolů se hned nato spustil <b>Jaso</b>. A potvrdil, co Tjutju viděl: pod naším táborem se skrýval celý zachovalý sklepní systém starého sudetského domu. Žulové kvádry, kamenné klenby a v rohu malý kamenný bazének na vodu.</p>
+<p>Spali jsme čtrnáct dní přímo nad zapomenutou historií.</p>
+<div class="learning page-break">
+    <h3>Poučení ze šluknovského podzemí</h3>
+    <p><b>Sviští pravidlo č. 4: Do díry v zemi se nikdy neleze samo.</b></p>
+    <p>Podzemní prostory umí být smrtelně nebezpečné. Můžou v nich být jedovaté plyny, které necítíš. Strop starý sto let se může utrhnout. Podlaha se může propadnout.</p>
+    <p>Tjutju byl hrdina ne proto, že slezl dolů – ale proto, že to udělal s lanem, s čelovkou, v rukavicích a s vedoucím nahoře.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Objevovat historii je skvělé. Vrátit se z ní nahoru na sluníčko je ještě lepší. Když něco najdeš, první krok je vždycky: běž to říct.</p>
+</div>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Ho ho Watanay</h2>
+<p class="artist">Žalman</p>
+<pre style="font-size:9.5pt">   D                     C           D
+1. Spinkej, můj maličký, máš v očích hvězdičky,
+             C             G           D
+   dám ti je do vlasů, tak usínej, tak usínej.
+     D              C     D              C        G        D
+Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
+ena.
+2. Sladkou vůni nese ti noční motýl z paseky,
+   vánek ho kolíbá, už nezpívá, už nezpívá.
+Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
+ena.
+3. V lukách to zavoní, rád jezdíš na koni
+   má barvu havraní, jak uhání, jak uhání.
+Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
+ena.
+4. V dlani motýl usíná, hvězdička už zhasíná,
+   vánek, co ji k tobě nes, až do léta ti odlétá.
+ Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kio
+kena.
+     Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
+ena.</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Holky z naší školky</h2>
+<p class="artist">Petr Kotvald, Stanislav Hložek</p>
+<pre style="font-size:10.5pt">    <b>D</b>           <b>G</b>        <b>A</b>
+1. Majdalenka, Apolenka s Veronikou
+           <b>D</b>              <b>G</b>            <b>A</b>
+   A taky Věrka, Zdeňka, Majka, Lenka s Monikou
+             <b>D</b>            <b>G</b>          <b>A</b>
+   No jasně Klára, Ančí, Bára, Mančí už nevím čí
+               <b>D</b>          <b>G</b>             <b>C</b>    <b>A</b>
+   To všechno byly holky z naší školky senzační.
+    <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
+R1. Jé, jé, jé - kdepak ty fajn holky jsou
+           <b>D</b>          <b>G</b>
+    A kde maj hračky svý
+            <b>Asus4</b>      <b>A</b>
+    Ty naše lásky tříletý
+    <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>            <b>G</b>
+    Pá, pá, pá - řekli jsme pá před školkou
+          <b>D</b>         <b>G</b>
+    Bylo nám právě šest
+            <b>Asus4</b>        <b>A</b>
+    A začlo další dívčí šou.
+            <b>D</b>        <b>G</b>          <b>A</b>
+2. Ve škole Daniela, Michaela s Romanetou
+           <b>D</b>       <b>G</b>            <b>A</b>
+   A taky Adriana, Mariana se Žanetou
+             <b>D</b>            <b>G</b>          <b>A</b>
+   A hlavně prima Radka, kamarádka, co všechno ví
+               <b>D</b>          <b>G</b>            <b>C</b>    <b>A</b>
+   Tyhlety holky byly naše víly školních dní.
+     <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
+R2. Jé, jé, jé - kdepak ty fajn holky jsou
+           <b>D</b>          <b>G</b>
+    A kde maj v žákovský
+          <b>Asus4</b>      <b>A</b>
+    Naše lásky klukovský
+    <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>            <b>G</b>
+    Čau, čau, čau - řekli jsme čau před školou
+          <b>D</b>         <b>G</b>
+    Táhlo nám na patnáct
+            <b>Asus4</b>        <b>A</b>
+    A začlo další dívčí šou.
+             <b>D</b>            <b>G</b>              <b>A</b>
+3. Na gymplu bezva Šárka, třída Klárka, Táňa jak sen
+           <b>D</b>            <b>G</b>              <b>A</b>
+   A taky senza Jenka v podkolenkách, veselá jen
+             <b>D</b>             <b>G</b>          <b>A</b>
+   A všechny v sexy tričku postavičku měli ham ham
+              <b>D</b>           <b>G</b>            <b>C</b>    <b>A</b>
+   No prostě prima štace, inspirace k maturám.
+     <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
+R3. Jé, jé, jé - kdepak ty fajn holky jsou
+           <b>D</b>        <b>G</b>
+    A kde maj zazděný
+          <b>Asus4</b>      <b>A</b>
+    Ty naše lásky vysněný
+    <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>            <b>G</b>
+    Au, au, au - vzdychli jsme au, čau a pá
+          <b>D</b>         <b>G</b>
+    Už se dál nekoná
+            <b>Asus4</b>        <b>A</b>
+    Žádná dívčí školní šou.
+              <b>D</b>            <b>G</b>                <b>A</b>
+4. I když pak poznali jsme spoustu dalších dívek a jmen
+   <b>D</b>            <b>G</b>            <b>A</b>
+   Plavovlásky, černovlásky, žár i sen
+   <b>D</b>              <b>G</b>                  <b>A</b>
+   V rytmu diska, z dálky - zblízka, i v náručí
+              <b>D</b>           <b>G</b>              <b>C</b>    <b>A</b>
+   Přesto jsou stále holky z naší školky nejhezčí.
+     <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
+R4. Jé, jé, jé - kdepak ty fajn holky jsou
+           <b>D</b>        <b>G</b>
+    A kde maj cůpky svý
+          <b>Asus4</b>      <b>A</b>
+    Ty naše lásky tříletý
+    <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>            <b>G</b>
+    Pá, pá, pá - říkáme dál před školkou
+          <b>D</b>         <b>G</b>
+    To se ví, léta jdou
+            <b>Asus4</b>        <b>A</b>
+    Ale ty holky nestárnou.</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Hrobař</h2>
+<p class="artist">Premiér</p>
+<pre style="font-size:10.5pt">   <b>D</b>
+1. V mládí jsem se učil hrobařem,
+   <b>Hmi</b>
+   jezdit s hlínou, jezdit s trakařem,
+   <b>G</b>                      <b>A7</b>
+   kopat hroby byl můj ideál.
+2. Jezdit s hlínou, jezdit s vozíkem,
+   s černou rakví, s bílým pomníkem,
+   toho bych se nikdy nenadál.
+3. Že do módy přijde kremace,
+   černý hrobař bude bez práce,
+   toho bych se nikdy nenadál.
+4. Kolem projel vůz milionáře,
+   záblesk světel pad&#x27; mi do tváře,
+   marně skřípěj&#x27; kola brzdící.
+5. Stoupám vzhůru, stoupám ke hvězdám,
+   tam se s černou rakví neshledám,
+   sbohem, bílé město zářící.
+6. Sbohem, moje město,
+   vzpomínat budu přesto,
+   jak jsem poznal tvůj smích a tvůj pláč.
+7. Na na na ...</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Vyhasnutém Oku a Nočním Výkřiku</h2>
+<p class="legend-meta">[Chata v Měsíčním údolí, 3. chata - 24.-26.3.2023]</p>
+<p>Ne leknutí. Křik, jako když někoho drají z kůže.</p>
+<p>A hned za ním, přes celé údolí: <i>„JASOOO!&quot;</i></p>
+<p>V chatě ztuhla krev v žilách všem. Noční zkouška odvahy měla být jednoduchá. Krátký lesní okruh, který začínal i končil u chaty. Na stromech odrazky – malé kouzelné body, které se v temnotě rozsvítí, jakmile na ně dopadne paprsek z čelovky.</p>
+<p>Prostě jdi, sviť, sleduj odrazky, vrať se. První skauti prošli okruh bez problémů.</p>
+<p>Pak do tmy vykročila <b>Mráček</b>. Minuty se vlekly. Mráček se nevracela. Les jako by spolkl všechen zvuk.</p>
+<p>Až najednou ten křik.</p>
+<p>Všichni vyrazili ven. Kluci a holky, s baterkami v rukou, s bušícím srdcem. Jedna skupina po trase zepředu, druhá zezadu, probíjeli se houštím a křičeli do tmy: <i>„Jdeme! Jdeme za tebou!&quot;</i></p>
+<p>Našli ji roztřesenou a uplakanou.</p>
+<p><i>„Já jsem se tak strašně bála,&quot;</i> vzlykala. <i>„Vždyť tu dneska nejsou žádné odrazky!&quot;</i></p>
+    <img src="legend_images/img06.png" alt="">
+
+    <p class="page-break">Vedoucí beze slova zvedl ruku a posvítil baterkou do lesa. Les se rozzářil jako vánoční stromeček. Odrazky tam byly. Všechny. Přesně tam, kde měly být.</p>
+<p >Problém byl jinde. Mráček si totiž před odjezdem nezkontrolovala čelovku. A tátovi se den předtím hodila na ryby.</p>
+<p>Do nočního lesa vyšla s téměř vybitou baterkou. Byla ztracená v lese, kde na každém druhém stromě visela její záchrana. Jen na ni nemohla posvítit.</p>
+<div class="learning">
+    <h3>Poučení z Měsíčního údolí</h3>
+    <p><b>Sviští pravidlo č. 5: Věc v batohu ještě neznamená, že funguje.</b></p>
+    <p>Čelovka v batohu je k ničemu, když je vybitá. Zápalky v KPZce jsou k ničemu, když jsi je spálil na minulém táboráku. A padesátikoruna na nouzi tě nezachrání, když jsi ji utratil za pizzu.</p>
+    <p>Nestačí věci sbalit. Musíš je zkontrolovat.</p>
+    <p>Když se ztratíš, křič jako Mráček a najdeme tě. </p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Večer před další výpravou vytáhni čelovku, zapni ji a nech ji minutu svítit. Pak projdi KPZku, kus po kuse. Trvá to pět minut a jednou ti to zachrání večer.</p>
+</div>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Kluzkých skalách a Prokletí Drifťáků</h2>
+<p class="legend-meta">[4. Chata, Chata Prachovka, Prachovské skály, 14.-16.4.2023]</p>
+<p>Existuje zvuk, který v lese nechceš nikdy slyšet.</p>
+<p>Křupnutí.</p>
+<p>Toho dne k němu chybělo strašně málo.</p>
+<p>Byla sychravá jarní sobota, když náš oddíl dorazil do skalního labyrintu <b>Prachovských skal</b>. Nebe se zatáhlo, spustil se studený déšť a pískovec potemněl. Skály se pokryly slizem. Pěšiny se změnily v blátivou skluzavku.</p>
+<p>A přesně v takové chvíli se ukáže, kdo se sbalil dobře.</p>
+<p>Vydra a Skunk tehdy vyrazili do skal v tenkých teniskách. V těch samých, ve kterých chodí do školy a po asfaltu.</p>
+<p>Okamžitě jsme pro ně vymysleli vědecký název: <b>Drifťáky</b>.</p>
+<p>A na mokrém pískovci to byl skutečně drift.</p>
+
+<p>Podrážka bez vzorku klouzala po každém centimetru. Noha v botě plavala jako v mýdlové vodě. A když přišla únava, svaly přestaly držet – kotníky se v měkkých teniskách začaly prolamovat do stran.</p>
+<p>Jeden špatný krok na oblé skále. Jeden mokrý kořen.</p>
+<p>A křup.</p>
+    <img src="legend_images/img07.png" alt="">
+    <p>Zatímco skauti v pořádných pohorkách procházeli kolem jako kamzíci, majitelé Drifťáků balancovali s roztaženýma rukama nad srázem a v očích měli čisté zoufalství.</p>
+<p>Domů jsme se tehdy vrátili bez sádry. Ale bylo to o vlas.</p>
+<div class="learning">
+    <h3>Poučení z Prachovských skal</h3>
+    <p><b>Sviští pravidlo č. 6: Do skal jen ve vysokých pohorkách. Bez výjimky.</b></p>
+    <p>Správná bota má tlustou podrážku se vzorkem – ta se na mokré skále nesmekne a udrží tě na blátě i na sypkém písku. A vysoký svršek ti drží kotník, takže když šlápneš na křivý kořen, nezlomíš si nohu.</p>
+    <p>Tenisky do skal nepatří. Ani ty drahé. Ani ty nové.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Před příští výpravou si stoupni před rodiče a ukaž jim seznam výbavy z oddílových dokumentů. To, co si zabalíš, je tvoje zodpovědnost – ne jejich.</p>
+</div>
+</section>
+
+
+
+
+
+
+<section class="song">
+<h2 class="song-title">Hudsonský šífy</h2>
+<p class="artist">Wabi Daněk</p>
+<pre style="font-size:10.0pt">   <b>Am</b>                             <b>C</b>
+1. Ten, kdo nezná hukot vody lopatkama vířený,
+        <b>G</b>           <b>Am</b>
+   jako já, jó jako já,
+       <b>Am</b>                          <b>G</b>
+   kdo Hudsonský slapy nezná sírou pekla sířený,
+         <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
+   ať se na Hudsonský šífy najmout dá, jo-ho-ho.
+   <b>Am</b>                                  <b>C</b>
+2. Ten, kdo nepřekládal uhlí, šíf když na mělčinu vjel,
+        <b>G</b>         <b>Am</b>
+   málo zná, málo zná,
+            <b>Am</b>                              <b>G</b>
+   ten, kdo neměl tělo ztuhlý, až se nočním chladem chvěl,
+         <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
+   ať se na Hudsonský šífy najmout dá, jo-ho-ho.
+     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
+Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
+     <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
+     jo-ho-ho, jo-ho-ho.
+   <b>Am</b>                         <b>C</b>
+3. Ten, kdo nezná noční zpěvy zarostenejch lodníků,
+        <b>G</b>           <b>Am</b>
+   jako já, jó jako já,
+        <b>Am</b>                             <b>G</b>
+   ten, kdo cejtí se bejt chlapem, umí dělat rotyku,
+         <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
+   ať se na Hudsonský šífy najmout dá, jo-ho-ho.
+   <b>Am</b>                          <b>C</b>
+4. Ten, kdo má na bradě mlíko, kdo se rumem neopil,
+        <b>G</b>            <b>Am</b>
+   málo zná, jó málo zná,
+       <b>Am</b>                            <b>G</b>
+   kdo necejtil hrůzu z vody, kde se málem utopil,
+         <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
+   ať se na Hudsonský šífy najmout dá, jo-ho-ho.
+     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
+Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
+     <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
+     jo-ho-ho, jo-ho-ho.
+   <b>Am</b>                            <b>C</b>
+5. Kdo má roztrhaný boty, kdo má pořád jenom hlad,
+        <b>G</b>           <b>Am</b>
+   jako já, jó jako já,
+       <b>Am</b>                              <b>G</b>
+   kdo chce celý noci čuchat pekelnýho vohně smrad,
+         <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
+   ať se na Hudsonský šífy najmout dá, jo-ho-ho.
+   <b>Am</b>                              <b>C</b>
+6. Kdo chce zhebnout třeba zejtra, komu je to všechno fuk,
+          <b>G</b>            <b>Am</b>
+   kdo je sám, jó jako já,
+       <b>Am</b>                                <b>G</b>
+   kdo má srdce v správným místě, kdo je prostě príma kluk,
+         <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
+   ať se na Hudsonský šífy najmout dá, jo-ho-ho.
+     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
+Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
+     <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
+     jo-ho-ho, jo-ho-ho,
+     <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
+     jo-ho-ho, jo-ho-ho.</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Chodím po Broadwayi</h2>
+<p class="artist">táborové písně</p>
+<pre style="font-size:10.5pt">          <b>D</b>
+1. Chodím po Broadwayi hladov sem a tam,
+                                    <b>A</b>
+   Chodím po Broadwayi hladov sem a tam,
+          <b>D</b>             <b>G</b>
+   chodím po Broadwayi, po Broadwayi,
+   <b>D</b>            <b>A</b>            <b>D</b>
+   po Broadwayi hladov sem a tam.
+   <b>D</b>
+R: Singi jou jou jupí jupí jou,
+                           <b>A</b>
+   singi jou jou jupí jupí jou,
+         <b>D</b>             <b>G</b>
+   singi jou jou jupí, pes má chlupy,
+   <b>D</b>             <b>A</b>          <b>D</b>
+   kočka srst, a prase štětiny.
+2. [: Moje černé děti mají stále hlad, :]
+   moje černé děti, černé děti,
+   černé děti mají stále hlad.
+R: Singi jou jou...
+3. [: Práci nedostanu, černou kůži mám, :]
+   práci nedostanu, nedostanu,
+   protože já černou kůži mám.
+R: Singi jou jou...
+4. [: A já pevně věřím, že zas přijde den, :]
+   a já pevně věřím, pevně věřím,
+   že zas bude černoch svoboden.
+R: Singi jou jou...</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Jožin z bažin</h2>
+<p class="artist">Ivan Mládek</p>
+<pre style="font-size:10.5pt">   <b>Emi</b>                 <b>H7</b>            <b>Emi</b>
+1. Jedu takhle tábořit Škodou 100 na Oravu,
+                           <b>H7</b>             <b>Emi</b>
+   spěchám proto, riskuji, projíždím přes Moravu.
+   <b>D7</b>          <b>G</b>          <b>D7</b>          <b>G</b> <b>H7</b>
+   Řádí tam to strašidlo, vystupuje z bažin,
+   <b>Emi</b>                  <b>H7</b>         <b>Emi</b> <b>D7</b>
+   žere hlavně Pražáky, jmenuje se Jo-žin.
+   <b>G</b>                        <b>D7</b>
+R: Jožin z bažin močálem se plíží,
+                              <b>G</b>
+   Jožin z bažin k vesnici se blíží,
+                            <b>D7</b>
+   Jožin z bažin už si zuby brousí,
+                              <b>G</b>
+   Jožin z bažin kouše, saje, rdousí.
+   <b>C</b>           <b>G</b>      <b>D</b>               <b>G</b>
+   Na Jožina z bažin, koho by to napadlo,
+   <b>C</b>           <b>G</b>     <b>D</b>               <b>G</b>  <b>H7</b>  <b>Emi</b>
+   platí jen a pouze práškovací letadlo.
+2. Projížděl jsem dědinou cestou na Vizovice,
+   přivítal mě předseda, řek&#x27; mi u slivovice:
+   &quot;Živého či mrtvého Jožina kdo přivede,
+    tomu já dám za ženu dceru a půl JZD!&quot;
+R:
+3. Říkám:&quot;Dej mi, předsedo, letadlo a prášek,
+   Jožina ti přivedu, nevidím v tom háček.&quot;
+   Předseda mi vyhověl, ráno jsem se vznesl,
+   na Jožina z letadla prášek pěkně klesl.
+R: Jožin z bažin už je celý bílý,
+   Jožin z bažin z močálu ven pílí,
+   Jožin z bažin dostal se na kámen,
+   Jožin z bažin - tady je s ním amen!
+   Jožina jsem dohnal, už ho držím, johoho,
+   dobré každé lóve, prodám já ho do ZOO.</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Spáčovi a Útoku Hromů na Vlčích Pramench</h2>
+<p class="legend-meta">[3. tábor Svišťů, 1.-15.7.2023]</p>
+<p>Svišti  spali na zádech, obličejem k hvězdám. Proto první kapku ucítili přímo do očí.</p>
+<p>A když je otevřeli, hvězdy tam nebyly. Byla tam černá stěna.</p>
+<p>Blesk. Ráno přitom nic nenasvědčovalo. Přišli jsme na bivak ke starému opuštěnému kamenolomu u Šluknova – místní mu neřeknou jinak než <b>Vlčí prameny</b>.</p>
+<p>Ten název zněl trochu strašidelně. Ale voda v lomu byla průzračná a teplá, obloha modrá, slunce hřálo. Nikdo na vlky nemyslel. K večeři jsme si do divočiny objednali pizzu. Obří. Tak obří, že jsme ji nedojedli. Krabice se zbytky jsme odložili kousek od tábořiště.</p>
+<p><i>Vždyť co. Břicha plná, zvěř nikde.</i></p>
+<p>Přišel západ slunce. Obloha plná hvězd. Idylka. Vybalili jsme spacáky – a pak padlo „geniální&quot; rozhodnutí:</p>
+<p><i>„Kdo by stavěl celtu, když je takhle krásně? Dáme ji radši pod sebe, ať se neušpiníme.&quot;</i></p>
+<p>Hlídka ale bdela. Horymír ticho seděl na židli a sledoval dohasínající pahřebu.. Ve správný čas vzbudil Flyma a do vyhaslé pahřeby teď hleděl Flym. V dálce viděl záblesk a po čase tlumený zvuk hromu. </p>
+    <img src="legend_images/img08.png" alt="">
+    <p>&quot;<i>Ah, naštěstí je to daleko</i>&quot;, řekl si. Při pohledu na Svišti spící na obrovské celtě pod nimi byl rád, že bouře je asi mine. </p>
+
+    <p>Blesk, jedna, dva, hrom. Počítal znovu a znovu vteřiny. Bouře se nezadržitelně blížila.. </p>
+<p><i>„Vstávejte! Bouřka! Stavíme celtu!&quot;</i></p>
+<p>Jenže děti, spali dál. Ticho. Jediný kto sa pprobral byl vedoucí Jaso. A to už bylo cítit první kapky. </p>
+<p><i>„Vstávejte! Bouřka! Okamžitě! Celta je pod vámi!&quot;</i></p>
+
+<p>Omámené spánkem, děti nebezpečí nechápaly. Zavrtaly se hlouběji do spacáků, v pevné víře, že když nevidí bouřku, bouřka nevidí je.</p>
+<p>Vedoucí neměli čas na vyjednávání. Děcka museli z celty doslova vysypat na zem.  </p>
+<p>Pak přišel chaos. Blesky, vítr, provazy, plachta a liják. Poslední uzly jsme dotahovali promáčení na kost.</p>
+<p>Ráno bylo zase pohádkově krásně. Slunce sušilo zem – a odhalilo spoušť.</p>
+<p>Naše krabice od pizzy byly rozmočené a pokryté armádou mravenců.</p>
+<p>Hladové děti to neodradilo. Mravence z pizzy sfoukaly, oklepaly, kousky ohřály nad ohněm a snědly.</p>
+<p>Zachránily, co se dalo. Ale tahle lekce bolela.</p>
+<div class="learning">
+    <h3>Poučení ze šluknovských Vlčích pramenů</h3>
+    <p><b>Sviští pravidlo č. 7: Celta se staví za světla. Ne za blesků.</b></p>
+    <p>Na bivaku se vždycky připrav na tu nejhorší variantu – i když je obloha jako z pohádky. Počasí se tě neptá.</p>
+    <p>Mít hlídku se vyplatí - dává oddílu čas a šanci zareagovat dříve, než přijde nebezpečí. Ale tato výhoda funguje jen tehdy, když hlídka jedná hned, jakmile si něčeho všimne.</p>
+    <p>Fakt nechceš uprostřed bouřky v panice vysypávat kamarády ze spacáků a po hmatu stavět přístřešek.</p>
+    <p>A jídlo? To v přírodě nikdy neleží jen tak. Ráno by z něj byla mravenčí kolonie – nebo něco většího.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Postav celtu do pěti minut. Nacvič si to na schůzce, za světla. V bouřce už na učení nebude čas.</p>
+</div>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Prokletí Ledového Diamantu a Nezlomném Háděti</h2>
+<p class="legend-meta">[7. chata - U Pepu, Jizerské hory, 8.-10.12.2023]</p>
+<p>Hádě se podívala Jasovi přímo do očí.</p>
+<p>Usmála se.</p>
+<p>A olízla rampouch.</p>
+<p>Bylo to v prosinci, těsně před Vánoci, kdy do <b>Jizerských hor</b> dorazila opravdová zima. Sníh ležel tak vysoko, že jsme si cestu museli prošlapávat vlastními těly. Děcka byla v sedmém nebi – svahy patřily bobům a les vypadal jako ze severské ságy.</p>
+<p>Na zamrzlých skalách nás pak čekal ten největší poklad. Ze skalních převisů visely obrovské rampouchy a v zimním slunci se třpytily jako diamanty.</p>
+<p><i>„Neničte to, vždyť je to nádherné!&quot;</i> křičeli jedni.</p>
+<p>Ti druzí neodolali. Rampouchy olamovali, nakládali je na boby jako kořist – a začali je olizovat.</p>
+<p><i>„Přestaňte s tím! Hoďte to na zem!&quot;</i> zahřměl Jaso. <i>„Podívejte se, kudy ta voda tekla, než zamrzla! Po hlíně, po skalách, po zemi! Je to špinavé!&quot;</i></p>
+<p>A tehdy se ozvala skautská rebelie.</p>
+    <img src="legend_images/img09.png" alt="">
+    <p class="page-break"><b>Hádě</b> měla ve tváři napsáno: <i>„Mně se přece nemůže nic stát. Já ten led porazím.&quot;</i></p>
+
+<p>S výrazem drsného survivalisty rampouch demonstrativně olízla.</p>
+<p>Trest přišel do dvou hodin.</p>
+<p>Jen co jsme dorazili na chatu, Hádětin vítězný úsměv zamrzl. Bakterie z rampouchu jí zaútočily na žaludek.</p>
+<p>Konec zábavy. Hádě odmítala jídlo. Nechtěla si hrát. Kytara ji nezajímala. Jen tiše ležela v posteli, schoulená do klubíčka, zatímco chatař <b>Peppa</b> kolem ní běhal jako polní lékař.</p>
+<p>Byl to smutný pohled na padlého hrdinu.</p>
+<p>Ale pro oddíl to byl důležitý den. Hádě se totiž v podstatě obětovala – a od té doby už nikoho olizování rampouchů nelákalo.</p>
+<div class="learning">
+    <h3>Poučení z Jizerských hor</h3>
+    <p><b>Sviští pravidlo č. 8: Nejez nic, co teklo po zemi.</b></p>
+    <p>Voda, která stéká po povrchu, s sebou bere lesní prach, hlínu, ptačí trus a bakterie. Mráz je nezabije – jen je zakonzervuje do podoby lákavého ledového lízátka.</p>
+    <p>Rampouch není zimní poklad. Rampouch je zmrzlá špína ve tvaru diamantu.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Máš na výpravě žízeň? Napij se z čutory. Kdo si vezme plnou čutoru na každou akci, ten nikdy nemusí olizovat rampouchy.</p>
+</div>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Když si báječnou ženskou...</h2>
+<p class="artist">Traband</p>
+<pre style="font-size:10.5pt">Živió, živió, živió, živió
+<b>A</b>                    <b>E</b>
+Jo, když si báječnou ženskou
+<b>A</b>       <b>E</b>
+vezme idiot
+<b>D</b>                     <b>A</b>
+tak jí zbydou oči pro pláč, pláč, pláč
+<b>E</b>                  <b>A</b>
+No co je tohle za život?
+On celej den jen tak sedí
+chlastá lahváče a čumí na fotbal
+a jediný co umí říct, říct, říct:
+Proč já si tě tenkrát vůbec bral?
+Ona sní o něžných vyznáních
+za úplňku, když se zešeří
+a místo toho slyší jen, jen, jen:
+Co bude dneska k večeři?
+Tolik by si přála od něj slyšet
+miláčku ti to dneska sluší
+Kráva jedna pitomá má má má
+nerozumí mužský duši.
+Jo, když si báječnou ženskou
+vezme blbej idiot
+tak jí zbydou oči pro pláč, pláč, pláč
+Co je tohle za život?
+            <b>D</b>        <b>A</b>   <b>F#mi</b>
+Jo, když si báječnou ženskou
+<b>E</b>     <b>A</b>
+vezme idiot idiot idiot idiot</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Loď John B</h2>
+<p class="artist">táborové písně</p>
+<pre style="font-size:10.5pt">      <b>G</b>
+1. Už vyplouvá loď &quot;John B&quot;,
+   už vyplouvá loď &quot;John B&quot;,
+   okamžik malý jen,
+                <b>D</b>
+   než poplujem v dál.
+                 <b>G</b>    <b>G7</b>
+R: Tak nechte mě plout, - nechte mě plout
+                 <b>C</b>    <b>C7</b>
+   tak nechte mě plout, - nechte mě plout
+   <b>G</b>           <b>D7</b>
+   Sil už málo mám,
+                 <b>G</b>
+   tak nechte mě plout.
+   <b>G</b>
+2. Nejdřív jsem se napil,
+   na zdraví všem připil,
+   vím, že cesta má
+            <b>D</b>
+   konec už má.
+R: Tak nechte mě plout...
+   <b>G</b>
+3. Sklenici svou dopil,
+   za krátko u mne byl,
+   okovy na ruce dal
+            <b>D</b>
+   a pistole vzal
+               <b>G</b>    <b>G7</b>
+R*: Šerif John Stone, - šerif Stone
+               <b>C</b>     <b>C7</b>
+    šerif John Stone, - šerif Stone
+    <b>G</b>             <b>D7</b>
+    Moji svobodu vzal
+               <b>G</b>
+    šerif John Stone.
+1. Už vyplouvá loď &quot;John B&quot;...
+R: Tak nechte mě plout...</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Mezi horami</h2>
+<p class="artist">Čechomor</p>
+<pre style="font-size:10.5pt">    <b>Dmi</b>  <b>C</b>  <b>Dmi</b>  <b>F</b>     <b>C</b>   <b>F</b>
+[:  Mezi horami, lipka zelená. :]
+    <b>F</b>             <b>C</b>        <b>Dmi</b>           <b>C</b>   <b>Dmi</b>
+[:  Zabili Janka, Janíčka, Janka, miesto jeleňa. :]
+[:  Keď ho zabili, zamordovali. :]
+[:  Na jeho hrobě, na jeho hrobě, kříž postavili. :]
+[:  Ej křížu, křížu, ukřižovaný. :]
+[:  Zde leží Janík, Janíček, Janík, zamordovaný. :]
+[:  Tu šla Anička, plakat Janíčka. :]
+[:  Hned na hrob padla a viac nevstala, dobrá Anička. :]</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Prchající Lávce a Jak se Učíme z Neúspěchů</h2>
+<p class="legend-meta">[7. přespávačka v klubovně a stavba 1. (25.2.2023), 2. (28.11.2023), 3. (16.11.2024), lávky přes potok] https://mapy.com/s/jokuzologu</p>
+<p>Dvakrát nás potok porazil.</p>
+<p>Napotřetí jsme vyhráli. Zatím.</p>
+<p>Košíkovský potok na cestě ze Slunečného vršku do lesoparku byl roky noční můrou každého, kdo ho chtěl přeskočit. Mnozí Svišti tu skákali přes vodu poprvé v životě. A brzy jsme si všimli, že úplně stejně riskují i lidé ze sídliště.</p>
+<p>Skautské srdce to nevydrželo.</p>
+
+<p><i>„Postavíme tu most. No... aspoň lávku.&quot;</i></p>
+<p><b>První lávka</b> vyrostla v noci, vlastníma rukama. Byla úzká – kočárek po ní neprojel – a hlavně stála moc nízko nad vodou.</p>
+<p>Netrvalo dlouho a přišla velká voda. Potok se změnil v hnědé monstrum a lávku spláchl do neznáma.</p>
+<p>Svišti to nevzdali.</p>
+<p>Nažhavili jsme pily, nařezali desky z palet a na podzim, zase v noci, postavili <b>Druhou lávku</b>. Širší. Vyšší. Pevnější. Ještě během stavby ji nadšeně testovali lidé ze sídliště. Objevila se dokonce na Mapy.cz pod hrdým jménem „Skautská lávka&quot;.</p>
+    <img src="legend_images/img10.png" alt="">
+    <p class="page-break">Byli jsme na sebe pyšní až po koruny stromů.</p>
+<p>Pak přišla další bouřka. Voda stoupla výš než kdy předtím a s řevem odnesla i druhou lávku.</p>
+<p>Dvě nula pro potok.</p>
+<p>Tady by to běžný smrtelník vzdal.</p>
+<p>Ale skauti nejsou běžní smrtelníci.</p>
+<p>Do boje nastoupili starší skauti z celého střediska v rámci noční hry. V temnotě svítily čelovky, řezaly pily, vrčely utahováky a vzduchem létaly nápady. Šlo do toho všechno – všechna moudrost i všechen vztek z prohraných soubojů.</p>
+<p><b>Třetí lávka</b> stojí dodnes.</p>
+<p>Postavili jsme ji o <b>60 centimetrů výš</b>, než byl předchozí rekord. Širokou, masivní, plynule navazující na terén – projede po ní i ten největší kočárek.</p>
+<p>Košíkovský potok byl poražen.</p>
+<div class="learning">
+    <h3>Poučení z Košíkovského potoka</h3>
+    <p><b>Sviští pravidlo č. 9: Nevzdávej to po prvním. Ani po druhém.</b></p>
+    <p>První pokus nemusí vyjít. Ani druhý. To není ostuda – to je normální.</p>
+    <p>Když ti spadne lávka (nebo plán), sedni si, zjisti, co bylo špatně, spoj se s partou a postav to znovu. Širší, pevnější a o šedesát centimetrů výš.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Přejdi po Skautské lávce a najdi si ji na mapě. Postavily ji děti – a někteří z nich jsou v oddíle dodnes.</p>
+</div>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Velkém Pátrání po Ztracené Pandě a Vrtulníku</h2>
+<p class="legend-meta">[8. přespávačka v klubovně, 22. – 23.3.2025]</p>
+<p>Do vzletu policejního vrtulníku zbývala jediná minuta.</p>
+<p>Nad Hostivařským lesoparkem měla začít pátrací akce s termovizí. Na sídlišti stálo pět policejních aut.</p>
+<p>A čtrnáctiletá Panda v té chvíli seděla úplně sama na pařezu. V naprosté tmě. Bez telefonu a bez čelovky.</p>
+<p>Přitom to začalo jako obyčejná noční hra.</p>
+<p>Byl březen 2025, osmá přespávačka v klubovně Gánek. Družiny dostaly zašifrovanou zprávu, ve které jasně stálo, kam mají jít: na Hostivařské hradiště.</p>
+<p>Jenže před klubovnou vypuklo šílenství.</p>
+<p>Kluci pod vedením Skládka zprávu rozlouskli a vyrazili do tmy. Ti věděli, kam běží. Ostatní se rozběhli za nimi. Nerozluštili nic – prostě předpokládali, že první skupina ví, co dělá.</p>
+<p>Znáš to. Když všichni běží, běžíš taky. I když netušíš kam.</p>
+<p>Rychlejší brzy utekli pomalejším. Panda a Sojka zůstávaly pozadu.</p>
+<p>Vedoucí Flym šel s odstupem jako poslední pojistka, aby se všichni dostali do cíle. V dálce ještě zahlédl, jak se Sojka s Pandou rozdělily. Rozběhl se za nimi – ale za zatáčkou už nikdo nebyl. Sídliště zelo prázdnotou a za cestou začínal temný les.</p>
+<p>Vtom mu zazvonil telefon. Sojčina máma. Právě teď?</p>
+<p>„Sojka se vám ztratila, tak mi zavolala z mobilu. Čeká vás před Albertem.&quot;</p>
+<p>Sojka se ztratila a našla během tří minut. Jenže o Pandě nevěděl nikdo nic.</p>
+<p>Flym dal vědět Jasovi, vyzvedl Sojku a prošel s ní sídliště i uličky mezi domky. Nic. Jako by se po Pandě slehla zem.</p>
+<p>Jaso mezitím dorazil s hlavní skupinou na hradiště. Přepočítal děti.</p>
+<p>Ticho.</p>
+<p>Panda chyběla.</p>
+<p>Ta v tu chvíli stála sama na křižovatce před lesoparkem. Zamyslela se: „Asi máme jít tam, kam chodíme nejčastěji.&quot; A vyrazila. Na opačnou stranu – na Korzárskou louku.</p>
+<p>Jaso okamžitě ukončil hru. Svišti se rozdělili do hlídek, pročesávali ulice a křičeli do tmy Pandino jméno.</p>
+<p>Les mlčel.</p>
+<p>Vedoucí zavolali Pandinu tatínkovi. Ten dorazil během pár minut a společně kontaktovali policii. Pět policejních aut. Velitel zásahu. Oficiální pátrání. A vrtulník s termovizí připravený vzlétnout.</p>
+<p>A co dělala celou tu dobu Panda?</p>
+<p>Došla potmě na Korzárskou louku. Nikdo tam nebyl. Vrátila se tedy kousek zpátky přes Skautskou lávku a sedla si na pařez. Chvíli čekala. Pak si řekla, že už čekala dost, a vydala se ke klubovně.</p>
+    <img src="legend_images/img11.png" alt="">
+
+    <p>Se Skládkovou hlídkou, která šla prohledávat právě tenhle kus parku, se minula o pouhých pět minut.</p>
+    <p >Před klubovnou zatím velitel zásahu rozhodl: vrtulník poletí. Stačil jediný povel do vysílačky.</p>
+<p>Vtom se po chodníku přiblížila pomalá, unavená postava.</p>
+<p>Panda.</p>
+<p>Když se skautské hlídky vracely ke klubovně, viděly už jen policejní auta odjíždět po Bratislavské. U klubovny stála Panda s rodiči. Živá, zdravá, v dobré náladě.</p>
+<p>Pro ni to byla nečekaná zkouška odvahy. Pro zbytek oddílu nejdelší večer v historii Svišťů.</p>
+<div class="learning">
+    <h3>Poučení z Velkého Pátrání</h3>
+    <p><b>Sviští pravidlo č. 10: Nikdy neběž za davem, když sám nevíš kam.</b></p>
+    <p>Dostaneš zašifrovanou zprávu? Nejdřív ji v klidu rozlušti. Teprve pak se rozbíhej.</p>
+    <p>Když poběžíš slepě za jinou skupinou a ztratíš ji, ztratíš zároveň i směr. A zůstaneš v lese sám.</p>
+    <p>Nevíš, kudy dál? Zastav se a zeptej se vedoucího. Držet se spolu je stokrát důležitější než vyhrát hru.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Zapamatuj si tři věci, které jdou na noční hru vždycky do kapsy: <b>čelovka, telefon, kamarád.</b> Kvůli zapomenuté čelovce nemá startovat vrtulník.</p>
+</div>
+
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Mrazík</h2>
+<p class="artist">Brontosauři</p>
+<pre style="font-size:10.5pt">     <b>Ami</b>
+1. Příroda se k spánku chystá,
+   hnědne listí, zima jistá,
+                               <b>G</b>            <b>Ami</b>
+   přesto slyšíš na cestách tulácký písně hrát.
+2. Svetr navíc, rána studí,
+   když tě první mrazík vzbudí,
+   teplej čaj, než rozhlédneš se, a zas o kousek dál.
+             <b>C</b>                 <b>G</b>
+R: Tak jako vítr, trochu jak blázen,
+             <b>Dmi</b>            <b>Ami</b>
+   ženeš to nocí, ostatní spí,
+            <b>C</b>             <b>G</b>
+   nevidíš nebe, nevidíš na zem,
+              <b>F</b>             <b>Ami</b>
+   vidíš pár lidí, co pochopí.
+3. Z poezie paneláků,
+   šedejch zdí a metra vlaků
+   na nádraží pospícháš, aby sis spravil chuť.
+4. Když se mlhy v lese zvednou,
+   známé tváře k ohni sednou,
+   ze smutnýho Babylonu zbyde jenom suť.
+R:</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Proměny</h2>
+<p class="artist">Čechomor</p>
+<pre style="font-size:10.5pt"><b>Ami</b>                <b>G</b>         <b>C</b>
+Darmo sa ty trápíš můj milý synečku
+                <b>E</b>           <b>Ami</b>
+nenosím ja tebe nenosím v srdéčku
+        <b>G</b>  <b>C</b>  <b>G</b>  <b>C</b>  <b>Dmi</b>       <b>E</b>   <b>Ami</b>
+A já tvoja ne bu du ani jednu hodinu
+Copak sobě myslíš má milá panenko
+vždyť ty si to moje rozmilé srdénko
+A ty musíš býti má lebo mi tě Pán Bůh dá
+A já sa udělám malú veverečkú
+a uskočím tobě z dubu na jedličku
+Přece tvoja nebudu ani jednu hodinu
+A já chovám doma takú sekérečku
+ona mi podetne dúbek i jedličku
+A ty musíš býti má lebo mi tě Pán Bůh dá
+A já sa udělám tú malú rybičkú
+a já ti uplynu preč po Dunajíčku
+Přece tvoja nebudu ani jednu hodinu
+A já chovám doma takovú udičku
+co na ni ulovím kdejakú rybičku
+A ty přece budeš má lebo mi tě Pán Bůh dá
+<b>Ami</b> <b>F</b> <b>C</b> <b>F</b> <b>C</b> <b>G</b> <b>Ami</b> <b>F</b> <b>C</b> <b>F</b> <b>C</b> <b>G</b>
+A já sa udělám tú velikú vranú
+a já ti uletím na uherskú stranu
+Přece tvoja nebudu ani jednu hodinu
+A já chovám doma starodávnú kušu
+co ona vystřelí všeckým vranám dušu
+A ty musíš býti má lebo mi tě Pán Bůh dá
+A já sa udělám hvězdičkú na nebi
+a já budu lidem svítiti na nebi
+Přece tvoja nebudu ani jednu hodinu
+A sú u nás doma takoví hvězdáři
+co vypočítajú hvězdičky na nebi
+A ty musíš býti má lebo mi tě Pán Bůh dá
+<b>Ami</b> <b>F</b> <b>C</b> <b>F</b> <b>C</b> <b>G</b> <b>Ami</b> <b>F</b> <b>C</b> <b>F</b> <b>C</b> <b>G</b></pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Sedm dostavníků</h2>
+<p class="artist">Waldemar Matuška</p>
+<pre style="font-size:10.5pt"> <b>Fm</b>
+Rec.: &quot;Hej! Kam jedete?&quot;
+      &quot;K brodu!&quot;
+      &quot;Vemte mě kousek sebou!&quot;
+      &quot;Tak si sedněte. Hyjé!&quot;
+   <b>Fm</b>                        <b>Es</b>
+1. Plání se blíží sedm dostavníků,
+   <b>Fm</b>                             <b>Es</b>
+   stačí jen mávnout a jeden zastaví.
+   <b>C#</b>       <b>Bm</b>         <b>Cm</b>              <b>C#</b>
+   Sveze mě dál za pár dobrejch slov a díků,
+            <b>Bm</b>          <b>Cm</b>        <b>Fm</b>
+   ten kočí co má modrý voči laskavý.
+     <b>Fm</b>          <b>B</b>    <b>Es7</b>         <b>As</b>
+Ref: Hyja, hyja, hou! Dlouhá bude cesta,
+     <b>Fm</b>          <b>B</b>      <b>Es7</b>       <b>Fm</b>
+     dlouhá jako píseň, co mě napadá.
+                 <b>B</b>    <b>Es7</b>             <b>As</b>
+     Hyja, hyja, hou! Sám, když někdy stojím,
+     <b>C#</b>        <b>Bm</b>            <b>Cm</b>        <b>Fm</b>
+     sám proti slunci, který právě zapadá.
+2. Vím, že se hvězdy, dneska nerozsvítí,
+   neklidný ptáci maj&#x27; hlasy hádavý.
+   Vyprahlá tráva už velký deště cítí,
+   ty deště co i moje stopy zaplaví.
+Ref: Hyja, hyja, hou! Dlouhá bude cesta,
+     dlouhá jako píseň, co mě napadá.
+     Hyja, hyja, hou! Sám, když někdy stojím,
+     sám proti slunci, který právě zapadá.
+ <b>Gm,</b> <b>F,</b>
+ <b>Gm,</b> <b>F,</b>
+ <b>Es,</b> <b>Cm,</b> <b>Dm,</b> <b>Es,</b>
+ <b>Es,</b> <b>Cm,</b> <b>Dm,</b> <b>Gm</b>
+Ref: Hyja, hyja, hou! Dlouhá bude cesta,
+     dlouhá jako píseň, co mě napadá.
+     Hyja, hyja, hou! Sám, když někdy stojím,
+     sám proti slunci, který právě zapadá.
+3. Plání se blíží sedm dostavníků,
+   stačí jen mávnout a jeden zastaví.
+   Sveze mě dál za pár dobrejch slov a díků,
+   ten kočí co má modrý voči laskavý.</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Šílenství na Korzárské louce a Ztracené Cti</h2>
+<p class="legend-meta">[oddílová schůzka v Hostivařském parku, červen 2025]</p>
+<p>Kluků bylo víc. </p>
+<p>Prohráli na celé čáře.</p>
+<p>Byl červen 2025 a naše půlroční etapová hra o osidlování Ameriky se blížila k vrcholu. Na <b>Korzárské louce</b> se měl odehrát střet, který přepíše mapu Nového světa: <b>Válka za nezávislost.</b> Armáda dívek v červeném proti batalionu kluků v modrém.</p>
+<p>Zbraně? Historické předovky – tedy kartonové repliky, které gumičkou vystřelovaly papírové kuličky. Dostřel mizerný. Přesnost tragická. Kulička letěla, kam chtěla.</p>
+<p>A přesně o tom to celé je.</p>
+<p>Ve skutečné bitvě s předovkami nerozhodovala přesnost. Rozhodovalo něco úplně jiného:</p>
+<p><b>Kdo udrží nervy. Kdo zůstane stát v řadě. Kdo poslechne rozkaz.</b></p>
+<p>Dívčí armáda fungovala jako hodinky.</p>
+<p>Pod velením rádkyně <b>Trixi</b> – která držela disciplínu pevněji než železná opona – postupovaly červené řady krok za krokem.</p>
+<p><i>„Nabít! Zamířit! Pal!&quot;</i></p>
+<img src="legend_images/img12.png" alt="">
+<p>A ozvala se salva. Jedna. Společná. Pak disciplinovaný krok vpřed. Nebo taktický ústup mimo dostřel.</p>
+<p>Na druhé straně bojiště, v modrých řadách, mezitím vypukla anarchie.</p>
+<p>Velitel <b>Tjutju</b> křičel rozkazy. Nikdo je neposlouchal.</p>
+<p>Jeden střílel bez míření. Druhý utíkal. Třetí brečel v trávě. Oddílový bubeník se zoufale snažil bubnovat aspoň nějaký rytmus, ale bylo pozdě.</p>
+<p>Modrá formace se rozpadla na prach.</p>
+<p>V posledním aktu zoufalství kluci jen bezmocně salutovali a padali k zemi jeden po druhém.</p>
+<p>Červené vojsko je zahnalo hluboko do lesa.</p>
+<p>Kluci utrpěli historickou porážku. Vzpamatovávali se z ní hodně dlouho.</p>
+<div class="learning">
+    <h3>Poučení z Korzárské louky</h3>
+    <p><b>Sviští pravidlo č. 11: Drž linii. Panika prohrává vždycky.</b></p>
+    <p>Nevyhrávají ti nejrychlejší. Ani ti nejhlasitější. Vyhrávají ti, kteří udrží chladnou hlavu a drží spolu jako jeden tým.</p>
+    <p>Ve chvíli, kdy každý začne dělat něco jiného, je konec – i kdyby vás bylo dvakrát tolik.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Až se příště v týmu něco pokazí, nekřič. Najdi svého velitele, poslechni jeden rozkaz a proveď ho pořádně. Uvidíš, co to udělá s ostatními.</p>
+</div>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Ztraceném Čase a Prokletí Broadwaye</h2>
+<p class="legend-meta">[New York City, 1.-6.7.2025]</p>
+<p>Flym byl ten večer jediný člověk na Broadwayi, který se díval na <i>Hamiltona</i> – a nakonec vůbec netušil, co pro svobodu Ameriky znamenal.</p>
+<p>V roce 2025 naše výprava překročila oceán. Cílem byl skutečný americký skautský tábor. Ale ještě než jsme vstoupili do amerických lesů, čekala nás divočina jiného druhu: <b>New York City.</b> Mrakodrapy, světla, hluk a kaňony ulic, ve kterých se člověk ztratí.</p>
+<p>A uprostřed toho všeho: lístky na <i>Hamiltona</i>. Nejslavnější muzikál světa.</p>
+<p>Pro nás to byla srdcovka. Vždyť přesně tohle téma – osidlování Ameriky a boj o nezávislost – jsme celý rok hráli jako etapovou hru.</p>
+<p>Seděli jsme v luxusních sedadlech. Napjatí. Čekali, až zhasnou světla.</p>
+<p>A pak se ozval nepřítel, na kterého nikdo nebyl připravený: <b>časový posun.</b></p>
+<p>Zatímco na jevišti zuřila americká revoluce, náš vedoucí <b>Flym</b> sváděl svůj vlastní, předem prohraný boj – s vlastními víčky.</p>
+<p>Hlava mu klesala k hrudi.</p>
+<img src="legend_images/img13.png" alt="">
+<p><i>Bum!</i> Výstřel na jevišti. Flym trhl hlavou, na vteřinu otevřel oči, uviděl herce v paruce – a zase se propadl do tmy.</p>
+<p>A znovu. A znovu.</p>
+<p>Probouzel se do útržků, které nedávaly smysl: jednou někdo rapoval o ústavě, pak někdo plakal, pak se střílelo, pak byl konec světa.</p>
+<p>Když muzikál skončil a sál vybuchl v potlesku, Flym zatleskal taky. Netušil čemu.</p>
+<p>Lístky na Broadway stojí jmění.</p>
+<p>Flym si za ně koupil ten nejdražší spánek svého života.</p>
+<div class="learning">
+    <h3>Poučení z newyorské noci</h3>
+    <p><b>Sviští pravidlo č. 12: Kdo se nevyspí, přijde o zážitek. Ne o nudu.</b></p>
+    <p>Když ti vedoucí večer řekne <i>„zalez do spacáku a spi&quot;</i>, nedělá to proto, aby tě otrávil. Dělá to proto, aby tě nepotkalo prokletí vedoucího Flyma.</p>
+    <p>Když probdíš noc, zítřejší hra, lanovka nebo koupačka ti protečou mezi prsty. Budeš u toho – ale nic si z toho neodneseš.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Na táboře si po večerce spočítej, kolik hodin spánku ti zbývá do budíčku. Pak se rozhodni, jestli se ještě vyplatí povídat.</p>
+</div>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Severní vítr</h2>
+<p class="artist">Zdeněk Svěrák, Jaroslav Uhlíř</p>
+<pre style="font-size:10.5pt">       D                    Hmi
+1. Jdu s děravou patou, mám horečku zlatou,
+        G                     D
+   jsem chudý, jsem sláb, nemocen.
+                   Hmi               G
+   Hlava mě pálí a v modravé dáli se leskne
+     A7         D
+   a třpytí můj sen.
+        D                   Hmi
+2. Kraj pod sněhem mlčí, tam stopy jsou vlčí,
+       G                  D
+   tam zbytečně budeš mi psát,
+                      Hmi
+   sám v dřevěné boudě sen o zlaté hroudě
+      G       A7         D
+   já nechám si tisíckrát zdát.
+   D       D7        G     D                A7
+R: Severní vítr je krutý, počítej lásko má s tím,
+    D          D7        G             D     A7  D  A7
+   k nohám Ti dám zlaté pruty, nebo se vůbec nevrátím
+:instrumental: / D  / G / D / A7 /
+      D          D7        G           D      A7   D  B7
+   k nohám Ti dám zlaté pruty, nebo se vůbec nevrátím
+      Eb                      Cmi
+3. Tak zarůstám vousem a vlci už jdou sem,
+      Ab                     Eb
+   už slyším je výt blíž a blíž.
+      Eb               Cmi
+   Už mají mou stopu, už větří, že kopu
+    Ab         B7               Eb
+   svůj hrob a že stloukám si kříž.
+     Eb                    Cmi
+4. Zde leží ten blázen, chtěl dům a chtěl bazén
+     Ab                    Eb
+   a opustil tvou krásnou tvář.
+     Eb                 Cmi
+   Má plechovej hrnek a pár zlatejch zrnek
+    Ab       B7           Eb
+   a nad hrobem polární zář.
+   Eb      Eb7        Ab     Eb               B7
+R: Severní vítr je krutý, počítej lásko má s tím,
+    Eb         E7        Ab             Eb     B7  Eb  B7
+   k nohám Ti dám zlaté pruty, nebo se vůbec nevrátím
+:instrumental: / Eb  / Ab / Eb / B7 /
+      Eb          Eb7     Ab           Eb    B7   Ab   Eb
+   k nohám Ti dám zlaté pruty, nebo se vůbec nevrátím</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Stánky</h2>
+<p class="artist">Jan Nedvěd</p>
+<pre style="font-size:10.5pt">   <b>D</b>           <b>G</b>
+1. U stánků na levnou krásu,
+   <b>D</b>          <b>Gmi</b>
+   postávaj a smějou se času,
+     <b>D</b>             <b>A7</b>                  <b>D</b>
+   s cigaretou a s holkou co nemá kam jít.
+   <b>D</b>               <b>G</b>
+2. Skleniček pár a pár tahů z trávy,
+   <b>D</b>             <b>Gmi</b>
+   uteče den jak večerní zprávy,
+     <b>D</b>          <b>A7</b>                  <b>D</b>
+   neuměj žít a bouřej se a neposlouchaj.
+   <b>G</b>                     <b>A7</b>
+R: Jen zahlídli svět maj na duši vrásky
+       <b>D</b>        <b>Gmi</b>
+   tak málo je, málo je lásky
+   <b>D</b>             <b>A7</b>                     <b>D</b>
+   ztracená víra hrozny z vinic neposbírá.
+3. U stánků na levnou krásu
+   postávaj a ze slov a hlasů
+   poznávám jak málo jsme jim stačili dát.
+   <b>G</b>                        <b>A7</b>
+R: Jen zahlídli svět maj na duši vrásky
+       <b>D</b>        <b>Gmi</b>
+   tak málo je, málo je lásky
+   <b>D</b>             <b>A7</b>                     <b>D</b>
+   ztracená víra hrozny z vinic neposbírá.
+R:</pre>
+</section>
+
+
+<section class="song">
+    <h2 class="song-title">Tisíc mil</h2>
+    <p class="artist">Spirituál kvintet</p>
+    <pre style="font-size:10.5pt">             <b>G</b>            <b>Emi</b>
+1. V nohách mám už tisíc mil,
+          <b>Ami</b>          <b>C</b>
+   stopy déšť a vítr smyl
+          <b>Ami</b>           <b>D</b>           <b>G</b> <b>D</b>
+   a můj kůň i já jsme cestou znaveni.
+2. Těch tisíc mil, těch tisíc mil
+   má jeden směr a jeden cíl,
+   jeden cíl, to malý bílý stavení.
+3. Je tam stráň a příkrej sráz,
+   modrá tůň a bobří hráz,
+   táta s mámou, kteří věřej&#x27; dětskejm snům.
+4. Těch tisíc mil, těch tisíc mil
+   má jeden směr a jeden cíl,
+   jeden cíl, ten starej známej bílej dům.
+5. V nohách mám už tisíc mil,
+   teď mi zbejvá jen pár chvil,
+   cestu znám, a ta se k nám dál nemění.
+6.=2.
+7. Kousek dál, a já to vím,
+   uvidím už stoupat dým,
+   šikmej štít střechy čnít k nebesům.
+          <b>Emi</b>     <b>Ami</b>              <b>D</b>           <b>G</b>
+8.=4. + [: jeden cíl, ten starej známej bílej dům ... :]</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Nočních Lovcích a Souboji o Pandin Batoh</h2>
+<p class="legend-meta">[Camp Sequassen, Connecticut (USA), 6.-12.7.2025]</p>
+<p>Vločka otevřela oči.</p>
+<p>Deset centimetrů od její hlavy seděl na kufru černobílý tvor s huňatým ocasem.</p>
+<p>Mýval.</p>
+<p>Byl červenec 2025 a naše skautky se ocitly uprostřed divočiny v americkém <b>Camp Sequassen</b>. Bydlely v tamní specialitě – dřevěných chatách, kterým chybí celá přední stěna. Jsi uvnitř a venku zároveň. Noční les ti dýchá přímo do tváře.</p>
+<p>Tmu kolem hlídají mývalové, skunci – a občas se rozezní varovný zvon, který znamená jediné: <b>medvěd.</b></p>
+<p>Vedoucí vydali před spaním jasný rozkaz:</p>
+<p><i>„Žádné jídlo v chatách! Zvířata mají neuvěřitelný čich. Když něco ucítí, přijdou si pro to. Je jim úplně jedno, že tam spíte. Sladkosti patří do kovových skříní mimo tábor!&quot;</i></p>
+<p>Jenže touha po tajném nočním mlsání byla silnější než strach.</p>
+<p>Některé holky si sladkosti schovaly hluboko do zavazadel. Přímo vedle postelí.</p>
+<p>Netušily, že batoh není pro lesní zvíře překážka. Je to dárkové balení.</p>
+<p>A pak přišla noc – a útok na dvou frontách.</p>
+<p>V první chatě ztuhla <b>Vločka</b> hrůzou. Mýval čenichal stopu cukru pár centimetrů od její tváře. Jeden špatný pohyb a odpálí svou chemickou zbraň, která by chatu zamořila na roky.</p>
+<p>Vločka polohlasně vykřikla. Mýval se lekl, seskočil z kufru a zmizel ve tmě.</p>
+<p>Vyhráno? Ne. Vedle se zrovna kradl batoh.</p>
+<p>Do chaty <b>Pandy</b> se vplížil maskovaný bandita lesa – <b>mýval</b>. Jeho šikovné prsty nahmátly batoh, ucítily kořist – a začaly ho táhnout ven, do lesa.</p>
+
+<p>Panda se probudila přesně ve chvíli, kdy jí batoh mizel ze dveří.</p>
+<p>Neváhala ani vteřinu. Vyskočila z postele a vrhla se do noci za zlodějem.</p>
+<p>Nastal americký wrestling: <b>skautka versus mýval</b>, přetahovaná o popruhy batohu.</p>
+<p>Panda chytila batoh. Mýval se kořisti vzdát nechtěl.</p>
+<p>Do bitvy musela zasáhnout až vyděšená vedoucí, která Pandu rázně okřikla ať toho nechá a zaleze zpátky do chaty – přetahovat se s divokou šelmou o batoh není soutěž, kterou chceš vyhrát, pokud se nejsi připraven na kousance.</p>
+<p>Batoh byl zachráněn. Noční klid v Connecticutu už ne.</p>
+    <img src="legend_images/img14.png" alt="">
+    <div class="learning page-break">
+    <h3>Poučení z americké divočiny</h3>
+    <p><b>Sviští pravidlo č. 13: Jídlo nepatří tam, kde spíš.</b></p>
+    <p>Sladkosti nejsou nebezpečné jen pro zuby. Jsou hlavně cítit – a to na velkou dálku. To, co ty ucítíš na metr, zvíře ucítí přes celý tábor.</p>
+    <p>A s divokou zvěří se o jídlo nikdy nepřetahuj. Batoh se dá koupit nový. Ty ne.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Než večer zalezeš do spacáku, prohledej si batoh a kapsy. Jediný zapomenutý bonbon stačí na to, aby ti v noci někdo přišel na návštěvu.</p>
+</div>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Osím Masakru při Hře Káně</h2>
+<p class="legend-meta">[12. Chata, U Psího zubu, Sázava, 10. – 12.10.2025]</p>
+<p>Sojka schytala šest žihadel.</p>
+<p>Bylo to její první bodnutí v životě.</p>
+<p>Byl říjen 2025, chata <b>U Psího zubu na Sázavě</b>, a Svišti hráli druhé kolo své oblíbené hry <i>Káně</i>. Adrenalin, maskování, plížení mezi stromy a spadaným listím.</p>
+<p>Nikdo z hráčů si nevšiml jedné maličkosti.</p>
+<p>Jedna z krycích pozic ležela přímo nad podzemním hnízdem vos.</p>
+<p>Stačilo pár rychlých kroků. Zdupaná hlína.</p>
+<p>A vosí armáda vyrazila do protiútoku.</p>
+<p><b>Sojku</b> zasáhly jako první. Šest žihadel najednou.</p>
+<p>Do rány vběhl vedoucí <b>Flym</b>, aby situaci zachránil – a dopadl úplně stejně. Dalších šest.</p>
+
+<p>Hra okamžitě skončila. Následovalo chlazení, ošetřování a utěšování. Sázavské vosy toho dne ukázaly svou divokou tvář.</p>
+    <img src="legend_images/img15.png" alt="">
+<div class="learning">
+    <h3>Poučení z osího masakru</h3>
+    <p><b>Sviští pravidlo č. 14: Než si sedneš, podívej se, kam si sedáš.</b></p>
+    <p>V lese se dívej pár metrů před sebe. Zapoj periferní vidění a všímej si, jestli nad zemí nelétá podezřele hodně hmyzu.</p>
+    <p>Vosy si hnízda staví pod zemí – v dírách po hraboších, ve starých pařezech, pod padlým dřevem. Někdy ani nelétají. Jen lezou po zemi kolem svého vchodu.</p>
+    <p>Teprve když je prostor čistý, můžeš si sednout nebo lehnout.</p>
+    <p>A když už žihadlo schytáš? Život tím nekončí. Naopak – je to jedinečná šance ukázat, že umíš překonat bolest. Všichni se dívají. I v téhle chvíli můžeš zůstat klidný a být hrdinou. Nebo hrdinkou.</p>
+</div>
+<div class="challange">
+    <p><b>Výzva:</b> Než si příště v lese sedneš, počítej do tří a rozhlédni se. Tři vteřiny tě můžou ušetřit šesti žihadel.</p>
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="song">
+<h2 class="song-title">Tři čuníci</h2>
+<p class="artist">Jaromír Nohavica</p>
+<pre style="font-size:9.75pt">   <b>C</b>
+1. V řadě za sebou tři čuníci jdou,
+                                  <b>Ami</b>
+   ťápají si v blátě cestou - necestou,
+   <b>Dmi</b>                      <b>G</b>
+   kufry nemají, cestu neznají,
+   <b>Dmi</b>                     <b>G</b>
+   vyšli prostě do světa a vesele si zpívají: uí uí uí ...
+2. Auta jezdí tam, náklaďáky sem,
+   tři čuníci jdou, jdou rovnou za nosem,
+   žito chřoupají, ušima bimbají,
+   vyšli prostě do světa a vesele si zpívají: uí uí uí ...
+3. Levá, pravá - teď!, přední, zadní - už!,
+   tři čuníci jdou, jdou jako jeden muž,
+   lidé zírají, důvod neznají,
+   proč ti malí čuníci tak vesele si zpívají: uí uí uí ...
+4. Když kopýtka pálí, když jim dojde dech,
+   sednou ke studánce na vysoký břeh,
+   kopýtka máchají, ušima bimbají,
+   chvilinku si odpočinou, a pak dál se vydají: uí uí uí ...
+5. Když se spustí déšť, roztrhne se mrak,
+   k sobě přitisknou se čumák na čumák,
+   blesky blýskají, kapky pleskají,
+   oni v dešti, v nepohodě vesele si zpívají: uí uí uí ...
+6. Za tu spoustu let, co je světem svět,
+   přešli zeměkouli třikrát tam a zpět
+   v řadě za sebou, hele, támhle jdou,
+   pojďme s nima zazpívat si jejich píseň veselou: uí uí uí ..</pre>
+</section>
+
+
+
+<section class="song">
+    <h2 class="song-title">Tři kříže</h2>
+    <p class="artist">Hop Trop</p>
+    <pre style="font-size:10.5pt">Předehra: Dmi 2x
+    <b>Dmi</b>          <b>C</b>           <b>Ami</b>
+1. Dávám sbohem břehům proklatejm,
+              <b>Dmi</b>      <b>Ami</b>   <b>Dmi</b>
+   který v drápech má ďábel sám,
+   <b>Dmi</b>         <b>C</b>            <b>Ami</b>
+   bílou přídí šalupa &quot;My Grave&quot;
+           <b>Dmi</b>    <b>Ami</b>      <b>Dmi</b>
+   míří k útesům, který znám.
+   <b>Dmi</b> <b>Ami</b>  <b>F</b>         <b>C</b>       <b>Ami</b>
+R: Jen tři kříže z bílýho kamení
+   <b>Ami</b>    <b>Dmi</b>     <b>Ami</b>    <b>Dmi</b>
+   někdo do písku poskládal,
+     <b>Ami</b>  <b>F</b>            <b>C</b>         <b>Ami</b>
+   slzy v očích měl a v ruce znavený,
+   <b>Ami</b>   <b>Dmi</b>       <b>Ami</b>         <b>Dmi</b>
+   lodní deník, co sám do něj psal.
+2. První kříž má pod sebou jen hřích,
+   samý pití a rvačky jen,
+   chřestot nožů, při kterým přejde smích,
+   srdce kámen a jméno &quot;Sten&quot;.
+R:
+3. Já, Bob Green, mám tváře zjizvený,
+   štěkot psa zněl, když jsem se smál,
+   druhej kříž mám a spím pod zemí,
+   že jsem falešný karty hrál.
+R:
+4. Třetí kříž snad vyvolá jen vztek,
+   Faty Rodgers těm dvoum život vzal,
+   svědomí měl, vedle nich si klek&#x27; ...
+Rec: Snad se chtěl modlit:
+     &quot;Vím, trestat je lidský,
+     ale odpouštět božský,
+     snad mi tedy Bůh odpustí ...&quot;
+R1: Jen tři kříže z bílýho kamení
+    jsem jim do písku poskládal,
+    slzy v očích měl a v ruce znavený,
+    lodní deník a v něm, co jsem psal.</pre>
+</section>
+
+
+
+<section class="song">
+<h2 class="song-title">Za svou pravdou stát</h2>
+<p class="artist">Spirituál kvintet</p>
+<pre style="font-size:9.75pt">Capo II
+předehra pro solo 2 kytara
+<b>Ami,</b> <b>G,</b> <b>Ami,</b> <b>G,</b> <b>Ami,</b>
+<b>Ami,</b> <b>G,</b> <b>F,</b> <b>Ami,</b> <b>E,</b> <b>Ami</b>
+       <b>Ami</b>                   <b>G</b>          <b>Ami</b>
+1. Máš všechny trumfy mládí a ruce čistý máš,
+        <b>Dmi</b>         <b>Ami</b>         <b>E</b>           <b>Ami</b>
+   jen na tobě teď záleží, na jakou hru se dáš.
+             <b>Ami</b>            <b>E</b>          <b>E7</b>             <b>Ami</b>
+R: [:Musíš za svou pravdou stát, musíš za svou pravdou stát :]
+2. Už víš, kolik co stojí, už víš, co bys&#x27; rád měl,
+   už ocenil jsi kompromis a párkrát zapomněl
+R:[:Že máš za svou pravdou stát,že máš za svou pravdou stát :]
+3. Už nejsi žádný elév, co prvně do hry vpad&#x27;,
+   už víš, jak s králem ustoupit a jak s ním dávat mat.
+R:[:Takhle za svou pravdou stát,takhle za svou pravdou stát :]
+4. Teď přichází tvá chvíle, teď nahrává ti čas,
+   tvůj sok poslušně neuhnul - a ty mu zlámeš vaz!
+R: [:Neměl za svou pravdou stát,neměl za svou pravdou stát :]
+5. Tvůj potomek ctí tátu, ty vštěpuješ mu rád
+   to heslo, které dobře znáš z dob, kdy jsi býval mlád.
+6. Máš všechny trumfy mládí a ruce čistý máš,
+   jen na tobě teď záleží, na jakou hru se dáš
+R: [:Musíš za svou pravdou stát, musíš za svou pravdou stát :]
+2x</pre>
+</section>
+
+
+
+<section class="legend">
+<h2 class="legend-title">Legenda o Bivaku pod Bralem, Odhodlané Alici a Vajíčku</h2>
+<p class="legend-meta">[Bivak na Kokořínsku, 12.-14.6.2026]</p>
+<p>Bylo to během deštivého červnového víkendu v roce 2024, konkrétně od 15. do 16. června, kdy Svišti vyrazili na svou v pořadí 9. víkendovou výpravu na tajuplné <b>Kokořínsko</b>. Celý den lilo jako z konve, les byl nasáklý vodou a terén prověřoval morálku celého oddílu. Našli jsme útočiště přímo pod mohutným pískovcovým bradlem, v suchých skalních převisech, které nás chránily před neutichajícím deštěm.</p>
+<p>Když se ráno protnulo s chladným lesním vzduchem, většina skautů se ze svých teplých spacáků zvedala jen velmi neochotně. Ne tak <b>Alice</b>. Ta se probudila s neuvěřitelnou energií a okamžitě chtěla přiložit ruku k dílu. Měla před sebou dvě obrovské osobní výzvy: nesmírně toužila pomoct s ranním úklidem bivaku, ale zároveň měla gigantický hlad a ze všeho nejvíc na světě chtěla k snídani sníst své natvrdo uvařené vajíčko.</p>
+<p>A tehdy to přišlo. Alice, poháněná touhou okamžitě pomáhat, udělala osudovou chybu – potřebovala si na vteřinu uvolnit ruce, a tak své drahocenné vajíčko položila na nešťastně nakloněnou dřevěnou lavičku.</p>
+    <img src="legend_images/img16.png" alt="">
+    <p class="page-break">Vajíčko nečekalo ani vteřinu. Nabralo směr a začalo se bleskově kutálet dolů z lavičky, přímo na strmý svah pod bradlem. Letělo, poskakovalo po kořenech a nabíralo šílenou rychlost dolů z kopce. Celý oddíl ztuhl a všichni s otevřenou pusou koukali, co se stane.</p>
+<p>Alice se však odmítla vzdát své snídaně i svého odhodlání. S divokým startem se bezhlavě vrhla dolů ze srázu za ním. Byl to napínavý závod mezi gravitací a skautskou vytrvalostí. Alice vajíčko nakonec dole v korytě úspěšně dostihla a zachránila. Bylo sice kompletně obalené černým popelem z ohniště, prachem a drsným pískovcovým pískem, ale bylo celé!</p>
+<p>Všichni sledovali, co udělá teď. Alice si vajíčko vítězoslavně vynosila zpátky nahoru do bivaku, klidně ho omyla čistou vodou z čutory, oloupala a do posledního drobečku snědla.</p>
+<div class="learning">
+    <h3>Poučení z Kokořínského vajíčka</h3>
+    <p>Když se tvoje vajíčko (nebo tvůj životní plán) skotálí z kopce a obalí se špínou, prachem a popelem, <b>nikdy to nevzdávej!</b></p>
+    <p>Správný skaut se nezroutí při první katastrofě. Seber veškeré odhodlání, rozběhni se dolů ze svahu, bojuj o to, co je tvoje, a když je to potřeba, omyj to čistou vodou a dokonči, co jsi začal. Vytrvalost a akčnost, jakou ukázala Alice, dokáže překonat jakýkoliv strmý kopec i pískovcovou špínu!</p>
+</div>
+
+</section>
+</body>
+</html>
