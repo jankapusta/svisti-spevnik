@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <title>Zpěvník a Legendy Svišťů</title>
 <style>
-@page { size: 148mm 210mm; margin: 12mm 10mm; }
+@page { size: 148mm 210mm; margin: 12mm 10mm 15mm;
+        @bottom-center { content: counter(page); font-family: Georgia, serif;
+                         font-size: 9pt; color: #666; } }
+@page cover { @bottom-center { content: none; } }
+.titlepage { page: cover; }
+@page toc { margin-bottom: 5mm; @bottom-center { content: none; } }
+.contents { page: toc; }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Georgia, "Times New Roman", serif;
        color: #1a1a1a; line-height: 1.4; }
@@ -17,17 +23,28 @@ h2 {
 }
 .titlepage { text-align: center; break-after: page; padding-top: 10mm; }
 .titlepage img.cover { max-width: 100%; max-height: 150mm; display: block; margin: 0 auto 8mm; }
-.edition { text-align: center; color: #555; font-style: italic; margin: 2px 0; }
-
+.subtitle { text-align: center; color: #555; font-style: italic; margin: 2px 0; }
+.edition { text-align: center; color: #555; font-style: italic; margin: 6px 0 0; font-size: 9pt; }
+.edition p {
+    margin: 0px;
+    padding: 0px;
+}
 /* printed contents page */
 .contents { break-after: page; }
-.contents h1 { font-size: 22pt; margin: 0 0 6px; }
+.contents h1 { font-size: 22pt; margin: 0 0 0px; }
 .c-head { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13pt;
           margin: 12px 0 4px; color: #7a3b12; }
-.c-list { columns: 2; column-gap: 8mm; margin: 0; padding-left: 1.3em;
-          font-size: 9.5pt; line-height: 1.35; }
-.c-list li { break-inside: avoid; margin: 0 0 2px; padding-left: 2px; }
+.c-list { list-style: none; margin: 0; padding: 0;
+          font-size: 9.5pt; line-height: 1.4; }
+.c-songs { columns: 2; column-gap: 8mm; }
 .c-legends { font-size: 9pt; }
+.c-list li { break-inside: avoid; margin: 0 0 2px; }
+.toc-entry { display: flex; align-items: baseline;
+             text-decoration: none; color: inherit; }
+.toc-entry .t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.toc-entry .dots { flex: 1 1 auto; border-bottom: 1px dotted #b0b0b0;
+                   margin: 0 4px; min-width: 8px; position: relative; top: -0.28em; }
+.toc-entry::after { content: target-counter(attr(href url), page); }
 
 section.song, section.legend { break-before: page; }
 
@@ -46,7 +63,7 @@ section.song, section.legend { break-before: page; }
 /* legends */
 .song-title , .legend-title { font-family: "Helvetica Neue", Arial, sans-serif;
                 font-size: 15pt; margin: 0 0 0px; color: #7a3b12; }
-.artist, .legend-meta { color: #666; font-style: italic; font-size: 10pt; margin: 0 0 8px; }
+.artist, .legend-meta { color: #666; font-style: italic; font-size: 10pt; margin: 0 0 1px; }
 
 .legend h3 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12.5pt;
              margin: 14px 0 4px; color: #33691e; }
@@ -64,12 +81,12 @@ section.song, section.legend { break-before: page; }
 /* on-screen: show page-like cards */
 @media screen {
   body { background: #e7e7e7; padding: 20px; }
-  section, .titlepage { background: #fff; width: 148mm; min-height: 210mm;
+  body > section, body > .titlepage { background: #fff; width: 148mm; min-height: 210mm;
     margin: 0 auto 16px; padding: 12mm 10mm; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
 }
 
 @media print {
-    section, .titlepage {  padding: 0mm 5mm; }
+    body > section, body > .titlepage {  padding: 0mm 5mm; }
 }
 </style>
 </head>
@@ -89,15 +106,14 @@ section.song, section.legend { break-before: page; }
     <br/>
     <br/>
     <br/>
-<p class="edition">1. vydání ze dne: 11. 7. 2026</p>
-<p class="edition">sestavil: Samuel Zubo - Jaso</p>
-<p class="edition">technické spracování: Jan Kapusta - Flym</p>
+<p class="subtitle">22. oddíl Svišťů</p>
+<p class="subtitle">Středisko Platan, Praha</p>
 </section>
 
 
 
 
-<section class="song">
+<section class="song" id="s-bedna-od-whisky">
 <h2 class="song-title">Bedna od whisky</h2>
 <p class="artist">Hoboes</p>
 <pre style="font-size:10.5pt">    <b>Ami</b>          <b>C</b>        <b>Ami</b>            <b>E</b>
@@ -135,7 +151,7 @@ R:  .... tak kopni do tý bedny.</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-cervena-reka">
 <h2 class="song-title">Červená řeka</h2>
 <p class="artist">táborové písně</p>
 <pre style="font-size:10.5pt">           <b>D</b>                      <b>G</b>
@@ -183,7 +199,7 @@ Mezihra: jako sloka
 
 
 
-<section class="song">
+<section class="song" id="s-dobru-noc-ma-mila">
 <h2 class="song-title">Dobrú noc, má milá</h2>
 <p class="artist">lidové písně</p>
 <pre style="font-size:10.5pt">   <b>Ami</b>        <b>Dmi</b>     <b>Ami</b>  <b>E</b>  <b>Ami</b>
@@ -202,7 +218,7 @@ Mezihra: jako sloka
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-timovkovi-a-armade-styriceti-klistat">
 <h2 class="legend-title">Legenda o Tímovkovi a Armádě Štyřiceti Klíšťat</h2>
 <p class="legend-meta">47. oddílová schůzka, 4.6.2021</p>
 <p>Čtyřicet.</p>
@@ -226,7 +242,7 @@ Mezihra: jako sloka
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-pyromanovi-jakubovi-a-plastovem-kosi">
 <h2 class="legend-title">Legenda o Pyromanovi Jakubovi a Plastovém Koši</h2>
 <p class="legend-meta">16. oddílová schůzka, Hostivařský lesopark, 11.9.2020</p>
 <p>Jaso ho zahlídl úplně náhodou. Malý kluk, v ruce žhnoucí větev, na tváři naprosto klidný úsměv – a míří rovnou k odpadkovému koši. Zbývaly asi tři vteřiny. Ale popořádku.</p>
@@ -257,7 +273,7 @@ Mezihra: jako sloka
 
 
 
-<section class="song">
+<section class="song" id="s-frantisek">
 <h2 class="song-title">František</h2>
 <p class="artist">Buty</p>
 <pre style="font-size:10.5pt">    <b>G,</b> <b>C,</b> <b>G,</b> <b>C</b>
@@ -310,7 +326,7 @@ Ref: Balabambam, balabambam....
 
 
 
-<section class="song">
+<section class="song" id="s-gronska-pisnicka">
 <h2 class="song-title">Grónská písnička</h2>
 <p class="artist">Jaromír Nohavica</p>
 <pre style="font-size:10.5pt">    <b>D</b>      <b>Emi</b>       <b>A7</b>         <b>D</b>
@@ -345,7 +361,7 @@ Ref: Balabambam, balabambam....
 
 
 
-<section class="song">
+<section class="song" id="s-hlidac-krav">
 <h2 class="song-title">Hlídač krav</h2>
 <p class="artist">Jaromír Nohavica</p>
 <pre style="font-size:9.75pt">Ref: <b>D</b> <b>G</b> <b>A</b> <b>D</b>
@@ -397,7 +413,7 @@ Ref:
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-prvnich-nozich-a-zkousce-ostri">
 <h2 class="legend-title">Legenda o Prvních Nožích a Zkoušce Ostří</h2>
 <p class="legend-meta">54. oddílovka, 28.9.2021</p>
 <p>„Tohle jsou opravdové nože. Jsou hrozně ostré. Nikdy nesahejte na ostří prstem!&quot; Jaso to dořekl. Uběhly dvě vteřiny.</p>
@@ -421,7 +437,7 @@ Ref:
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-tajemstvi-sudetskeho-podzemi-a-odvaze-pruzkumnik">
 <h2 class="legend-title">Legenda o Tajemství Sudetského Podzemí a Odvaze Průzkumníka Tjutjua</h2>
 <p class="legend-meta">2. tábor Svišťů, Šluknov, 1.7.2022</p>
 <p>Lopatka narazila na něco tvrdého.</p>
@@ -465,7 +481,7 @@ Ref:
 
 
 
-<section class="song">
+<section class="song" id="s-ho-ho-watanay">
 <h2 class="song-title">Ho ho Watanay</h2>
 <p class="artist">Žalman</p>
 <pre style="font-size:9.5pt">   D                     C           D
@@ -493,7 +509,7 @@ ena.</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-holky-z-nasi-skolky">
 <h2 class="song-title">Holky z naší školky</h2>
 <p class="artist">Petr Kotvald, Stanislav Hložek</p>
 <pre style="font-size:10.5pt">    <b>D</b>           <b>G</b>        <b>A</b>
@@ -580,7 +596,7 @@ R4. Jé, jé, jé - kdepak ty fajn holky jsou
 
 
 
-<section class="song">
+<section class="song" id="s-hrobar">
 <h2 class="song-title">Hrobař</h2>
 <p class="artist">Premiér</p>
 <pre style="font-size:10.5pt">   <b>D</b>
@@ -609,7 +625,7 @@ R4. Jé, jé, jé - kdepak ty fajn holky jsou
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-vyhasnutem-oku-a-nocnim-vykriku">
 <h2 class="legend-title">Legenda o Vyhasnutém Oku a Nočním Výkřiku</h2>
 <p class="legend-meta">Chata v Měsíčním údolí, 3. chata - 24.-26.3.2023</p>
 <p>Ne leknutí. Křik, jako když někoho drají z kůže.</p>
@@ -640,7 +656,7 @@ R4. Jé, jé, jé - kdepak ty fajn holky jsou
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-kluzkych-skalach-a-prokleti-driftaku">
 <h2 class="legend-title">Legenda o Kluzkých skalách a Prokletí Drifťáků</h2>
 <p class="legend-meta">4. Chata, Chata Prachovka, Prachovské skály, 14.-16.4.2023</p>
 <p>Existuje zvuk, který v lese nechceš nikdy slyšet.</p>
@@ -674,7 +690,7 @@ R4. Jé, jé, jé - kdepak ty fajn holky jsou
 
 
 
-<section class="song">
+<section class="song" id="s-hudsonsky-sify">
 <h2 class="song-title">Hudsonský šífy</h2>
 <p class="artist">Wabi Daněk</p>
 <pre style="font-size:10.0pt">   <b>Am</b>                             <b>C</b>
@@ -743,7 +759,7 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
 
 
 
-<section class="song">
+<section class="song" id="s-chodim-po-broadwayi">
 <h2 class="song-title">Chodím po Broadwayi</h2>
 <p class="artist">táborové písně</p>
 <pre style="font-size:10.5pt">          <b>D</b>
@@ -778,7 +794,7 @@ R: Singi jou jou...</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-jozin-z-bazin">
 <h2 class="song-title">Jožin z bažin</h2>
 <p class="artist">Ivan Mládek</p>
 <pre style="font-size:10.5pt">   <b>Emi</b>                 <b>H7</b>            <b>Emi</b>
@@ -820,7 +836,7 @@ R: Jožin z bažin už je celý bílý,
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-spacovi-a-utoku-hromu-na-vlcich-pramenech">
 <h2 class="legend-title">Legenda o Spáčovi a Útoku Hromů na Vlčích Pramenech</h2>
 <p class="legend-meta">3. tábor Svišťů, 1.-15.7.2023</p>
 <p>Svišti  spali na zádech, obličejem k hvězdám. Proto první kapku ucítili přímo do očí.</p>
@@ -861,7 +877,7 @@ R: Jožin z bažin už je celý bílý,
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-prokleti-ledoveho-diamantu-a-nezlomnem-hadeti">
 <h2 class="legend-title">Legenda o Prokletí Ledového Diamantu a Nezlomném Háděti</h2>
 <p class="legend-meta">7. chata - U Pepu, Jizerské hory, 8.-10.12.2023</p>
 <p>Hádě se podívala Jasovi přímo do očí.</p>
@@ -896,7 +912,7 @@ R: Jožin z bažin už je celý bílý,
 
 
 
-<section class="song">
+<section class="song" id="s-kdyz-si-bajecnou-zenskou">
 <h2 class="song-title">Když si báječnou ženskou...</h2>
 <p class="artist">Traband</p>
 <pre style="font-size:10.5pt">Živió, živió, živió, živió
@@ -932,7 +948,7 @@ vezme idiot idiot idiot idiot</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-lod-john-b">
 <h2 class="song-title">Loď John B</h2>
 <p class="artist">táborové písně</p>
 <pre style="font-size:10.5pt">      <b>G</b>
@@ -976,7 +992,7 @@ R: Tak nechte mě plout...</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-mezi-horami">
 <h2 class="song-title">Mezi horami</h2>
 <p class="artist">Čechomor</p>
 <pre style="font-size:10.5pt">    <b>Dmi</b>  <b>C</b>  <b>Dmi</b>  <b>F</b>     <b>C</b>   <b>F</b>
@@ -993,7 +1009,7 @@ R: Tak nechte mě plout...</pre>
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-prchajici-lavce-a-jak-se-ucime-z-neuspechu">
 <h2 class="legend-title">Legenda o Prchající Lávce a Jak se Učíme z Neúspěchů</h2>
 <p class="legend-meta">7. přespávačka v klubovně a stavba 1. (25.2.2023), 2. (28.11.2023), 3. (16.11.2024), lávky přes potok] https://mapy.com/s/jokuzologu</p>
 <p>Dvakrát nás potok porazil.</p>
@@ -1029,7 +1045,7 @@ R: Tak nechte mě plout...</pre>
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-velkem-patrani-po-ztracene-pande-a-vrtulniku">
 <h2 class="legend-title">Legenda o Velkém Pátrání po Ztracené Pandě a Vrtulníku</h2>
 <p class="legend-meta">8. přespávačka v klubovně, 22. – 23.3.2025</p>
 <p>Do vzletu policejního vrtulníku zbývala jediná minuta.</p>
@@ -1078,7 +1094,7 @@ R: Tak nechte mě plout...</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-mrazik">
 <h2 class="song-title">Mrazík</h2>
 <p class="artist">Brontosauři</p>
 <pre style="font-size:10.5pt">     <b>Ami</b>
@@ -1108,7 +1124,7 @@ R:</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-promeny">
 <h2 class="song-title">Proměny</h2>
 <p class="artist">Čechomor</p>
 <pre style="font-size:10.5pt"><b>Ami</b>                <b>G</b>         <b>C</b>
@@ -1150,7 +1166,7 @@ A ty musíš býti má lebo mi tě Pán Bůh dá
 
 
 
-<section class="song">
+<section class="song" id="s-sedm-dostavniku">
 <h2 class="song-title">Sedm dostavníků</h2>
 <p class="artist">Waldemar Matuška</p>
 <pre style="font-size:10.5pt"> <b>Fm</b>
@@ -1198,7 +1214,7 @@ Ref: Hyja, hyja, hou! Dlouhá bude cesta,
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-silenstvi-na-korzarske-louce-a-ztracene-cti">
 <h2 class="legend-title">Legenda o Šílenství na Korzárské louce a Ztracené Cti</h2>
 <p class="legend-meta">oddílová schůzka v Hostivařském parku, červen 2025</p>
 <p>Kluků bylo víc. </p>
@@ -1233,7 +1249,7 @@ Ref: Hyja, hyja, hou! Dlouhá bude cesta,
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-ztracenem-case-a-prokleti-broadwaye">
 <h2 class="legend-title">Legenda o Ztraceném Čase a Prokletí Broadwaye</h2>
 <p class="legend-meta">New York City, 1.-6.7.2025</p>
 <p>Flym byl ten večer jediný člověk na Broadwayi, který se díval na <i>Hamiltona</i> – a nakonec vůbec netušil, co pro svobodu Ameriky znamenal.</p>
@@ -1264,7 +1280,7 @@ Ref: Hyja, hyja, hou! Dlouhá bude cesta,
 
 
 
-<section class="song">
+<section class="song" id="s-severni-vitr">
 <h2 class="song-title">Severní vítr</h2>
 <p class="artist">Zdeněk Svěrák, Jaroslav Uhlíř</p>
 <pre style="font-size:10.5pt">       D                    Hmi
@@ -1317,7 +1333,7 @@ R: Severní vítr je krutý, počítej lásko má s tím,
 
 
 
-<section class="song">
+<section class="song" id="s-stanky">
 <h2 class="song-title">Stánky</h2>
 <p class="artist">Jan Nedvěd</p>
 <pre style="font-size:10.5pt">   <b>D</b>           <b>G</b>
@@ -1351,7 +1367,7 @@ R:</pre>
 </section>
 
 
-<section class="song">
+<section class="song" id="s-tisic-mil">
     <h2 class="song-title">Tisíc mil</h2>
     <p class="artist">Spirituál kvintet</p>
     <pre style="font-size:10.5pt">             <b>G</b>            <b>Emi</b>
@@ -1382,7 +1398,7 @@ R:</pre>
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-nocnich-lovcich-a-souboji-o-pandin-batoh">
 <h2 class="legend-title">Legenda o Nočních Lovcích a Souboji o Pandin Batoh</h2>
 <p class="legend-meta">Camp Sequassen, Connecticut (USA), 6.-12.7.2025</p>
 <p>Vločka otevřela oči.</p>
@@ -1421,7 +1437,7 @@ R:</pre>
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-osim-masakru-pri-hre-kane">
 <h2 class="legend-title">Legenda o Osím Masakru při Hře Káně</h2>
 <p class="legend-meta">12. Chata, U Psího zubu, Sázava, 10. – 12.10.2025</p>
 <p>Sojka schytala šest žihadel.</p>
@@ -1455,7 +1471,7 @@ R:</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-tri-cunici">
 <h2 class="song-title">Tři čuníci</h2>
 <p class="artist">Jaromír Nohavica</p>
 <pre style="font-size:9.75pt">   <b>C</b>
@@ -1490,7 +1506,7 @@ R:</pre>
 
 
 
-<section class="song">
+<section class="song" id="s-tri-krize">
     <h2 class="song-title">Tři kříže</h2>
     <p class="artist">Hop Trop</p>
     <pre style="font-size:10.5pt">Předehra: Dmi 2x
@@ -1535,7 +1551,7 @@ R1: Jen tři kříže z bílýho kamení
 
 
 
-<section class="song">
+<section class="song" id="s-za-svou-pravdou-stat">
 <h2 class="song-title">Za svou pravdou stát</h2>
 <p class="artist">Spirituál kvintet</p>
 <pre style="font-size:9.75pt">Capo II
@@ -1567,7 +1583,7 @@ R: [:Musíš za svou pravdou stát, musíš za svou pravdou stát :]
 
 
 
-<section class="legend">
+<section class="legend" id="l-legenda-o-bivaku-pod-bralem-odhodlane-alici-a-vajicku">
 <h2 class="legend-title">Legenda o Bivaku pod Bralem, Odhodlané Alici a Vajíčku</h2>
 <p class="legend-meta">Bivak na Kokořínsku, 12.-14.6.2026</p>
 
@@ -1594,52 +1610,58 @@ R: [:Musíš za svou pravdou stát, musíš za svou pravdou stát :]
     <h1>Obsah</h1>
     <h2 class="c-head">Písně</h2>
     <ol class="c-list c-songs">
-        <li>Bedna od whisky</li>
-        <li>Červená řeka</li>
-        <li>Dobrú noc, má milá</li>
-        <li>František</li>
-        <li>Grónská písnička</li>
-        <li>Hlídač krav</li>
-        <li>Ho ho Watanay</li>
-        <li>Holky z naší školky</li>
-        <li>Hrobař</li>
-        <li>Hudsonský šífy</li>
-        <li>Chodím po Broadwayi</li>
-        <li>Jožin z bažin</li>
-        <li>Když si báječnou ženskou...</li>
-        <li>Loď John B</li>
-        <li>Mezi horami</li>
-        <li>Mrazík</li>
-        <li>Proměny</li>
-        <li>Sedm dostavníků</li>
-        <li>Severní vítr</li>
-        <li>Stánky</li>
-        <li>Tři kříže</li>
-        <li>Tisíc mil</li>
-        <li>Tři čuníci</li>
-        <li>Za svou pravdou stát</li>
+        <li><a class="toc-entry" href="#s-bedna-od-whisky"><span class="t">Bedna od whisky</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-cervena-reka"><span class="t">Červená řeka</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-dobru-noc-ma-mila"><span class="t">Dobrú noc, má milá</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-frantisek"><span class="t">František</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-gronska-pisnicka"><span class="t">Grónská písnička</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-hlidac-krav"><span class="t">Hlídač krav</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-ho-ho-watanay"><span class="t">Ho ho Watanay</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-holky-z-nasi-skolky"><span class="t">Holky z naší školky</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-hrobar"><span class="t">Hrobař</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-hudsonsky-sify"><span class="t">Hudsonský šífy</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-chodim-po-broadwayi"><span class="t">Chodím po Broadwayi</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-jozin-z-bazin"><span class="t">Jožin z bažin</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-kdyz-si-bajecnou-zenskou"><span class="t">Když si báječnou ženskou...</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-lod-john-b"><span class="t">Loď John B</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-mezi-horami"><span class="t">Mezi horami</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-mrazik"><span class="t">Mrazík</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-promeny"><span class="t">Proměny</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-sedm-dostavniku"><span class="t">Sedm dostavníků</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-severni-vitr"><span class="t">Severní vítr</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-stanky"><span class="t">Stánky</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-tisic-mil"><span class="t">Tisíc mil</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-tri-cunici"><span class="t">Tři čuníci</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-tri-krize"><span class="t">Tři kříže</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#s-za-svou-pravdou-stat"><span class="t">Za svou pravdou stát</span><span class="dots"></span></a></li>
     </ol>
     <h2 class="c-head">Legendy</h2>
     <ol class="c-list c-legends">
-        <li>Legenda o Tímovkovi a Armádě Štyřiceti Klíšťat</li>
-        <li>Legenda o Pyromanovi Jakubovi a Plastovém Koši</li>
-        <li>Legenda o Prvních Nožích a Zkoušce Ostří</li>
-        <li>Legenda o Tajemství Sudetského Podzemí a Odvaze Průzkumníka Tjutjua</li>
-        <li>Legenda o Vyhasnutém Oku a Nočním Výkřiku</li>
-        <li>Legenda o Kluzkých skalách a Prokletí Drifťáků</li>
-        <li>Legenda o Spáčovi a Útoku Hromů na Vlčích Pramench</li>
-        <li>Legenda o Prokletí Ledového Diamantu a Nezlomném Háděti</li>
-        <li>Legenda o Prchající Lávce a Jak se Učíme z Neúspěchů</li>
-        <li>Legenda o Velkém Pátrání po Ztracené Pandě a Vrtulníku</li>
-        <li>Legenda o Šílenství na Korzárské louce a Ztracené Cti</li>
-        <li>Legenda o Ztraceném Čase a Prokletí Broadwaye</li>
-        <li>Legenda o Nočních Lovcích a Souboji o Pandin Batoh</li>
-        <li>Legenda o Osím Masakru při Hře Káně</li>
-        <li>Legenda o Bivaku pod Bralem, Odhodlané Alici a Vajíčku</li>
+        <li><a class="toc-entry" href="#l-legenda-o-timovkovi-a-armade-styriceti-klistat"><span class="t">Legenda o Tímovkovi a Armádě Štyřiceti Klíšťat</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-pyromanovi-jakubovi-a-plastovem-kosi"><span class="t">Legenda o Pyromanovi Jakubovi a Plastovém Koši</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-prvnich-nozich-a-zkousce-ostri"><span class="t">Legenda o Prvních Nožích a Zkoušce Ostří</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-tajemstvi-sudetskeho-podzemi-a-odvaze-pruzkumnik"><span class="t">Legenda o Tajemství Sudetského Podzemí a Odvaze Průzkumníka Tjutjua</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-vyhasnutem-oku-a-nocnim-vykriku"><span class="t">Legenda o Vyhasnutém Oku a Nočním Výkřiku</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-kluzkych-skalach-a-prokleti-driftaku"><span class="t">Legenda o Kluzkých skalách a Prokletí Drifťáků</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-spacovi-a-utoku-hromu-na-vlcich-pramenech"><span class="t">Legenda o Spáčovi a Útoku Hromů na Vlčích Pramenech</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-prokleti-ledoveho-diamantu-a-nezlomnem-hadeti"><span class="t">Legenda o Prokletí Ledového Diamantu a Nezlomném Háděti</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-prchajici-lavce-a-jak-se-ucime-z-neuspechu"><span class="t">Legenda o Prchající Lávce a Jak se Učíme z Neúspěchů</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-velkem-patrani-po-ztracene-pande-a-vrtulniku"><span class="t">Legenda o Velkém Pátrání po Ztracené Pandě a Vrtulníku</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-silenstvi-na-korzarske-louce-a-ztracene-cti"><span class="t">Legenda o Šílenství na Korzárské louce a Ztracené Cti</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-ztracenem-case-a-prokleti-broadwaye"><span class="t">Legenda o Ztraceném Čase a Prokletí Broadwaye</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-nocnich-lovcich-a-souboji-o-pandin-batoh"><span class="t">Legenda o Nočních Lovcích a Souboji o Pandin Batoh</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-osim-masakru-pri-hre-kane"><span class="t">Legenda o Osím Masakru při Hře Káně</span><span class="dots"></span></a></li>
+        <li><a class="toc-entry" href="#l-legenda-o-bivaku-pod-bralem-odhodlane-alici-a-vajicku"><span class="t">Legenda o Bivaku pod Bralem, Odhodlané Alici a Vajíčku</span><span class="dots"></span></a></li>
     </ol>
+    <div class="edition">
+    <p >1. vydání ze dne: 11. 7. 2026</p>
+    <p >sestavil: Samuel Zubo - Jaso</p>
+    <p >technické spracování: Jan Kapusta - Flym</p>
+    </div>
 </section>
 
 
 
+<script src="paged.polyfill.js"></script>
 </body>
 </html>
