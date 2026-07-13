@@ -12,10 +12,10 @@ so it can be printed "2 pages per A4, double-sided" and each A4 sheet folded onc
 IMPORTANT: this works on the RENDERED PDF, not on index.html. Page breaks and the
 printed page numbers are produced by the Paged.js renderer when the HTML is
 exported to PDF. Reordering the PDF keeps each page's content AND its printed
-number exactly as-is and only changes the order — which is what we want.
+number exactly as-is and only changes the order -- which is what we want.
 So the workflow is:
     1. Export index.html -> PDF the way you already do (Zpevnik-a-Legendy-Svistu.pdf)
-    2. Run this script.
+    2. Run this script:  python3 ./make_a4_print_order.py
 
 If the total page count is not a multiple of 4, blank pages are appended at the
 end so the last A4 sheet is complete.
@@ -25,17 +25,62 @@ Usage:
 Defaults:
     input  = Zpevnik-a-Legendy-Svistu.pdf
     output = Zpevnik-A4-tisk.pdf
-"""
-import sys
-import os
 
-try:
-    from pypdf import PdfReader, PdfWriter, PageObject
-except ImportError:
-    sys.exit("Missing dependency 'pypdf'. Install it with:\n    pip3 install pypdf")
+You do NOT need to install anything by hand. On first run the script creates a
+local .venv next to itself and installs pypdf there, then re-runs itself with it.
+"""
+import os
+import subprocess
+import sys
+
+
+def _ensure_pypdf():
+    """Make `import pypdf` work. If it isn't available in the current interpreter,
+    create/use a local .venv, install pypdf there, and re-exec with that python."""
+    try:
+        import pypdf  # noqa: F401
+        return
+    except ImportError:
+        pass
+
+    here = os.path.dirname(os.path.abspath(__file__))
+    venv = os.path.join(here, ".venv")
+    vpy = os.path.join(venv, "bin", "python")            # POSIX (macOS/Linux)
+    if not os.path.exists(vpy):
+        vpy = os.path.join(venv, "Scripts", "python.exe")  # Windows fallback
+
+    # NB: compare sys.prefix, not the executable path -- a venv's python is a
+    # symlink to the same base binary, so realpath(sys.executable) is identical
+    # in both. sys.prefix, however, points at the venv dir when running its python.
+    already_in_venv = os.path.realpath(sys.prefix) == os.path.realpath(venv)
+
+    try:
+        if not os.path.exists(vpy):
+            print("First run: creating local .venv and installing pypdf ...")
+            subprocess.check_call([sys.executable, "-m", "venv", venv])
+            vpy = os.path.join(venv, "bin", "python")
+            if not os.path.exists(vpy):
+                vpy = os.path.join(venv, "Scripts", "python.exe")
+        # install/upgrade pypdf inside the venv (venvs are not PEP-668 locked)
+        subprocess.check_call([vpy, "-m", "pip", "install", "--quiet",
+                               "--disable-pip-version-check", "pypdf"])
+    except (subprocess.CalledProcessError, OSError) as e:
+        sys.exit(f"Could not set up pypdf automatically ({e}).\n"
+                 f"Manual fix:\n"
+                 f"    python3 -m venv .venv && ./.venv/bin/pip install pypdf\n"
+                 f"then run:  ./.venv/bin/python make_a4_print_order.py")
+
+    if already_in_venv:
+        # We are the venv python and pypdf is now installed -> just continue.
+        return
+    # Re-launch this script with the venv's python.
+    os.execv(vpy, [vpy, os.path.abspath(__file__)] + sys.argv[1:])
 
 
 def main():
+    _ensure_pypdf()
+    from pypdf import PdfReader, PdfWriter, PageObject
+
     inp = sys.argv[1] if len(sys.argv) > 1 else "Zpevnik-a-Legendy-Svistu.pdf"
     out = sys.argv[2] if len(sys.argv) > 2 else "Zpevnik-A4-tisk.pdf"
 
