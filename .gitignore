@@ -3,3 +3,8 @@ sourcePDF
 *.bak
 *.bak2
 /images
+# generated / local artifacts
+*.pdf
+.venv/
+legend_images/_originals/
+.DS_Store
