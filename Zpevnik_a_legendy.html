@@ -37,7 +37,7 @@ h2 {
 }
 /* printed contents page */
 .contents { break-after: page; }
-.contents h1 { font-size: 18pt; margin: 0 0 0px; }
+.contents h1 { font-size: 15pt; margin: 0 0 0px;  color: #7a3b12;  }
 .c-head { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13pt;
           margin: 12px 0 4px; color: #7a3b12; }
 .c-list { list-style: none; margin: 0; padding: 0;
@@ -65,12 +65,20 @@ section.song, section.legend { break-before: page; }
             white-space: pre; margin: 0; line-height: 1.12;
             font-variant-ligatures: none; }
 .song pre b { font-weight: 700; }
-.song pre.stanza { break-inside: avoid; }
-
+.song pre.stanza { break-inside: avoid; margin-top: 12px;}
+.song pre {
+    font-size:10.5pt;
+}
+.song.tight pre {
+    font-size:9.5pt;
+}
 /* legends */
 .song-title , .legend-title { font-family: "Helvetica Neue", Arial, sans-serif;
                 font-size: 15pt; margin: 0 0 0px; color: #7a3b12; }
 .artist, .legend-meta { color: #666; font-style: italic; font-size: 10pt; margin: 0 0 1px; }
+.artist {
+    margin-bottom: 6px;
+}
 
 .legend h3 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12.5pt;
              margin: 14px 0 4px; color: #33691e; }
@@ -119,7 +127,9 @@ section.song, section.legend { break-before: page; }
 <section class="song" id="s-bedna-od-whisky">
 <h2 class="song-title">Bedna od whisky</h2>
 <p class="artist">Hoboes</p>
-<pre style="font-size:10.5pt">    <b>Ami</b>          <b>C</b>        <b>Ami</b>            <b>E</b>
+
+<pre>
+    <b>Ami</b>          <b>C</b>        <b>Ami</b>            <b>E</b>
 1. Dneska už mně fóry ňák nejdou přes pysky,
     <b>Ami</b>              <b>C</b>          <b>Ami</b>   <b>E</b>       <b>Ami</b>
    stojím s dlouhou kravatou na bedně vod whisky,
@@ -127,6 +137,7 @@ section.song, section.legend { break-before: page; }
    stojím s dlouhým vobojkem jak stájovej pinč,
        <b>Ami</b>        <b>C</b>         <b>Ami</b>     <b>E</b>      <b>Ami</b>   <b>A</b>
    tu kravatu, co nosím, mi navlík&#x27; soudce Lynč.
+
         <b>A</b>          <b>D</b>         <b>E</b>           <b>A</b>
 R.:Tak kopni do tý bedny, ať panstvo nečeká,
                       <b>D</b>           <b>E</b>        <b>A</b>
@@ -135,27 +146,33 @@ R.:Tak kopni do tý bedny, ať panstvo nečeká,
    do nebeskýho baru, já sucho v krku mám,
                    <b>D</b>         <b>E</b>           <b>A</b>   <b>Ami</b>
    tak kopni do tý bedny, ať na cestu se dám.
+
 2. Mít tak všechny bedny od whisky vypitý,
    postavil bych malej dům na louce ukrytý,
    postavil bych malej dům a z vokna koukal ven
    a chlastal bych tam s Bilem a chlastal by tam Ben.
+
 R:
+
 3. Kdyby jsi se, hochu, jen porád nechtěl rvát,
    nemusel jsi dneska na týhle bedně stát,
    moh&#x27; jsi někde v suchu tu svoji whisku pít,
    nemusel jsi dneska na krku laso mít.
+
 R:
+
 4. Až kopneš do tý bedny, jak se to dělává,
    do krku mi zvostane jen dírka mrňavá,
    jenom dírka mrňavá a k smrti jenom krok,
    má to smutnej konec a whisky ani lok.
+
 R:  .... tak kopni do tý bedny.</pre>
 </section>
 
 <section class="song" id="s-buraky">
 <h2 class="song-title">Buráky</h2>
 <p class="artist">Michal Tučný</p>
-<pre style="font-size:10.5pt">        <b>D</b>           <b>D</b>         <b>G</b>             <b>D</b>
+<pre>        <b>D</b>           <b>D</b>         <b>G</b>             <b>D</b>
 1. Když Sever válčí s Jihem a zem jde do války,
    <b>D</b>                <b>D</b>           <b>E</b>         <b>A</b>
    na polích místo bavlny teď rostou bodláky.
@@ -163,6 +180,7 @@ R:  .... tak kopni do tý bedny.</pre>
    Ve stínu u silnice vidíš z Jihu vojáky,
    <b>D</b>          <b>D</b>       <b>A</b>           <b>D</b>
    jak válejí líně a louskaj&#x27; buráky.
+
         <b>D</b>       <b>D</b>        <b>G</b>            <b>D</b>
 R: Hej hou, hej hou, nač chodit do války,
    <b>D</b>             <b>D</b>       <b>E</b>           <b>A</b>
@@ -171,6 +189,7 @@ R: Hej hou, hej hou, nač chodit do války,
    Hej hou, hej hou, nač chodit do války,
    <b>D</b>             <b>D</b>       <b>A</b>           <b>D</b>
    je lepší doma sedět a louskat buráky.
+
    <b>D</b>             <b>D</b>            <b>G</b>           <b>D</b>
 2. Plukovník je v sedle, volá:&quot;Yankeeové jdou!&quot;,
    <b>D</b>                   <b>D</b>          <b>E</b>          <b>A</b>
@@ -179,7 +198,9 @@ R: Hej hou, hej hou, nač chodit do války,
    Plukovník se otočí a koukne do dálky,
    <b>D</b>               <b>D</b>          <b>A</b>          <b>D</b>
    tam jeho slavná armáda teď louská buráky.
+
 R: Hej hou...
+
    <b>D</b>              <b>D</b>        <b>G</b>             <b>D</b>
 3. Až tahle válka skončí a jestli budem žít,
    <b>D</b>             <b>D</b>        <b>E</b>           <b>A</b>
@@ -188,16 +209,17 @@ R: Hej hou...
    Když se zeptaj&#x27;:&quot;Hrdino, cos&#x27; dělal za války?&quot;
     <b>D</b>                 <b>D</b>          <b>A</b>           <b>D</b>
    &quot;Já flákal jsem se s kvérem a louskal buráky.&quot;
+
 R: Hej hou...</pre>
 </section>
 
 
 
 
-<section class="song" id="s-cervena-reka">
+<section class="song tight" id="s-cervena-reka">
 <h2 class="song-title">Červená řeka</h2>
 <p class="artist">táborové písně</p>
-<pre style="font-size:10.5pt">           <b>D</b>                      <b>G</b>
+<pre>           <b>D</b>                      <b>G</b>
 1. Pod tou skálou, kde proud řeky syčí
          <b>D</b>               <b>A</b>
    a kde ční červený kamení,
@@ -205,6 +227,7 @@ R: Hej hou...</pre>
    žije ten, co mi jen srdce ničí,
          <b>D</b>       <b>A</b>            <b>D</b>
    koho já ráda mám k zbláznění.
+
            <b>D</b>                     <b>G</b>
 2. Vím, že lásku jak trám lehce slíbí,
           <b>D</b>                 <b>A</b>
@@ -213,6 +236,7 @@ R: Hej hou...</pre>
    ale já ho chci mít, mně se líbí,
             <b>D</b>         <b>A</b>       <b>D</b>
    bez něj žít už mě dál nebaví.
+
            <b>D</b>                     <b>G</b>
 3. Často k nám jezdívá s kytkou růží,
          <b>D</b>                 <b>A</b>
@@ -221,6 +245,7 @@ R: Hej hou...</pre>
    vestu má ušitou z hadích k ůží,
          <b>D</b>           <b>A</b>        <b>D</b>
    bitej pás, na něm pár pistolí.
+
             <b>D</b>                       <b>G</b>
 4. Hned se ptá, jak se mám, jak se daří,
           <b>D</b>                    <b>A</b>
@@ -245,7 +270,8 @@ Mezihra: jako sloka
 <section class="song" id="s-dobru-noc-ma-mila">
 <h2 class="song-title">Dobrú noc, má milá</h2>
 <p class="artist">lidové písně</p>
-<pre style="font-size:10.5pt">   <b>Ami</b>        <b>Dmi</b>     <b>Ami</b>  <b>E</b>  <b>Ami</b>
+<pre>
+   <b>Ami</b>        <b>Dmi</b>     <b>Ami</b>  <b>E</b>  <b>Ami</b>
 1. Dobrú noc, má milá, dobrú noc,
    <b>Ami</b>        <b>Dmi</b>       <b>Ami</b>   <b>E</b>  <b>Ami</b>
    nech ti je sám Pánboh na  pomoc!
@@ -253,6 +279,7 @@ Mezihra: jako sloka
    |: Dobrú noc, dobre   spi,
    <b>Ami</b>        <b>Dmi</b>    <b>Ami</b>   <b>E</b>  <b>Ami</b>
    nech sa ti snívajú sladké  sny. :|
+
 2. Dobrú noc, má milá, dobrú noc,
    nech je ti sám Pánboh na pomoc!
    Dobrú noc, dobre spi,
@@ -316,10 +343,10 @@ Mezihra: jako sloka
 
 
 
-<section class="song" id="s-frantisek">
+<section class="song tight" id="s-frantisek">
 <h2 class="song-title">František</h2>
 <p class="artist">Buty</p>
-<pre style="font-size:10.5pt">    <b>G,</b> <b>C,</b> <b>G,</b> <b>C</b>
+<pre>    <b>G,</b> <b>C,</b> <b>G,</b> <b>C</b>
    <b>G</b>                              <b>C</b>
 1. Na hladinu rybníka svítí sluníčko
    <b>Emi</b>                          <b>G</b>
@@ -328,10 +355,12 @@ Mezihra: jako sloka
    které tam zasadil jeden hodný člověk,
    <b>Ami</b>                   <b>D</b>
    jmenoval se František Dobrota.
+
 2. František Dobrota, rodák z blízké vesnice,
    měl hodně dětí a jednu starou babičku,
    která když umírala, tak mu řekla: Františku,
    teď dobře poslouchej, co máš všechno udělat.
+
      <b>C</b>                     <b>D</b>
 Ref: Balabambam, balabambam....
      <b>C</b>                     <b>D</b>
@@ -340,6 +369,7 @@ Ref: Balabambam, balabambam....
      balabambam, balabambam....
      <b>Ami</b>                             <b>D</b>
      a kolem rybníka nahusto nasázet topoly.
+
    <b>G</b>                                  <b>C</b>
 3. František udělal všechno, co mu řekla,
    <b>C</b>
@@ -350,6 +380,7 @@ Ref: Balabambam, balabambam....
    žebřiňák s nářadím dotáhl od chalupy k rybníku,
    <b>Ami</b>                    <b>D</b>
    vykopal díry a zasadil topoly.
+
    <b>G</b>                               <b>C</b>
 4. Od té doby vítr na hladinu nefouká,
    <b>Emi</b>                         <b>G</b>
@@ -367,7 +398,7 @@ Ref: Balabambam, balabambam....
 <section class="song" id="s-gronska-pisnicka">
 <h2 class="song-title">Grónská písnička</h2>
 <p class="artist">Jaromír Nohavica</p>
-<pre style="font-size:10.5pt">    <b>D</b>      <b>Emi</b>       <b>A7</b>         <b>D</b>
+<pre>    <b>D</b>      <b>Emi</b>       <b>A7</b>         <b>D</b>
 1. Daleko na severu je Grónská zem,
     <b>D</b>       <b>Emi</b>         <b>A7</b>     <b>D</b>
    žije tam Eskymačka s Eskymákem,
@@ -375,22 +406,27 @@ Ref: Balabambam, balabambam....
    [: my bychom umrzli, jim není zima,
                <b>Emi</b>   <b>A7</b>     <b>D</b>
       snídají nanuky a eskima. :]
+
 2. Mají se bezvadně, vyspí se moc,
    půl roku trvá tam polární noc,
    [: na jaře vzbudí se a vyběhnou ven,
       půl roku trvá tam polární den. :]
+
 3. Když sněhu napadne nad kotníky,
    hrávají s medvědy na četníky,
    [: medvědi těžko jsou k poražení,
       neboť medvědy ve sněhu vidět není. :]
+
 4. Pokaždé ve středu, přesně ve dvě
    zaklepe na na íglů hlavní medvěd:
    [: &quot;Dobrý den, mohu dál na vteřinu?
       Nesu vám trochu ryb na svačinu.&quot; :]
+
 5. V kotlíku bublá čaj, kamna hřejí,
    psi venku hlídají před zloději,
    [: smíchem se otřásá celé íglů,
       neboť medvěd jim předvádí spoustu fíglů. :]
+
 6. Tak žijou vesele na severu,
    srandu si dělají z teploměrů,
    [: my bychom umrzli, jim není zima,
@@ -470,10 +506,10 @@ Ref: Balabambam, balabambam....
 
 
 
-<section class="song" id="s-hlidac-krav">
+<section class="song tight" id="s-hlidac-krav">
     <h2 class="song-title">Hlídač krav</h2>
     <p class="artist">Jaromír Nohavica</p>
-    <pre style="font-size:9.75pt">Ref: <b>D</b> <b>G</b> <b>A</b> <b>D</b>
+    <pre>Ref: <b>D</b> <b>G</b> <b>A</b> <b>D</b>
 2x
    <b>D</b>
 1. Když jsem byl malý, říkali mi naši,
@@ -485,6 +521,7 @@ Ref: Balabambam, balabambam....
    bere velký peníze a škrábe se v uchu,
    <b>G</b>                      <b>A</b>                <b>D</b>
    já jim ale na to řek, chci být hlídačem krav.&quot;
+
      <b>D</b>
 Ref: Já chci mít čapku s bambulí nahoře,
      jíst kaštany, mýt se v lavoře,
@@ -521,10 +558,10 @@ Ref:
 </section>
 
 
-<section class="song" id="s-holky-z-nasi-skolky">
+<section class="song tight" id="s-holky-z-nasi-skolky">
 <h2 class="song-title">Holky z naší školky</h2>
 <p class="artist">Petr Kotvald, Stanislav Hložek</p>
-<pre class="stanza" style="font-size:10.5pt">    <b>D</b>           <b>G</b>        <b>A</b>
+<pre class="stanza">    <b>D</b>           <b>G</b>        <b>A</b>
 1. Majdalenka, Apolenka s Veronikou
            <b>D</b>              <b>G</b>            <b>A</b>
    A taky Věrka, Zdeňka, Majka, Lenka s Monikou
@@ -532,6 +569,7 @@ Ref:
    No jasně Klára, Ančí, Bára, Mančí už nevím čí
                <b>D</b>          <b>G</b>             <b>C</b>    <b>A</b>
    To všechno byly holky z naší školky senzační.
+
     <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
 R1. Jé, jé, jé - kdepak ty fajn holky jsou
            <b>D</b>          <b>G</b>
@@ -544,7 +582,7 @@ R1. Jé, jé, jé - kdepak ty fajn holky jsou
     Bylo nám právě šest
             <b>Asus4</b>        <b>A</b>
     A začlo další dívčí šou.</pre>
-<pre class="stanza" style="font-size:10.5pt">            <b>D</b>        <b>G</b>          <b>A</b>
+<pre class="stanza">            <b>D</b>        <b>G</b>          <b>A</b>
 2. Ve škole Daniela, Michaela s Romanetou
            <b>D</b>       <b>G</b>            <b>A</b>
    A taky Adriana, Mariana se Žanetou
@@ -552,6 +590,7 @@ R1. Jé, jé, jé - kdepak ty fajn holky jsou
    A hlavně prima Radka, kamarádka, co všechno ví
                <b>D</b>          <b>G</b>            <b>C</b>    <b>A</b>
    Tyhlety holky byly naše víly školních dní.
+
      <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
 R2. Jé, jé, jé - kdepak ty fajn holky jsou
            <b>D</b>          <b>G</b>
@@ -564,7 +603,7 @@ R2. Jé, jé, jé - kdepak ty fajn holky jsou
     Táhlo nám na patnáct
             <b>Asus4</b>        <b>A</b>
     A začlo další dívčí šou.</pre>
-<pre class="stanza" style="font-size:10.5pt">             <b>D</b>            <b>G</b>              <b>A</b>
+<pre class="stanza" >             <b>D</b>            <b>G</b>              <b>A</b>
 3. Na gymplu bezva Šárka, třída Klárka, Táňa jak sen
            <b>D</b>            <b>G</b>              <b>A</b>
    A taky senza Jenka v podkolenkách, veselá jen
@@ -572,6 +611,7 @@ R2. Jé, jé, jé - kdepak ty fajn holky jsou
    A všechny v sexy tričku postavičku měli ham ham
               <b>D</b>           <b>G</b>            <b>C</b>    <b>A</b>
    No prostě prima štace, inspirace k maturám.
+
      <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
 R3. Jé, jé, jé - kdepak ty fajn holky jsou
            <b>D</b>        <b>G</b>
@@ -584,7 +624,7 @@ R3. Jé, jé, jé - kdepak ty fajn holky jsou
     Už se dál nekoná
             <b>Asus4</b>        <b>A</b>
     Žádná dívčí školní šou.</pre>
-<pre class="stanza" style="font-size:10.5pt">              <b>D</b>            <b>G</b>                <b>A</b>
+<pre class="stanza" >              <b>D</b>            <b>G</b>                <b>A</b>
 4. I když pak poznali jsme spoustu dalších dívek a jmen
    <b>D</b>            <b>G</b>            <b>A</b>
    Plavovlásky, černovlásky, žár i sen
@@ -592,6 +632,7 @@ R3. Jé, jé, jé - kdepak ty fajn holky jsou
    V rytmu diska, z dálky - zblízka, i v náručí
               <b>D</b>           <b>G</b>              <b>C</b>    <b>A</b>
    Přesto jsou stále holky z naší školky nejhezčí.
+
      <b>D</b>   <b>A</b>   <b>G</b>     <b>A</b>         <b>D</b>          <b>G</b>
 R4. Jé, jé, jé - kdepak ty fajn holky jsou
            <b>D</b>        <b>G</b>
@@ -610,27 +651,27 @@ R4. Jé, jé, jé - kdepak ty fajn holky jsou
 <section class="song" id="s-ho-ho-watanay">
     <h2 class="song-title">Ho ho Watanay</h2>
     <p class="artist">Žalman</p>
-    <pre style="font-size:9.5pt">   D                     C           D
+    <pre >   D                     C           D
 1. Spinkej, můj maličký, máš v očích hvězdičky,
              C             G           D
    dám ti je do vlasů, tak usínej, tak usínej.
+
      D              C     D              C        G        D
-Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
-ena.
+Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiokena.
+
 2. Sladkou vůni nese ti noční motýl z paseky,
    vánek ho kolíbá, už nezpívá, už nezpívá.
-Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
-ena.
+Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiokena.
+
 3. V lukách to zavoní, rád jezdíš na koni
    má barvu havraní, jak uhání, jak uhání.
-Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
-ena.
+Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiokena.
+
 4. V dlani motýl usíná, hvězdička už zhasíná,
    vánek, co ji k tobě nes, až do léta ti odlétá.
- Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kio
-kena.
-     Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiok
-ena.</pre>
+
+ Ref: Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiokena.
+     Ho ho Watanay, ho ho Watanay, ho ho Watanay, kiokena, kiokena.</pre>
 </section>
 
 
@@ -639,27 +680,33 @@ ena.</pre>
 <section class="song" id="s-hrobar">
 <h2 class="song-title">Hrobař</h2>
 <p class="artist">Premiér</p>
-<pre style="font-size:10.5pt">   <b>D</b>
+<pre>   <b>D</b>
 1. V mládí jsem se učil hrobařem,
    <b>Hmi</b>
    jezdit s hlínou, jezdit s trakařem,
    <b>G</b>                      <b>A7</b>
    kopat hroby byl můj ideál.
+
 2. Jezdit s hlínou, jezdit s vozíkem,
    s černou rakví, s bílým pomníkem,
    toho bych se nikdy nenadál.
+
 3. Že do módy přijde kremace,
    černý hrobař bude bez práce,
    toho bych se nikdy nenadál.
+
 4. Kolem projel vůz milionáře,
    záblesk světel pad&#x27; mi do tváře,
    marně skřípěj&#x27; kola brzdící.
+
 5. Stoupám vzhůru, stoupám ke hvězdám,
    tam se s černou rakví neshledám,
    sbohem, bílé město zářící.
+
 6. Sbohem, moje město,
    vzpomínat budu přesto,
    jak jsem poznal tvůj smích a tvůj pláč.
+
 7. Na na na ...</pre>
 </section>
 
@@ -733,7 +780,7 @@ ena.</pre>
 <section class="song" id="s-hudsonsky-sify">
 <h2 class="song-title">Hudsonský šífy</h2>
 <p class="artist">Wabi Daněk</p>
-<pre class="stanza" style="font-size:10.0pt">   <b>Am</b>                             <b>C</b>
+<pre class="stanza" >   <b>Am</b>                             <b>C</b>
 1. Ten, kdo nezná hukot vody lopatkama vířený,
         <b>G</b>           <b>Am</b>
    jako já, jó jako já,
@@ -741,7 +788,7 @@ ena.</pre>
    kdo Hudsonský slapy nezná sírou pekla sířený,
          <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
    ať se na Hudsonský šífy najmout dá, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">   <b>Am</b>                                  <b>C</b>
+<pre class="stanza" >   <b>Am</b>                                  <b>C</b>
 2. Ten, kdo nepřekládal uhlí, šíf když na mělčinu vjel,
         <b>G</b>         <b>Am</b>
    málo zná, málo zná,
@@ -749,11 +796,11 @@ ena.</pre>
    ten, kdo neměl tělo ztuhlý, až se nočním chladem chvěl,
          <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
    ať se na Hudsonský šífy najmout dá, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
+<pre class="stanza" >     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
 Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
      <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
      jo-ho-ho, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">   <b>Am</b>                         <b>C</b>
+<pre class="stanza" >   <b>Am</b>                         <b>C</b>
 3. Ten, kdo nezná noční zpěvy zarostenejch lodníků,
         <b>G</b>           <b>Am</b>
    jako já, jó jako já,
@@ -761,7 +808,7 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
    ten, kdo cejtí se bejt chlapem, umí dělat rotyku,
          <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
    ať se na Hudsonský šífy najmout dá, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">   <b>Am</b>                          <b>C</b>
+<pre class="stanza" >   <b>Am</b>                          <b>C</b>
 4. Ten, kdo má na bradě mlíko, kdo se rumem neopil,
         <b>G</b>            <b>Am</b>
    málo zná, jó málo zná,
@@ -769,11 +816,11 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
    kdo necejtil hrůzu z vody, kde se málem utopil,
          <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
    ať se na Hudsonský šífy najmout dá, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
+<pre class="stanza" >     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
 Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
      <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
      jo-ho-ho, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">   <b>Am</b>                            <b>C</b>
+<pre class="stanza" >   <b>Am</b>                            <b>C</b>
 5. Kdo má roztrhaný boty, kdo má pořád jenom hlad,
         <b>G</b>           <b>Am</b>
    jako já, jó jako já,
@@ -781,7 +828,7 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
    kdo chce celý noci čuchat pekelnýho vohně smrad,
          <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
    ať se na Hudsonský šífy najmout dá, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">   <b>Am</b>                              <b>C</b>
+<pre class="stanza" >   <b>Am</b>                              <b>C</b>
 6. Kdo chce zhebnout třeba zejtra, komu je to všechno fuk,
           <b>G</b>            <b>Am</b>
    kdo je sám, jó jako já,
@@ -789,7 +836,7 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
    kdo má srdce v správným místě, kdo je prostě príma kluk,
          <b>Am</b>           <b>G</b>            <b>Am</b>  <b>G</b>     <b>Am</b>
    ať se na Hudsonský šífy najmout dá, jo-ho-ho.</pre>
-<pre class="stanza" style="font-size:10.0pt">     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
+<pre class="stanza" >     <b>F</b>              <b>Am</b>      <b>G</b>                      <b>Am</b>
 Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
      <b>G</b>     <b>Am</b>  <b>G</b>     <b>Am</b>
      jo-ho-ho, jo-ho-ho,
@@ -802,7 +849,7 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
 <section class="song" id="s-chodim-po-broadwayi">
 <h2 class="song-title">Chodím po Broadwayi</h2>
 <p class="artist">táborové písně</p>
-<pre style="font-size:10.5pt">          <b>D</b>
+<pre>          <b>D</b>
 1. Chodím po Broadwayi hladov sem a tam,
                                     <b>A</b>
    Chodím po Broadwayi hladov sem a tam,
@@ -810,6 +857,7 @@ Ref: Ahoj, páru tam hoď, ať do pekla se dříve dohrabem,
    chodím po Broadwayi, po Broadwayi,
    <b>D</b>            <b>A</b>            <b>D</b>
    po Broadwayi hladov sem a tam.
+
    <b>D</b>
 R: Singi jou jou jupí jupí jou,
                            <b>A</b>
@@ -818,17 +866,23 @@ R: Singi jou jou jupí jupí jou,
    singi jou jou jupí, pes má chlupy,
    <b>D</b>             <b>A</b>          <b>D</b>
    kočka srst, a prase štětiny.
+
 2. [: Moje černé děti mají stále hlad, :]
    moje černé děti, černé děti,
    černé děti mají stále hlad.
+
 R: Singi jou jou...
+
 3. [: Práci nedostanu, černou kůži mám, :]
    práci nedostanu, nedostanu,
    protože já černou kůži mám.
+
 R: Singi jou jou...
+
 4. [: A já pevně věřím, že zas přijde den, :]
    a já pevně věřím, pevně věřím,
    že zas bude černoch svoboden.
+
 R: Singi jou jou...</pre>
 </section>
 
@@ -837,7 +891,7 @@ R: Singi jou jou...</pre>
 <section class="song" id="s-jozin-z-bazin">
 <h2 class="song-title">Jožin z bažin</h2>
 <p class="artist">Ivan Mládek</p>
-<pre style="font-size:10.5pt">   <b>Emi</b>                 <b>H7</b>            <b>Emi</b>
+<pre>   <b>Emi</b>                 <b>H7</b>            <b>Emi</b>
 1. Jedu takhle tábořit Škodou 100 na Oravu,
                            <b>H7</b>             <b>Emi</b>
    spěchám proto, riskuji, projíždím přes Moravu.
@@ -920,7 +974,7 @@ R: Jožin z bažin už je celý bílý,
 <section class="song" id="s-kdyz-si-bajecnou-zenskou">
     <h2 class="song-title">Když si báječnou ženskou...</h2>
     <p class="artist">Traband</p>
-    <pre style="font-size:10.5pt">Živió, živió, živió, živió
+    <pre>Živió, živió, živió, živió
 <b>A</b>                    <b>E</b>
 Jo, když si báječnou ženskou
 <b>A</b>       <b>E</b>
@@ -991,7 +1045,7 @@ vezme idiot idiot idiot idiot</pre>
 <section class="song" id="s-lod-john-b">
 <h2 class="song-title">Loď John B</h2>
 <p class="artist">táborové písně</p>
-<pre style="font-size:10.5pt">      <b>G</b>
+<pre>      <b>G</b>
 1. Už vyplouvá loď &quot;John B&quot;,
    už vyplouvá loď &quot;John B&quot;,
    okamžik malý jen,
@@ -1035,7 +1089,7 @@ R: Tak nechte mě plout...</pre>
 <section class="song" id="s-mezi-horami">
 <h2 class="song-title">Mezi horami</h2>
 <p class="artist">Čechomor</p>
-<pre style="font-size:10.5pt">    <b>Dmi</b>  <b>C</b>  <b>Dmi</b>  <b>F</b>     <b>C</b>   <b>F</b>
+<pre>    <b>Dmi</b>  <b>C</b>  <b>Dmi</b>  <b>F</b>     <b>C</b>   <b>F</b>
 [:  Mezi horami, lipka zelená. :]
     <b>F</b>             <b>C</b>        <b>Dmi</b>           <b>C</b>   <b>Dmi</b>
 [:  Zabili Janka, Janíčka, Janka, miesto jeleňa. :]
@@ -1137,7 +1191,7 @@ R: Tak nechte mě plout...</pre>
 <section class="song" id="s-mrazik">
 <h2 class="song-title">Mrazík</h2>
 <p class="artist">Brontosauři</p>
-<pre style="font-size:10.5pt">     <b>Ami</b>
+<pre>     <b>Ami</b>
 1. Příroda se k spánku chystá,
    hnědne listí, zima jistá,
                                <b>G</b>            <b>Ami</b>
@@ -1165,7 +1219,7 @@ R:</pre>
 <section class="song" id="s-nebesti-jezdci">
 <h2 class="song-title">Nebeští jezdci</h2>
 <p class="artist">Waldemar Matuška</p>
-<pre style="font-size:10.5pt">      <b>Ami</b>                   <b>C</b>
+<pre>      <b>Ami</b>                   <b>C</b>
 1. Po zasmušilé pustině jel starý honec krav,
       <b>Ami</b>                      <b>C</b>
    den temný byl a ševelil větrem ve stéblech trav,
@@ -1198,7 +1252,7 @@ R: Jupija héj...</pre>
 <section class="song" id="s-promeny">
 <h2 class="song-title">Proměny</h2>
 <p class="artist">Čechomor</p>
-<pre style="font-size:10.5pt"><b>Ami</b>                <b>G</b>         <b>C</b>
+<pre><b>Ami</b>                <b>G</b>         <b>C</b>
 Darmo sa ty trápíš můj milý synečku
                 <b>E</b>           <b>Ami</b>
 nenosím ja tebe nenosím v srdéčku
@@ -1306,7 +1360,7 @@ A ty musíš býti má lebo mi tě Pán Bůh dá
 <section class="song" id="s-sedm-dostavniku">
     <h2 class="song-title">Sedm dostavníků</h2>
     <p class="artist">Waldemar Matuška</p>
-    <pre style="font-size:10.5pt"> <b>Fm</b>
+    <pre> <b>Fm</b>
 Rec.: &quot;Hej! Kam jedete?&quot;
       &quot;K brodu!&quot;
       &quot;Vemte mě kousek sebou!&quot;
@@ -1354,7 +1408,7 @@ Ref: Hyja, hyja, hou! Dlouhá bude cesta,
 <section class="song" id="s-severni-vitr">
 <h2 class="song-title">Severní vítr</h2>
 <p class="artist">Zdeněk Svěrák, Jaroslav Uhlíř</p>
-<pre style="font-size:10.5pt">       D                    Hmi
+<pre>       D                    Hmi
 1. Jdu s děravou patou, mám horečku zlatou,
         G                     D
    jsem chudý, jsem sláb, nemocen.
@@ -1399,7 +1453,7 @@ R: Severní vítr je krutý, počítej lásko má s tím,
 <section class="song" id="s-stanky">
 <h2 class="song-title">Stánky</h2>
 <p class="artist">Jan Nedvěd</p>
-<pre style="font-size:10.5pt">   <b>D</b>           <b>G</b>
+<pre>   <b>D</b>           <b>G</b>
 1. U stánků na levnou krásu,
    <b>D</b>          <b>Gmi</b>
    postávaj a smějou se času,
@@ -1433,7 +1487,7 @@ R:</pre>
 <section class="song" id="s-tisic-mil">
     <h2 class="song-title">Tisíc mil</h2>
     <p class="artist">Spirituál kvintet</p>
-    <pre style="font-size:10.5pt">             <b>G</b>            <b>Emi</b>
+    <pre>             <b>G</b>            <b>Emi</b>
 1. V nohách mám už tisíc mil,
           <b>Ami</b>          <b>C</b>
    stopy déšť a vítr smyl
@@ -1501,10 +1555,10 @@ R:</pre>
 
 
 
-<section class="song" id="s-tri-cunici">
+<section class="song tight" id="s-tri-cunici">
     <h2 class="song-title">Tři čuníci</h2>
     <p class="artist">Jaromír Nohavica</p>
-    <pre style="font-size:9.75pt">   <b>C</b>
+    <pre>   <b>C</b>
 1. V řadě za sebou tři čuníci jdou,
                                   <b>Ami</b>
    ťápají si v blátě cestou - necestou,
@@ -1572,7 +1626,7 @@ R:</pre>
 <section class="song" id="s-tri-krize">
     <h2 class="song-title">Tři kříže</h2>
     <p class="artist">Hop Trop</p>
-    <pre style="font-size:10.5pt">Předehra: Dmi 2x
+    <pre>Předehra: Dmi 2x
     <b>Dmi</b>          <b>C</b>           <b>Ami</b>
 1. Dávám sbohem břehům proklatejm,
               <b>Dmi</b>      <b>Ami</b>   <b>Dmi</b>
@@ -1617,7 +1671,7 @@ R1: Jen tři kříže z bílýho kamení
 <section class="song" id="s-za-svou-pravdou-stat">
 <h2 class="song-title">Za svou pravdou stát</h2>
 <p class="artist">Spirituál kvintet</p>
-<pre style="font-size:9.75pt">Capo II
+<pre>Capo II
 předehra pro solo 2 kytara
 <b>Ami,</b> <b>G,</b> <b>Ami,</b> <b>G,</b> <b>Ami,</b>
 <b>Ami,</b> <b>G,</b> <b>F,</b> <b>Ami,</b> <b>E,</b> <b>Ami</b>
