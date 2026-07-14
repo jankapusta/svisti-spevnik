@@ -61,7 +61,13 @@ section.song, section.legend { break-before: page; }
 
 /* songs */
 
-.song pre { font-family: Consolas, "DejaVu Sans Mono", "Courier New", monospace;
+/* Courier Prime — darker monospace so printed lyrics aren't greyish (OFL, files in ./fonts) */
+@font-face { font-family: "Courier Prime"; font-style: normal; font-weight: 400;
+             src: url("fonts/CourierPrime-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Courier Prime"; font-style: normal; font-weight: 700;
+             src: url("fonts/CourierPrime-Bold.ttf") format("truetype"); font-display: swap; }
+
+.song pre { font-family: "Courier Prime", "Courier New", monospace; color: #000;
             white-space: pre; margin: 0; line-height: 1.12;
             font-variant-ligatures: none; }
 .song pre b { font-weight: 700; }
