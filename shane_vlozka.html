@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Shane — vložka</title>
+<style>
+@page { size: 148mm 210mm; margin: 12mm 10mm 15mm;
+        @bottom-center { content: "52 a 3/4"; font-family: Georgia, serif;
+                         font-size: 9pt; color: #666; } }
+@page :first { @bottom-center { content: "52 a 1/2"; } }
+/* loose insert (not bound) → symmetric margins, no binding gutter */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, "Times New Roman", serif;
+       color: #1a1a1a; line-height: 1.4; }
+h2 { margin: 0px; padding: 0px; }
+
+/* Courier Prime — darker monospace so printed lyrics aren't greyish (OFL, files in ./fonts) */
+@font-face { font-family: "Courier Prime"; font-style: normal; font-weight: 400;
+             src: url("fonts/CourierPrime-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Courier Prime"; font-style: normal; font-weight: 700;
+             src: url("fonts/CourierPrime-Bold.ttf") format("truetype"); font-display: swap; }
+
+.song pre { font-family: "Courier Prime", "Courier New", monospace; color: #000;
+            white-space: pre; margin: 0; line-height: 1.12;
+            font-variant-ligatures: none; }
+.song pre b { font-weight: 700; }
+.song pre.stanza { break-inside: avoid; margin-top: 12px; }
+.song pre { font-size: 9pt; }
+.song.tight pre { font-size: 9.5pt; }
+.song-title { font-family: "Helvetica Neue", Arial, sans-serif;
+              font-size: 15pt; margin: 0 0 0px; color: #7a3b12; }
+.artist { color: #666; font-style: italic; font-size: 10pt; margin: 0 0 6px; }
+
+/* on-screen: show page-like cards */
+@media screen {
+  body { background: #e7e7e7; padding: 20px; }
+  body > section { background: #fff; width: 148mm; min-height: 210mm;
+    margin: 0 auto 16px; padding: 12mm 10mm; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
+}
+</style>
+</head>
+<body>
+
+<section class="song" id="s-shane">
+<h2 class="song-title">Shane</h2>
+<p class="artist">táborová píseň</p>
+<pre class="stanza">        <b>Ami</b>                         <b>G</b>               <b>Ami</b>
+1. Tam někde v dálce oheň kvet&#x27;, a tak jsem k němu jel,
+                       <b>G</b>             <b>F</b>               <b>E</b>
+   jen tak s chlapama posedět jsem zrovna tenkrát chtěl,
+         <b>F</b>              <b>G</b>        <b>F</b>            <b>E</b>
+   ten stařík s tváří vrásčitou jak dubovej kmen
+       <b>Ami</b>                      <b>G</b>             <b>Ami</b>
+   vyprávěl pověst letitou o střelci jménem Shane.
+
+    <b>G</b>       <b>Ami</b>   <b>G</b>       <b>Ami</b>
+R: Byl to Shane, byl to Shane.</pre>
+<pre class="stanza">2. Je v kraji klid, však bejval čas, kdy Reed tu s bandou vlád&#x27;,
+   všem při tom jménu běhal mráz a nikdo nemoh&#x27; spát,
+   Reed zabíjel a všecko krad, všecko včetně žen,
+   Reed strašlivě se začal smát, když slyšel jméno Shane.
+R:</pre>
+<pre class="stanza">3. Ten Shane, to je zlý svědomí lumpů jako Reed,
+   i když je člověk jako my, líp se umí bít,
+   a pak nám pastor vyjevil, že měl dnes živej sen,
+   a den nato se objevil střelec jménem Shane.
+R:</pre>
+<pre class="stanza">4. Měl tváře prachem šedivý a oči jako len,
+   měl divný jméno mazlivý, jmenoval se Shane,
+   my všichni na něj koukali, co se bude dít,
+   pak jména svý jsme říkali, a on dal koni pít.
+R:</pre>
+<pre class="stanza">5. Měl šaty z módy vyšlý snad, v tom se nevyznám,
+   a unavenej na zem pad&#x27; k žlutejm diviznám,
+   a pak se zdvih&#x27;, řek&#x27;:&quot;Už jsem fit,&quot; jen trochu přitom zív&#x27;,
+   a řek&#x27; nám, že jde vyčistit ten Augiášův chlív.
+R:</pre>
+<pre class="stanza">6. A v saloonu tou dobou Reed se svojí bandou byl,
+   ten Reed by jistě přestal pít, kdyby vytušil,
+   že dostane ho pistolník s očima jako len,
+   štíhlej jako řeholník, muž toho jména Shane.
+R:</pre>
+<pre class="stanza">7. Shane bouchačku si spustil níž, než do saloonu vlez&#x27;,
+   a my nad ním dělali kříž, vidím to jako dnes,
+   a pak jsme jenom slyšeli šest poctivejch ran,
+   a tím, že rány zazněly, zhas&#x27; celej Reedův klan.
+R:</pre>
+<pre class="stanza">8. Shane vyšel ven, měl pevnej krok a řek&#x27;:&quot;Je hotovo,&quot;
+   však rudá krev mu barví bok, on měl v něm olovo,
+   pak řek&#x27;, že je čas odejít, měl v očích chladnej cejn,
+   a v saloonu byl mrtvej klid, on jmenoval se Shane.
+R:</pre>
+<pre class="stanza">9. Ten večer rosou zastudil a na kůži sed&#x27; chlad,
+   i já, ač jsem se nenudil, jsem řek&#x27;, že půjdu spát,
+   my dali jsme si po loku, už stařík spí svůj sen,
+   jen já mám jizvu na boku a mý jméno je Shane.
+R: R:</pre>
+</section>
+
+<script src="paged.polyfill.js"></script>
+</body>
+</html>
