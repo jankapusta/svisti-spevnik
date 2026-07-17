@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Pranostiky — hra Pravda / Mýtus</title>
+<style>
+  * { box-sizing: border-box; }
+  @page { size: A4; margin: 10mm; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; color: #222; font-size: 11pt; margin: 0; }
+  .bar { background: #1a4d6d; color: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 12px; }
+  .bar h1 { margin: 0; font-size: 17pt; }
+  .bar .sub { font-size: 10pt; opacity: 0.92; margin-top: 4px; }
+  .howto { background: #eef5f8; border: 1px solid #b8d4e3; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; font-size: 10pt; }
+  .howto b { color: #1a4d6d; }
+  .howto ol { margin: 4px 0 0 18px; padding: 0; }
+  .deck-title { font-size: 12pt; font-weight: bold; color: #1a4d6d; margin: 12px 0 6px; }
+
+  /* voting paddles */
+  .paddles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  .paddle { border: 1px dashed #888; border-radius: 8px; height: 34mm; display: flex; align-items: center; justify-content: center; font-size: 19pt; font-weight: bold; letter-spacing: 1px; page-break-inside: avoid; }
+  .paddle.true  { background: #eaf7ea; color: #2e7d32; border-color: #9ccf9c; }
+  .paddle.myth  { background: #fdeaea; color: #c0392b; border-color: #e2a0a0; }
+
+  .pagebreak { page-break-before: always; }
+
+  /* leader statement cards */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .scard { border: 1px dashed #888; border-radius: 6px; padding: 10px 12px; min-height: 54mm; page-break-inside: avoid; display: flex; flex-direction: column; }
+  .scard .verdict { align-self: flex-start; font-size: 8.5pt; font-weight: bold; padding: 2px 9px; border-radius: 8px; letter-spacing: 1px; color: #fff; }
+  .v-true { background: #2e7d32; }
+  .v-myth { background: #c0392b; }
+  .v-half { background: #c98a1a; }
+  .scard .say { font-size: 12.5pt; font-weight: bold; color: #333; margin: 8px 0; font-style: italic; }
+  .scard .exp { font-size: 9.5pt; color: #444; margin-top: auto; }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1>Pranostiky — Pravda, nebo Mýtus?</h1>
+  <div class="sub">Hlasovací hra k aktivitě „Pranostiky" (UKAŽ SE 12) &middot; 1. sezení (úterý)</div>
+</div>
+
+<div class="howto">
+  <b>Jak hrát:</b>
+  <ol>
+    <li>Každé dítě dostane dvě hlasovací kartičky: <b>PRAVDA</b> (zelená) a <b>MÝTUS</b> (červená).</li>
+    <li>Vedoucí přečte pranostiku/tvrzení z karty (druhá strana). Děti <b>zvednou</b> svůj tip.</li>
+    <li>Vedoucí odhalí verdikt a krátce vysvětlí <i>proč</i> — a k čemu se pranostika vztahuje.</li>
+    <li>Pointa: pranostika = <b>dlouhodobá zkušenost</b> (spíš podnebí), ne přesná předpověď na zítřek.</li>
+  </ol>
+</div>
+
+<div class="deck-title">Hlasovací kartičky (rozstříhej — 6× PRAVDA, 6× MÝTUS)</div>
+<div class="paddles">
+  <div class="paddle true">PRAVDA</div>
+  <div class="paddle true">PRAVDA</div>
+  <div class="paddle true">PRAVDA</div>
+  <div class="paddle true">PRAVDA</div>
+  <div class="paddle true">PRAVDA</div>
+  <div class="paddle true">PRAVDA</div>
+  <div class="paddle myth">MÝTUS</div>
+  <div class="paddle myth">MÝTUS</div>
+  <div class="paddle myth">MÝTUS</div>
+  <div class="paddle myth">MÝTUS</div>
+  <div class="paddle myth">MÝTUS</div>
+  <div class="paddle myth">MÝTUS</div>
+</div>
+
+<div class="pagebreak"></div>
+<div class="deck-title">Karty s tvrzeními (pro vedoucího — verdikt a vysvětlení)</div>
+<div class="grid">
+  <div class="scard"><span class="verdict v-true">PRAVDA (většinou)</span><div class="say">„Červánky večer — pěkně, červánky ráno — déšť."</div><div class="exp">Večerní červánky = suchý vzduch od západu, odkud k nám počasí přichází → často pěkně. Ranní naopak signalizují vlhkost a blížící se frontu.</div></div>
+  <div class="scard"><span class="verdict v-true">SPÍŠ PRAVDA</span><div class="say">„Vlaštovky létají nízko — bude pršet."</div><div class="exp">Před deštěm je vlhký těžký vzduch, hmyz drží nízko — a vlaštovky za potravou taky. Náznak zhoršení, ne jistota.</div></div>
+  <div class="scard"><span class="verdict v-myth">MÝTUS</span><div class="say">„Blesk nikdy neuhodí dvakrát na stejné místo."</div><div class="exp">Uhodí — a klidně opakovaně. Vysoké objekty (věže, stromy) dostávají zásah mnohokrát za bouřku.</div></div>
+  <div class="scard"><span class="verdict v-true">PRAVDA (často)</span><div class="say">„Kruh (halo) kolem Měsíce — mění se počasí."</div><div class="exp">Halo vzniká na ledových krystalcích v cirrostratu, který přichází před teplou frontou → do dne až dvou často déšť.</div></div>
+  <div class="scard"><span class="verdict v-true">PRAVDA</span><div class="say">„Šišky se zavírají — přichází vlhko."</div><div class="exp">Čistě fyzikální: šupiny šišky reagují na vlhkost vzduchu — ve vlhku se zavírají, v suchu otevírají. Funguje i na odlomené šišce.</div></div>
+  <div class="scard"><span class="verdict v-half">NAPŮL</span><div class="say">„Medardova kápě, čtyřicet dní kape."</div><div class="exp">Půlka června opravdu často ovlivní ráz počasí na několik týdnů (poloha frontální oblasti), ale „přesně 40 dní" je nadsázka.</div></div>
+  <div class="scard"><span class="verdict v-myth">MÝTUS</span><div class="say">„Když si kráva lehne, bude pršet."</div><div class="exp">Krávy leží z mnoha důvodů (odpočinek, přežvykování). Spolehlivá předpověď to není.</div></div>
+  <div class="scard"><span class="verdict v-half">NAPŮL</span><div class="say">„Bolí mě staré zranění — mění se počasí."</div><div class="exp">Někteří lidé opravdu citlivě vnímají <b>pokles tlaku</b> před frontou (klouby, jizvy). Individuální a nespolehlivé — ale ne úplný nesmysl.</div></div>
+</div>
+
+</body>
+</html>

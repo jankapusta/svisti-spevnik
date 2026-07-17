@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Meteorologie — 2. sezení (neděle) — scénář pro vedoucího</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    color: #222; font-size: 11pt; line-height: 1.42;
+    max-width: 900px; margin: 0 auto; padding: 14px;
+  }
+  .session-title { background: #1a4d6d; color: #fff; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .session-title h1 { color: #fff; font-size: 19pt; margin: 0; }
+  .session-title .sub { font-size: 10.5pt; opacity: 0.92; margin-top: 5px; }
+  h2.sec { font-size: 13pt; color: #1a4d6d; border-bottom: 2px solid #dceaf0; padding-bottom: 3px; margin: 20px 0 8px; }
+
+  .chip { display: inline-block; font-size: 8.5pt; padding: 2px 8px; border-radius: 10px; margin: 2px 3px 2px 0; white-space: nowrap; }
+  .chip.dokaz { background: #2e7d32; color: #fff; }
+  .chip.ukaz  { background: #1a4d6d; color: #fff; }
+  .chip.time  { background: #f0e2bd; color: #6b531a; font-weight: bold; }
+
+  .goal { background: #eef5f8; border: 1px solid #b8d4e3; border-radius: 6px; padding: 10px 14px; margin: 10px 0; font-size: 10.5pt; }
+  .prep { background: #f1f7ec; border: 1px solid #cfe3c0; border-left: 4px solid #33691e; border-radius: 6px; padding: 10px 14px; margin: 12px 0; }
+  .prep h2 { font-size: 13pt; color: #33691e; margin: 0 0 6px; }
+  .prep ul { margin: 4px 0 0 18px; padding: 0; font-size: 10pt; }
+  .prep li { margin: 3px 0; }
+
+  table.timeline { width: 100%; border-collapse: collapse; margin: 8px 0 4px; }
+  table.timeline th, table.timeline td { border: 1px solid #bbb; padding: 5px 8px; font-size: 10pt; text-align: left; vertical-align: top; }
+  table.timeline th { background: #dceaf0; }
+  table.timeline td.t { white-space: nowrap; font-weight: bold; color: #1a4d6d; width: 74px; }
+
+  .activity { border: 1px solid #ddd; border-left: 5px solid #1a4d6d; border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+  @media print { .activity, table.timeline, .prep { page-break-inside: avoid; } }
+  .activity h3 { margin: 0; font-size: 13.5pt; color: #1a4d6d; }
+  .act-meta { margin: 4px 0 8px; }
+  .materials { background: #f7f7f7; border-radius: 4px; padding: 6px 10px; font-size: 9.7pt; margin: 6px 0; }
+  .materials b { color: #1a4d6d; }
+  .activity ol { margin: 6px 0 6px 20px; padding: 0; }
+  .activity li { margin: 3px 0; font-size: 10.6pt; }
+  .say { background: #fff6de; border-left: 3px solid #d9b34a; padding: 6px 10px; font-size: 10pt; margin: 6px 0; }
+  .say b { color: #8a6a1a; }
+  .connect-box { background: #eef5f8; border-left: 3px solid #1a4d6d; padding: 6px 10px; margin: 6px 0; font-size: 9.7pt; }
+  .connect-box b { color: #1a4d6d; }
+  .formula-box { background: #fff6de; border: 1px solid #d9b34a; border-radius: 4px; padding: 8px 12px; text-align: center; font-size: 12pt; font-weight: bold; margin: 8px 0; }
+  .scenarios { margin: 6px 0; }
+  .scen { border: 1px solid #d8c48a; border-radius: 4px; padding: 7px 10px; margin: 6px 0; font-size: 10pt; background: #fffdf5; }
+  .scen .q { font-weight: bold; color: #6b531a; }
+  .scen .a { color: #33691e; margin-top: 3px; }
+  .scen .a b { color: #2e7d32; }
+</style>
+</head>
+<body>
+
+<div class="session-title">
+  <h1>Meteorologie — 2. sezení (neděle)</h1>
+  <div class="sub">Scénář pro vedoucího &middot; ~55 min &middot; skupina 5–6 dětí (11–14 let) &middot; navazuje na úterní deník</div>
+</div>
+
+<div class="goal">
+  <b>Cíl sezení:</b> uzavřít týdenní měření a udělat předpověď, projít nebezpečí bouřky, odhad větru
+  a optické jevy. Sezení <b>dokončuje</b> <span class="chip dokaz">DOKAŽ TO A</span>, naplní
+  <span class="chip dokaz">DOKAŽ TO B</span> a <span class="chip ukaz">UKAŽ SE 17</span>
+  <span class="chip ukaz">UKAŽ SE 9</span> <span class="chip ukaz">UKAŽ SE 6</span>, dotkne se
+  <span class="chip dokaz">DOKAŽ TO E</span>.
+</div>
+
+<div class="prep">
+  <h2>Před sezením (příprava)</h2>
+  <ul>
+    <li><b>Děti přinesou vyplněné deníky</b> z týdne (připomeň jim to už v úterý!).</li>
+    <li><b>Bouřková hra:</b> scénáře jsou napsané rovnou v tomto scénáři (aktivita 2) — stačí číst nahlas; papír + tužky na odpovědi.</li>
+    <li><b>Beaufort:</b> poster Beaufortovy stupnice na nástěnce; volný prostor venku na pozorování / pantomimu.</li>
+    <li><b>Optický pokus:</b> baterka (nebo mobil), sklenice s vodou, bílý papír, rozprašovač s vodou (na duhu venku na slunci), pár kapek mléka (na „modrou oblohu").</li>
+    <li><b>Atmosféra + Slunce:</b> baterka + míč/globus, možnost zatemnit (stan/stín).</li>
+    <li>Přístup k <b>ČHMÚ</b> předpovědi (mobil) na ověření.</li>
+  </ul>
+</div>
+
+<h2 class="sec">Přehled — časová osa</h2>
+<table class="timeline">
+  <tr><th>Čas</th><th>Aktivita</th><th>Odborka</th></tr>
+  <tr><td class="t">0–2 min</td><td>Úvod: máme za sebou týden měření</td><td>—</td></tr>
+  <tr><td class="t">2–14 min</td><td>Kontrola deníků + porovnání dní + předpověď</td><td>DOKAŽ TO A (dokončení) · E (dotek)</td></tr>
+  <tr><td class="t">14–26 min</td><td>Bouřková hra (scénáře)</td><td>UKAŽ SE 17</td></tr>
+  <tr><td class="t">26–36 min</td><td>Odhad síly větru (Beaufort)</td><td>UKAŽ SE 9</td></tr>
+  <tr><td class="t">36–46 min</td><td>Optické jevy (pokus)</td><td>UKAŽ SE 6</td></tr>
+  <tr><td class="t">46–54 min</td><td>Atmosféra a role Slunce (baterka + míč)</td><td>DOKAŽ TO B</td></tr>
+  <tr><td class="t">54–55 min</td><td>Závěr: co komu chybí na odborku</td><td>—</td></tr>
+</table>
+
+<h2 class="sec">Podrobný scénář</h2>
+
+<div class="activity">
+  <h3>0 &middot; Úvod</h3>
+  <div class="act-meta"><span class="chip time">0–2 min</span></div>
+  <ol>
+    <li>„Celý týden jste měřili — dneska z toho konečně něco vyčteme a zahrajeme si na předpovědače počasí."</li>
+  </ol>
+</div>
+
+<div class="activity">
+  <h3>1 &middot; Kontrola deníků + porovnání + předpověď</h3>
+  <div class="act-meta"><span class="chip time">2–14 min</span> <span class="chip dokaz">DOKAŽ TO A (dokončení)</span> <span class="chip dokaz">DOKAŽ TO E (dotek)</span></div>
+  <div class="materials"><b>Pomůcky:</b> vyplněné deníky dětí, mobil s předpovědí ČHMÚ.</div>
+  <ol>
+    <li>Projděte zápisy. Každý najde <b>nejteplejší</b> a <b>nejchladnější/deštivý den</b> a nahlas porovná hodnoty (teplota, tlak, srážky). <b>Tohle je jádro DOKAŽ TO A.</b></li>
+    <li>Všimněte si vztahů: klesající tlak → často zhoršení počasí; nízké tmavé mraky → déšť.</li>
+    <li>Podle dnešního nebe (mraky, tlak stoupá/klesá, vítr) společně <b>předpovězte počasí</b> na dnešek/zítřek.</li>
+    <li><b>Ověřte</b> předpověď u ČHMÚ — kdo se trefil? (dotek DOKAŽ TO E)</li>
+  </ol>
+  <div class="say"><b>Tip:</b> komu deník chybí/je neúplný, může A dodělat sám do konce tábora — dnešní porovnání mu ukáže jak.</div>
+</div>
+
+<div class="activity">
+  <h3>2 &middot; Bouřková hra</h3>
+  <div class="act-meta"><span class="chip time">14–26 min</span> <span class="chip ukaz">UKAŽ SE 17</span></div>
+  <div class="materials"><b>Pomůcky:</b> papír + tužky (děti píšou odpovědi), scénáře níže.</div>
+  <ol>
+    <li>Nejdřív společně: <b>jak daleko je bouřka?</b> Počítej sekundy mezi bleskem a hřměním a poděl třemi:</li>
+  </ol>
+  <div class="formula-box">vzdálenost (km) ≈ počet sekund ÷ 3</div>
+  <ol start="2">
+    <li>Přečti scénář, děti <b>napíšou</b> (nebo řeknou), jak se zachovají. Pak společně vyhodnoťte.</li>
+  </ol>
+  <div class="scenarios">
+    <div class="scen"><div class="q">A) Jsi na otevřené louce a přižene se bouřka. Co uděláš?</div>
+      <div class="a"><b>Správně:</b> nebýt nejvyšší bod — přikrčit se do dřepu, nohy u sebe, ruce na kolenou; nestát pod osamělým stromem; pryč od kovu a vody.</div></div>
+    <div class="scen"><div class="q">B) Zahlédneš blesk a za 6 sekund uslyšíš hřmění. Jak daleko bouřka je? A blíží se?</div>
+      <div class="a"><b>Správně:</b> 6 ÷ 3 = <b>2 km</b>. Když se interval zkracuje, bouřka se <b>blíží</b>.</div></div>
+    <div class="scen"><div class="q">C) Jste na kánoích na jezeře a začne se blýskat. Co hned?</div>
+      <div class="a"><b>Správně:</b> okamžitě ke břehu a <b>z vody ven</b> — hladina je nebezpečná.</div></div>
+    <div class="scen"><div class="q">D) Schováš se před bleskem pod vysoký samostatný strom?</div>
+      <div class="a"><b>Správně: NE.</b> Osamělý strom přitahuje blesk. Radši nízký porost nebo dřep v otevřeném terénu.</div></div>
+    <div class="scen"><div class="q">E) Jsi v autě. Jsi v bezpečí?</div>
+      <div class="a"><b>Správně: ANO</b> (zavřené auto funguje jako klec, která svede proud kolem). Budova je taky bezpečná.</div></div>
+  </div>
+  <div class="connect-box"><b>Souvislost:</b> podrobnosti o nebezpečném počasí jsou na nástěnce (poster <i>Když počasí ubližuje</i>).</div>
+</div>
+
+<div class="activity">
+  <h3>3 &middot; Odhad síly větru (Beaufort)</h3>
+  <div class="act-meta"><span class="chip time">26–36 min</span> <span class="chip ukaz">UKAŽ SE 9</span></div>
+  <div class="materials"><b>Pomůcky:</b> poster Beaufortovy stupnice (nástěnka), volný prostor venku.</div>
+  <ol>
+    <li>Jděte ven a <b>pozorujte vítr:</b> co dělá listí, větve, vlajka, kouř, prach? Podle toho přiřaďte <b>stupeň Beaufortovy stupnice</b> (0 bezvětří → 12 orkán).</li>
+    <li><b>„Living Beaufort" (pantomima):</b> jedno dítě předvede tělem daný stupeň (0 = stojí; 3 = vlají vlasy; 6 = těžko se jde; 9–10 = skoro spadne), ostatní hádají číslo.</li>
+    <li>Cíl podmínky: každý umí odhadnout sílu větru <b>bez přístroje</b> a dokáže to <b>naučit kamaráda</b>.</li>
+  </ol>
+  <div class="say"><b>Tip:</b> ať si dvojice navzájem „přezkouší" — tím je splněné to „naučím alespoň jednoho kamaráda".</div>
+</div>
+
+<div class="activity">
+  <h3>4 &middot; Optické jevy (pokus)</h3>
+  <div class="act-meta"><span class="chip time">36–46 min</span> <span class="chip ukaz">UKAŽ SE 6</span></div>
+  <div class="materials"><b>Pomůcky:</b> baterka/mobil, sklenice s vodou, bílý papír, rozprašovač, pár kapek mléka.</div>
+  <ol>
+    <li><b>Duha:</b> posviťte baterkou přes sklenici vody na bílý papír (nebo rozprašovačem proti slunci) — objeví se <b>barevné spektrum</b>. Vysvětli: světlo se <b>láme a rozkládá</b> na barvy.</li>
+    <li><b>Proč je obloha modrá:</b> do sklenice vody kápni pár kapek mléka, posviť baterkou <b>z boku</b> → voda zmodrá (rozptyl); posviť <b>skrz</b> na stěnu → světlo zežloutne/zčervená (jako <b>západ slunce</b>).</li>
+    <li>Zmiň další jev: <b>halo</b> (kruh kolem Slunce/Měsíce od ledových krystalků) — bývá znamením změny počasí.</li>
+  </ol>
+  <div class="connect-box"><b>Souvislost:</b> na nástěnce jsou k tomu diagramy (Rayleighův rozptyl, vznik duhy krok 1-2-3, halo 22°).</div>
+</div>
+
+<div class="activity">
+  <h3>5 &middot; Atmosféra a role Slunce</h3>
+  <div class="act-meta"><span class="chip time">46–54 min</span> <span class="chip dokaz">DOKAŽ TO B</span></div>
+  <div class="materials"><b>Pomůcky:</b> baterka (= Slunce), míč/globus (= Země), zatemněné místo.</div>
+  <ol>
+    <li>Zatemni. Baterka = Slunce, míč = Země. Sviť <b>kolmo</b> (rovník) vs. <b>šikmo</b> (póly) na papír/míč.</li>
+    <li>Ukaž: šikmé paprsky rozlévají stejnou energii na <b>větší plochu</b> → je tam <b>chladněji</b>. Proto je na rovníku horko a na pólech zima.</li>
+    <li>Otáčej míčem → <b>den a noc</b>, střídání ohřevu a ochlazování → vzduch se dává do pohybu = <b>vítr a počasí</b>.</li>
+    <li>Závěr myšlenky: <b>počasí pohání Slunce</b> přes ohřívání atmosféry. Nech děti vlastními slovy (s pomocí obrázku na nástěnce) vysvětlit roli Slunce — <b>to je přesně podmínka B.</b></li>
+  </ol>
+</div>
+
+<div class="activity">
+  <h3>Závěr: co komu chybí na odborku</h3>
+  <div class="act-meta"><span class="chip time">54–55 min</span></div>
+  <ol>
+    <li>Krátce shrň, co skupina za dvě sezení zvládla (A, B, E-dotek + UKAŽ SE 2, 3, 6, 9, 12, 17).</li>
+    <li>Připomeň, že zbytek (např. dočíst nástěnku k <b>osobnostem</b> = UKAŽ SE 5, <b>nebezpečí</b> = DOKAŽ TO D, dopsat deník) jde <b>dodělat samostatně</b> ve volném čase v táboře.</li>
+    <li>Kdo chce odborku dotáhnout, ví teď přesně co mu chybí.</li>
+  </ol>
+</div>
+
+</body>
+</html>

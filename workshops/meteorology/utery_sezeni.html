@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Meteorologie — 1. sezení (úterý) — scénář pro vedoucího</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    color: #222; font-size: 11pt; line-height: 1.42;
+    max-width: 900px; margin: 0 auto; padding: 14px;
+  }
+  .session-title { background: #1a4d6d; color: #fff; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .session-title h1 { color: #fff; font-size: 19pt; margin: 0; }
+  .session-title .sub { font-size: 10.5pt; opacity: 0.92; margin-top: 5px; }
+  h2.sec { font-size: 13pt; color: #1a4d6d; border-bottom: 2px solid #dceaf0; padding-bottom: 3px; margin: 20px 0 8px; }
+
+  .chip { display: inline-block; font-size: 8.5pt; padding: 2px 8px; border-radius: 10px; margin: 2px 3px 2px 0; white-space: nowrap; }
+  .chip.dokaz { background: #2e7d32; color: #fff; }
+  .chip.ukaz  { background: #1a4d6d; color: #fff; }
+  .chip.time  { background: #f0e2bd; color: #6b531a; font-weight: bold; }
+
+  .goal { background: #eef5f8; border: 1px solid #b8d4e3; border-radius: 6px; padding: 10px 14px; margin: 10px 0; font-size: 10.5pt; }
+  .prep { background: #f1f7ec; border: 1px solid #cfe3c0; border-left: 4px solid #33691e; border-radius: 6px; padding: 10px 14px; margin: 12px 0; }
+  .prep h2 { font-size: 13pt; color: #33691e; margin: 0 0 6px; }
+  .prep ul { margin: 4px 0 0 18px; padding: 0; font-size: 10pt; }
+  .prep li { margin: 3px 0; }
+
+  table.timeline { width: 100%; border-collapse: collapse; margin: 8px 0 4px; }
+  table.timeline th, table.timeline td { border: 1px solid #bbb; padding: 5px 8px; font-size: 10pt; text-align: left; vertical-align: top; }
+  table.timeline th { background: #dceaf0; }
+  table.timeline td.t { white-space: nowrap; font-weight: bold; color: #1a4d6d; width: 74px; }
+
+  .activity { border: 1px solid #ddd; border-left: 5px solid #1a4d6d; border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+  @media print { .activity, table.timeline, .prep { page-break-inside: avoid; } }
+  .activity h3 { margin: 0; font-size: 13.5pt; color: #1a4d6d; }
+  .act-meta { margin: 4px 0 8px; }
+  .materials { background: #f7f7f7; border-radius: 4px; padding: 6px 10px; font-size: 9.7pt; margin: 6px 0; }
+  .materials b { color: #1a4d6d; }
+  .activity ol { margin: 6px 0 6px 20px; padding: 0; }
+  .activity li { margin: 3px 0; font-size: 10.6pt; }
+  .say { background: #fff6de; border-left: 3px solid #d9b34a; padding: 6px 10px; font-size: 10pt; margin: 6px 0; }
+  .say b { color: #8a6a1a; }
+  .connect-box { background: #eef5f8; border-left: 3px solid #1a4d6d; padding: 6px 10px; margin: 6px 0; font-size: 9.7pt; }
+  .connect-box b { color: #1a4d6d; }
+</style>
+</head>
+<body>
+
+<div class="session-title">
+  <h1>Meteorologie — 1. sezení (úterý)</h1>
+  <div class="sub">Scénář pro vedoucího &middot; ~55 min &middot; skupina 5–6 dětí (11–14 let) &middot; za den 3 skupiny</div>
+</div>
+
+<div class="goal">
+  <b>Cíl sezení:</b> rozjet týdenní měření (deník + meteostanice), naučit rozpoznávat mraky a odlišit
+  počasí od podnebí. Sezení <b>odstartuje</b> hlavní podmínku <span class="chip dokaz">DOKAŽ TO A</span>
+  (dokončí se v neděli) a naplní <span class="chip ukaz">UKAŽ SE 3</span>
+  <span class="chip ukaz">UKAŽ SE 2</span> <span class="chip ukaz">UKAŽ SE 12</span>, dotkne se
+  <span class="chip dokaz">DOKAŽ TO C</span>.
+</div>
+
+<div class="prep">
+  <h2>Před sezením (příprava)</h2>
+  <ul>
+    <li><b>Barometry</b> (na každou skupinu 2 ks, sdílené po 2–3 dětech): sklenice/zavařovačka, kus nafukovacího balonku, gumička, brčko nebo tenká špejle, lepicí páska, karton na stupnici, fix.</li>
+    <li><b>Meteostanice:</b> teploměr, hotový (nebo dnes vyrobený) barometr, srážkoměr = průhledná láhev/odměrka s ryskou v mm; vytipuj stinné, chráněné místo u tábora.</li>
+    <li><b>Vytištěné:</b> kartička „10 druhů oblaků" (na hru), prázdné deníky (1 na dítě), tužky.</li>
+    <li>Odkaz na nástěnku: poster <i>Počasí a podnebí</i> a <i>Optické jevy</i> (na pranostiky/diskusi).</li>
+  </ul>
+</div>
+
+<h2 class="sec">Přehled — časová osa</h2>
+<table class="timeline">
+  <tr><th>Čas</th><th>Aktivita</th><th>Odborka</th></tr>
+  <tr><td class="t">0–3 min</td><td>Úvod: co nás dnes čeká</td><td>—</td></tr>
+  <tr><td class="t">3–15 min</td><td>Stavba barometrů (2 na skupinu)</td><td>UKAŽ SE 3</td></tr>
+  <tr><td class="t">15–25 min</td><td>Meteostanice u tábora + 1. měření</td><td>UKAŽ SE 3 · DOKAŽ TO A (start)</td></tr>
+  <tr><td class="t">25–37 min</td><td>Hra: druhy oblaků</td><td>UKAŽ SE 2</td></tr>
+  <tr><td class="t">37–47 min</td><td>Pranostiky + počasí × podnebí</td><td>UKAŽ SE 12 · DOKAŽ TO C</td></tr>
+  <tr><td class="t">47–53 min</td><td>Rozdání deníků + týdenní úkol</td><td>DOKAŽ TO A</td></tr>
+  <tr><td class="t">53–55 min</td><td>Závěr / rezerva</td><td>—</td></tr>
+</table>
+
+<h2 class="sec">Podrobný scénář</h2>
+
+<div class="activity">
+  <h3>0 &middot; Úvod: co nás dnes čeká</h3>
+  <div class="act-meta"><span class="chip time">0–3 min</span></div>
+  <ol>
+    <li>Krátce: „Celý týden budeme <b>měřit počasí</b> jako opravdoví meteorologové — a dneska si na to postavíme přístroje a založíme stanici."</li>
+    <li>Ukaž deník a řekni, že na konci týdne (v neděli) z něj uděláme <b>předpověď</b> a porovnáme dny.</li>
+  </ol>
+  <div class="say"><b>Hook:</b> „Kdo tipne, jaký je teď tlak vzduchu — a jestli přes noc stoupne, nebo klesne?"</div>
+</div>
+
+<div class="activity">
+  <h3>1 &middot; Stavba barometrů</h3>
+  <div class="act-meta"><span class="chip time">3–15 min</span> <span class="chip ukaz">UKAŽ SE 3</span></div>
+  <div class="materials"><b>Pomůcky:</b> sklenice, balonek, gumička, brčko/špejle, karton + fix, páska (2 sady na skupinu).</div>
+  <ol>
+    <li>Přetáhněte kus balonku přes ústí sklenice, pěkně <b>napněte</b> a upevněte gumičkou — musí být vzduchotěsné.</li>
+    <li>Na membránu vodorovně přilepte brčko (ukazatel), ať špička trčí ven přes okraj.</li>
+    <li>Za špičku postavte karton se stupnicí a nakreslete šipky „vyšší tlak / nižší tlak".</li>
+    <li>Vysvětli princip: <b>stoupne-li tlak</b> venku, zamáčkne membránu dovnitř → špička brčka jde <b>nahoru</b>; klesne-li tlak, membrána se vyklene a špička jde <b>dolů</b>.</li>
+    <li>Označte fixem dnešní polohu = <b>start</b>.</li>
+  </ol>
+  <div class="say"><b>Pozor:</b> teplota membránou taky hýbe — proto barometr (i stanici) dáme <b>do stínu</b>, ne na okno/slunce.</div>
+  <div class="connect-box"><b>Souvislost:</b> tenhle přístroj vymyslel <b>Torricelli</b> (viz nástěnka) — jen místo balonku používal rtuť.</div>
+</div>
+
+<div class="activity">
+  <h3>2 &middot; Meteostanice u tábora + první měření</h3>
+  <div class="act-meta"><span class="chip time">15–25 min</span> <span class="chip ukaz">UKAŽ SE 3</span> <span class="chip dokaz">DOKAŽ TO A (start)</span></div>
+  <div class="materials"><b>Pomůcky:</b> teploměr, barometr, srážkoměr (láhev s ryskou v mm), deníky, tužky.</div>
+  <ol>
+    <li>Společně vyberte místo: <b>ve stínu</b>, chráněné, ~1,5 m nad zemí; srážkoměr naopak na <b>otevřené</b> místo (aby do něj pršelo).</li>
+    <li>Umístěte teploměr + barometr, postavte srážkoměr.</li>
+    <li>Vysvětli, proč měříme ve <b>stálých časech 7 – 14 – 21 h</b> (aby šly dny porovnat).</li>
+    <li>Proveďte <b>první měření</b> a zapište do deníku: teplota, poloha barometru, srážky (dnes většinou 0 mm).</li>
+  </ol>
+  <div class="connect-box"><b>Souvislost:</b> časy 7–14–21 zavedl <b>Antonín Strnad</b> (zadní strana deníku). Tímhle měřením startuje <b>DOKAŽ TO A</b> — dokončí se v neděli porovnáním dvou různých dní.</div>
+</div>
+
+<div class="activity">
+  <h3>3 &middot; Hra: druhy oblaků</h3>
+  <div class="act-meta"><span class="chip time">25–37 min</span> <span class="chip ukaz">UKAŽ SE 2</span></div>
+  <div class="materials"><b>Pomůcky:</b> kartička „10 druhů oblaků", deníky, tužky. (Venku, když je vidět obloha.)</div>
+  <ol>
+    <li><b>Párování:</b> čti nahlas popis („tenké, peříčkové, vysoko" / „rybí šupiny" / „bouřková věž s kovadlinou"…), děti hádají <b>název</b> a <b>patro</b> (vysoké / střední / nízké / vertikální).</li>
+    <li><b>Na obloze:</b> jděte ven a určete, co je dnes na nebi; odhadněte výšku podle patra.</li>
+    <li>Každé dítě si do deníku <b>zakreslí</b>, jaký druh dnes vidělo.</li>
+  </ol>
+  <div class="say"><b>Tip:</b> zaměř se na 3–4 nejčastější (cirrus, cumulus, stratus, cumulonimbus) — nemusí umět všech 10 zpaměti, stačí poznat a najít na kartičce.</div>
+  <div class="connect-box"><b>Souvislost:</b> mraky pojmenoval <b>Luke Howard</b> (zadní strana kartičky s oblaky).</div>
+</div>
+
+<div class="activity">
+  <h3>4 &middot; Pranostiky + počasí × podnebí</h3>
+  <div class="act-meta"><span class="chip time">37–47 min</span> <span class="chip ukaz">UKAŽ SE 12</span> <span class="chip dokaz">DOKAŽ TO C (dotek)</span></div>
+  <div class="materials"><b>Pomůcky:</b> 5 pranostik z kartičky/deníku; poster <i>Počasí a podnebí</i> na nástěnce.</div>
+  <ol>
+    <li>Přečtěte <b>5 pranostik</b>; u každé: k čemu se vztahuje a jestli v ní je „zrnko pravdy".</li>
+    <li>Klíčová myšlenka: pranostika = <b>dlouhodobá zkušenost</b> → mluví spíš o <b>podnebí</b>, ne o přesné předpovědi na zítřek.</li>
+    <li>Krátká diskuse: <b>počasí</b> = co je teď/dnes; <b>podnebí</b> = dlouhodobý průměr místa (odkaz na nástěnku, Köppen).</li>
+  </ol>
+  <div class="say"><b>Otázka do diskuse:</b> „Když řeknu, že v Praze bývají mírné zimy — mluvím o počasí, nebo o podnebí?"</div>
+</div>
+
+<div class="activity">
+  <h3>5 &middot; Rozdání deníků + týdenní úkol</h3>
+  <div class="act-meta"><span class="chip time">47–53 min</span> <span class="chip dokaz">DOKAŽ TO A</span></div>
+  <div class="materials"><b>Pomůcky:</b> deník pro každé dítě, tužka.</div>
+  <ol>
+    <li>Rozdej deník, ukaž tabulku <b>7 – 14 – 21 h</b> a kam se co píše.</li>
+    <li><b>Úkol na týden:</b> každý den zapisovat aspoň <b>2 veličiny</b> (teplota + tlak/srážky) a průběžně kreslit mraky.</li>
+    <li>Domluva: <b>v neděli přineste vyplněný deník</b> — porovnáme teplý a studený den a uděláme předpověď.</li>
+  </ol>
+  <div class="say"><b>Motivace:</b> „Kdo si týden poctivě zapisuje, má hlavní podmínku <b>A</b> skoro splněnou."</div>
+</div>
+
+<div class="activity">
+  <h3>Závěr / rezerva</h3>
+  <div class="act-meta"><span class="chip time">53–55 min</span></div>
+  <ol>
+    <li>Shrň, co jsme dnes stihli, a připomeň nedělní sraz s deníkem.</li>
+    <li>Kdo chce, může si mezitím přečíst nástěnku (Torricelli, Köppen, nebezpečí, optické jevy) — pomáhá to k odborce.</li>
+  </ol>
+</div>
+
+</body>
+</html>

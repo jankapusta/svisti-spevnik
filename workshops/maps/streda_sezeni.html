@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Mapař — 1. sezení (středa) — scénář pro vedoucího</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    color: #222; font-size: 11pt; line-height: 1.42;
+    max-width: 900px; margin: 0 auto; padding: 14px;
+  }
+  .session-title { background: #1a4d6d; color: #fff; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .session-title h1 { color: #fff; font-size: 19pt; margin: 0; }
+  .session-title .sub { font-size: 10.5pt; opacity: 0.92; margin-top: 5px; }
+  h2.sec { font-size: 13pt; color: #1a4d6d; border-bottom: 2px solid #dceaf0; padding-bottom: 3px; margin: 20px 0 8px; }
+
+  .chip { display: inline-block; font-size: 8.5pt; padding: 2px 8px; border-radius: 10px; margin: 2px 3px 2px 0; white-space: nowrap; }
+  .chip.dokaz { background: #2e7d32; color: #fff; }
+  .chip.ukaz  { background: #1a4d6d; color: #fff; }
+  .chip.time  { background: #f0e2bd; color: #6b531a; font-weight: bold; }
+
+  .goal { background: #eef5f8; border: 1px solid #b8d4e3; border-radius: 6px; padding: 10px 14px; margin: 10px 0; font-size: 10.5pt; }
+  .prep { background: #f1f7ec; border: 1px solid #cfe3c0; border-left: 4px solid #33691e; border-radius: 6px; padding: 10px 14px; margin: 12px 0; }
+  .prep h2 { font-size: 13pt; color: #33691e; margin: 0 0 6px; }
+  .prep ul { margin: 4px 0 0 18px; padding: 0; font-size: 10pt; }
+  .prep li { margin: 3px 0; }
+  .secret { background: #fbeaea; border: 1px solid #e2b6b6; border-left: 4px solid #c0392b; border-radius: 6px; padding: 8px 12px; margin: 12px 0; font-size: 10pt; }
+  .secret b { color: #a5281f; }
+
+  table.timeline { width: 100%; border-collapse: collapse; margin: 8px 0 4px; }
+  table.timeline th, table.timeline td { border: 1px solid #bbb; padding: 5px 8px; font-size: 10pt; text-align: left; vertical-align: top; }
+  table.timeline th { background: #dceaf0; }
+  table.timeline td.t { white-space: nowrap; font-weight: bold; color: #1a4d6d; width: 74px; }
+
+  .activity { border: 1px solid #ddd; border-left: 5px solid #1a4d6d; border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+  @media print { .activity, table.timeline, .prep, .secret { page-break-inside: avoid; } }
+  .activity h3 { margin: 0; font-size: 13.5pt; color: #1a4d6d; }
+  .act-meta { margin: 4px 0 8px; }
+  .materials { background: #f7f7f7; border-radius: 4px; padding: 6px 10px; font-size: 9.7pt; margin: 6px 0; }
+  .materials b { color: #1a4d6d; }
+  .activity ol { margin: 6px 0 6px 20px; padding: 0; }
+  .activity li { margin: 3px 0; font-size: 10.6pt; }
+  .say { background: #fff6de; border-left: 3px solid #d9b34a; padding: 6px 10px; font-size: 10pt; margin: 6px 0; }
+  .say b { color: #8a6a1a; }
+  .connect-box { background: #eef5f8; border-left: 3px solid #1a4d6d; padding: 6px 10px; margin: 6px 0; font-size: 9.7pt; }
+  .connect-box b { color: #1a4d6d; }
+</style>
+</head>
+<body>
+
+<div class="session-title">
+  <h1>Mapař/Mapařka — 1. sezení (středa)</h1>
+  <div class="sub">Scénář pro vedoucího &middot; ~55 min &middot; skupina 5–6 dětí (11–14 let), dělíme na 2 podskupiny</div>
+</div>
+
+<div class="goal">
+  <b>Cíl sezení:</b> vyrobit si kompas, zvládnout azimut a <b>triangulaci</b> (protínání směrů)
+  a ve dvojicích naplánovat trasu na <b>čtvrteční výlet</b>. Naplní
+  <span class="chip ukaz">UKAŽ SE 1</span> <span class="chip dokaz">DOKAŽ TO D</span>
+  a dotkne se <span class="chip dokaz">DOKAŽ TO B</span> (orientace v terénu).
+</div>
+
+<div class="secret">
+  <b>Jen pro vedoucího — NEŘÍKAT dětem:</b> večer běží tajná velká hra (vede ji jiný vedoucí)
+  a využívá triangulaci. Triangulaci proto učíme <b>jako běžnou dovednost</b> — o večerní hře
+  se ani slovem nezmiňujeme (překvapení).
+</div>
+
+<div class="prep">
+  <h2>Před sezením (příprava)</h2>
+  <ul>
+    <li><b>Kompas:</b> na každé dítě korek (plátek ~1 cm), jehla/špendlík, mělká miska s vodou,
+      silný magnet (na zmagnetování jehly). Volitelně kus izolepy.</li>
+    <li><b>Triangulace:</b> buzoly (ideálně 1 na 2 děti), pro každou podskupinu <b>mapka se 3
+      označenými stanovišti</b> + lísteček se 3 azimuty (viz pracovní list + <b>řešení pro
+      vedoucího</b>). V terénu 3 stanoviště fyzicky označit (kolík/fáborek).</li>
+    <li><b>Plánování trasy:</b> mapy okolí (papírové) s vyznačeným <b>cílem čtvrtečního výletu</b>,
+      tužky, itinerářový formulář (pracovní list), příp. jízdní řády.</li>
+    <li>Pravítko/úhloměr na vynášení azimutů, podložky na psaní.</li>
+  </ul>
+</div>
+
+<h2 class="sec">Přehled — časová osa</h2>
+<table class="timeline">
+  <tr><th>Čas</th><th>Aktivita</th><th>Odborka</th></tr>
+  <tr><td class="t">0–2 min</td><td>Úvod: co je Mapař, co nás čeká</td><td>—</td></tr>
+  <tr><td class="t">2–11 min</td><td>Výroba kompasu (korek + jehla + voda)</td><td>UKAŽ SE 1</td></tr>
+  <tr><td class="t">11–35 min</td><td>Triangulace (+ práce s buzolou/azimutem)</td><td>dotek B</td></tr>
+  <tr><td class="t">35–52 min</td><td>Plánování trasy na čtvrteční výlet (dvojice)</td><td>DOKAŽ TO D</td></tr>
+  <tr><td class="t">52–55 min</td><td>Zadání domácích úkolů + závěr</td><td>—</td></tr>
+</table>
+
+<h2 class="sec">Podrobný scénář</h2>
+
+<div class="activity">
+  <h3>0 &middot; Úvod</h3>
+  <div class="act-meta"><span class="chip time">0–2 min</span></div>
+  <ol>
+    <li>Krátce: „Dnes se z nás stanou mapaři — vyrobíme si kompas, naučíme se najít bod v terénu
+      podle směrů a naplánujeme trasu na čtvrteční výlet."</li>
+  </ol>
+</div>
+
+<div class="activity">
+  <h3>1 &middot; Výroba kompasu</h3>
+  <div class="act-meta"><span class="chip time">2–11 min</span> <span class="chip ukaz">UKAŽ SE 1</span></div>
+  <div class="materials"><b>Pomůcky:</b> korek, jehla/špendlík, miska s vodou, magnet.</div>
+  <ol>
+    <li><b>Zmagnetuj jehlu:</b> ~20× přejeď jehlu magnetem <b>stále stejným směrem</b> (ne tam a zpět).</li>
+    <li>Prostrč jehlu plátkem korku (nebo polož na korek).</li>
+    <li>Polož korek s jehlou na hladinu vody — jehla se sama <b>natočí sever–jih</b>.</li>
+    <li>Ověř směr proti buzole; označ si, kde je sever.</li>
+  </ol>
+  <div class="say"><b>Proč to funguje:</b> zmagnetovaná jehla se srovná s magnetickým polem Země —
+    stejně jako střelka buzoly.</div>
+</div>
+
+<div class="activity">
+  <h3>2 &middot; Triangulace (protínání azimutů)</h3>
+  <div class="act-meta"><span class="chip time">11–35 min</span> <span class="chip dokaz">dotek DOKAŽ TO B</span></div>
+  <div class="materials"><b>Pomůcky:</b> buzoly, mapka se 3 stanovišti + 3 azimuty (na podskupinu), pravítko/úhloměr, tužka. <b>Řešení má vedoucí.</b></div>
+  <ol>
+    <li><b>Rychlá prověrka buzoly</b> (cca 50 % dětí už umí): zkušené spáruj s nováčky. Krátce:
+      jak držet buzolu, co je <b>azimut</b> (úhel od severu ve stupních) a jak podle azimutu jít.</li>
+    <li>Vysvětli princip: <b>z jednoho směru nevíš, jak daleko cíl je</b> — ale když ho zaměříš
+      ze <b>tří míst</b>, tři přímky se protnou v jednom bodě → <b>to je hledaný bod</b>.</li>
+    <li>Každá podskupina obejde 3 stanoviště. Na každém nastaví <b>zadaný azimut</b> a
+      <b>zakreslí přímku do mapky</b> (od stanoviště v daném směru).</li>
+    <li>Tři přímky se protnou → děti najdou průsečík na mapce (a případně dojdou na to místo).</li>
+    <li>Zkontroluj podle řešení; kdo má průsečík „mimo", ať zkontroluje azimuty.</li>
+  </ol>
+  <div class="say"><b>Tip:</b> ať si každý aspoň jednou sám vezme azimut buzolou — o to jde.
+    Zkušenější ať vedou, ne dělají za nováčky.</div>
+</div>
+
+<div class="activity">
+  <h3>3 &middot; Plánování trasy na čtvrteční výlet</h3>
+  <div class="act-meta"><span class="chip time">35–52 min</span> <span class="chip dokaz">DOKAŽ TO D</span></div>
+  <div class="materials"><b>Pomůcky:</b> mapa okolí s vyznačeným cílem výletu, itinerářový formulář, tužky, (jízdní řády).</div>
+  <ol>
+    <li>Ukaž na mapě <b>cíl čtvrtečního výletu</b>. Děti pracují <b>ve dvojicích</b>.</li>
+    <li>Každá dvojice navrhne trasu: kudy půjdeme, <b>co nejméně po turistických značkách</b>
+      (ať musí číst mapu, ne jen značky).</li>
+    <li>Do itineráře zapíšou <b>úseky, odhad času a vzdálenosti</b> (využijí měřítko) a <b>volbu
+      dopravy</b> (pěšky/kolo/bus…).</li>
+    <li>Pár dvojic svou trasu krátce představí; porovnáme varianty.</li>
+  </ol>
+  <div class="connect-box"><b>Propojení:</b> nejlepší nápady můžeme ve čtvrtek na výletu opravdu
+    použít — děti vedou podle své mapy.</div>
+</div>
+
+<div class="activity">
+  <h3>4 &middot; Domácí úkoly + závěr</h3>
+  <div class="act-meta"><span class="chip time">52–55 min</span> <span class="chip ukaz">UKAŽ SE 13</span> <span class="chip ukaz">UKAŽ SE 15</span></div>
+  <ol>
+    <li><b>Světové strany v noci (13):</b> dnes/zítra večer zkuste určit sever podle <b>měsíce</b>
+      (s hodinkami i bez) a <b>hvězd</b> — návod je na nástěnce.</li>
+    <li><b>Slavný kartograf (15):</b> vyber si kartografa/kartografku (tip na nástěnce), zjisti
+      jeho osudy a metody a <b>v sobotu ho krátce představíš</b> družině.</li>
+    <li>Připomeň čtvrteční výlet (půjdeme podle vašich map).</li>
+  </ol>
+</div>
+
+</body>
+</html>

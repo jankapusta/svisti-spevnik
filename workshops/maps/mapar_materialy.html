@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; color: #222; font-size: 11pt; line-height: 1.4; max-width: 900px; margin: 0 auto; padding: 10px; }
+  .section-divider { text-align: center; margin: 10px 0 25px 0; padding: 10px; background: #1a4d6d; color: white; border-radius: 4px; font-size: 14pt; font-weight: bold; letter-spacing: 1px; }
+  .page { border: 1px solid #ddd; border-radius: 4px; padding: 18px 24px; margin-bottom: 25px; background: white; }
+  @media print { .page { page-break-after: always; border: none; } .page:last-child { page-break-after: avoid; } }
+
+  .header-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .icon-badge { flex-shrink: 0; width: 70px; height: 70px; border-radius: 50%; background: #1a4d6d; display: flex; align-items: center; justify-content: center; }
+  h1 { font-size: 20pt; margin: 0; color: #1a4d6d; }
+  h2.dates { font-size: 11pt; font-weight: normal; color: #666; margin: 1mm 0 0 0; }
+  .lead { font-size: 12.5pt; margin: 10px 0; color: #333; }
+  .body-text { font-size: 11pt; margin: 7px 0; }
+  .small-note { font-size: 8.5pt; color: #666; font-style: italic; }
+  .connect-box { background: #fff6de; border-left: 3px solid #d9b34a; padding: 8px 12px; margin-top: 12px; font-size: 10.5pt; }
+  .connect-box b { color: #8a6a1a; }
+
+  /* cartographer profiles */
+  .profile { display: flex; gap: 16px; align-items: flex-start; border: 1px solid #e2e2e2; border-radius: 6px; padding: 12px; margin: 12px 0; break-inside: avoid; }
+  .profile img { flex-shrink: 0; width: 120px; height: 150px; object-fit: cover; border-radius: 4px; background: #eee; }
+  .profile .pname { font-size: 14pt; font-weight: bold; color: #1a4d6d; margin: 0; }
+  .profile .pdates { font-size: 9.5pt; color: #777; margin: 1px 0 6px; }
+  .profile p { font-size: 10pt; margin: 4px 0; }
+  .profile .tagline { display: inline-block; background: #eef5f8; border: 1px solid #b8d4e3; color: #1a4d6d; font-size: 8.5pt; padding: 2px 8px; border-radius: 8px; margin-top: 4px; }
+
+  /* night sky */
+  .sky-fig { text-align: center; margin: 10px 0; }
+  .sky-fig svg { max-width: 100%; }
+  .method { border-left: 4px solid #1a4d6d; background: #f6f9fb; border-radius: 4px; padding: 8px 14px; margin: 10px 0; }
+  .method h3 { margin: 0 0 4px; color: #1a4d6d; font-size: 12.5pt; }
+  .method ol { margin: 4px 0 0 18px; padding: 0; }
+  .method li { font-size: 10.5pt; margin: 3px 0; }
+
+  /* scale */
+  table.info { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  table.info th, table.info td { border: 1px solid #999; padding: 5px 8px; font-size: 10pt; text-align: left; }
+  table.info th { background: #dceaf0; }
+  .formula-box { background: #fff6de; border: 1px solid #d9b34a; border-radius: 4px; padding: 8px 12px; text-align: center; font-size: 12pt; font-weight: bold; margin: 10px 0; }
+
+  /* symbol legend */
+  .symgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+  .sym { display: flex; align-items: center; gap: 10px; border: 1px solid #e2e2e2; border-radius: 4px; padding: 6px 8px; }
+  .sym svg { flex-shrink: 0; width: 46px; height: 34px; border: 1px solid #eee; border-radius: 3px; background: #fbfdff; }
+  .sym span { font-size: 9.5pt; }
+</style>
+</head>
+<body>
+
+<div class="section-divider">NÁSTĚNKA — pro veřejnou tabuli v táboře</div>
+
+<!-- SLAVNI KARTOGRAFOVE -->
+<div class="page">
+  <div class="header-row">
+    <div class="icon-badge">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="34" fill="none" stroke="#fff" stroke-width="3"/>
+        <ellipse cx="50" cy="50" rx="34" ry="13" fill="none" stroke="#fff" stroke-width="2"/>
+        <line x1="16" y1="50" x2="84" y2="50" stroke="#fff" stroke-width="2"/>
+        <line x1="50" y1="16" x2="50" y2="84" stroke="#fff" stroke-width="2"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Slavní kartografové</h1>
+      <h2 class="dates">Vyber si jednoho a připrav jeho krátký příběh pro družinu (UKAŽ SE 15)</h2>
+    </div>
+  </div>
+
+  <p class="lead">Kartograf = ten, kdo tvoří mapy. Podívej se na tři slavné a jednoho si vyber
+  — v sobotu ho krátce představíš ostatním (kdo to byl, jak dělal mapy, čím je slavný).</p>
+
+  <div class="profile">
+    <img src="cartographer_mercator.jpg" alt="Gerardus Mercator">
+    <div>
+      <p class="pname">Gerardus Mercator</p>
+      <p class="pdates">1512–1594, Flandry (dnešní Belgie)</p>
+      <p>Vlámský kartograf a rytec. Roku <b>1569</b> vytvořil slavnou mapu světa v úplně nové
+      projekci a pro knihu map zavedl slovo <b>„atlas"</b>.</p>
+      <p><b>Metoda — Mercatorova projekce:</b> poledníky i rovnoběžky se kříží v pravém úhlu, takže
+      <b>námořní kurz je na mapě rovná čára</b> — skvělé pro plavbu. Daň: <b>zkresluje plochy</b>
+      u pólů (Grónsko vypadá obrovské, i když je mnohem menší než Afrika).</p>
+      <p class="tagline">Jeho projekci používají dodnes i mapy na mobilu.</p>
+    </div>
+  </div>
+
+  <div class="profile">
+    <img src="cartographer_ortelius.jpg" alt="Abraham Ortelius">
+    <div>
+      <p class="pname">Abraham Ortelius</p>
+      <p class="pdates">1527–1598, Antverpy</p>
+      <p>Vlámský kartograf a obchodník s mapami. Roku <b>1570</b> vydal <b>Theatrum Orbis Terrarum</b>
+      — bývá označován za <b>první moderní atlas</b> (jednotný formát listů, seznam pramenů).</p>
+      <p><b>Nápad navíc:</b> jako jeden z prvních nahlas napsal, že <b>kontinenty do sebe kdysi možná
+      zapadaly</b> — dávno předtím, než vznikla teorie pohybu kontinentů.</p>
+      <p class="tagline">Otec moderního atlasu.</p>
+    </div>
+  </div>
+
+  <div class="profile">
+    <img src="cartographer_muller_mapa.jpg" alt="Müllerova mapa Čech (1720)">
+    <div>
+      <p class="pname">Jan Kryštof Müller</p>
+      <p class="pdates">1673–1721, český zemský kartograf</p>
+      <p>Vojenský inženýr a kartograf. Roku <b>1720</b> dokončil <b>Müllerovu mapu Čech</b> —
+      na svou dobu neuvěřitelně podrobnou mapu celého Českého království (na 25 listech).</p>
+      <p><b>Metoda:</b> měření přímo v terénu, <b>triangulace</b> a pečlivý záznam tisíců obcí, cest
+      a řek. (Triangulaci znáš z dílny — Müller ji používal naostro!)</p>
+      <p class="tagline">Nejpodrobnější mapa Čech 18. století — dodnes cenný historický pramen.</p>
+    </div>
+  </div>
+  <p class="small-note">Obrázky: Wikimedia Commons (volné dílo). Müllerovu osobu se portrét nedochoval
+  — vpravo je zdobný roh (kartuše) jeho mapy s pohledem na město.</p>
+</div>
+
+<!-- SVETOVE STRANY V NOCI -->
+<div class="page">
+  <div class="header-row">
+    <div class="icon-badge">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <circle cx="35" cy="35" r="10" fill="#fff"/>
+        <polygon points="70,20 74,32 86,32 76,40 80,52 70,44 60,52 64,40 54,32 66,32" fill="#fff"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Světové strany v noci</h1>
+      <h2 class="dates">Když nemáš buzolu — najdi sever podle hvězd a měsíce (UKAŽ SE 13)</h2>
+    </div>
+  </div>
+
+  <div class="method">
+    <h3>Podle hvězd — Polárka (Severka) = SEVER</h3>
+    <ol>
+      <li>Najdi <b>Velký vůz</b> — sedm jasných hvězd ve tvaru naběračky (vozu).</li>
+      <li>Vezmi <b>zadní dvě hvězdy „korby"</b> a jejich spojnici <b>protáhni asi 5×</b>.</li>
+      <li>Dojdeš k <b>Polárce</b> — nepříliš jasná hvězda, která stojí skoro přesně nad <b>severem</b>.
+        Je to poslední hvězda oje <b>Malého vozu</b>.</li>
+    </ol>
+  </div>
+  <div class="sky-fig">
+    <svg viewBox="0 0 360 200" width="360" height="200" font-family="DejaVu Sans">
+      <rect width="360" height="200" fill="#0f1e3a"/>
+      <!-- Velký vůz -->
+      <g fill="#ffffff">
+        <circle cx="70" cy="165" r="3"/><circle cx="80" cy="120" r="3.2"/>
+        <circle cx="125" cy="112" r="3"/><circle cx="120" cy="158" r="3"/>
+        <circle cx="160" cy="107" r="2.6"/><circle cx="192" cy="118" r="2.6"/><circle cx="222" cy="135" r="2.6"/>
+      </g>
+      <g stroke="#8fb4e0" stroke-width="1" opacity="0.8" fill="none">
+        <polyline points="70,165 80,120 125,112 120,158 70,165"/>
+        <polyline points="125,112 160,107 192,118 222,135"/>
+      </g>
+      <text x="120" y="185" font-size="8.5" fill="#9fb8dd">Velký vůz</text>
+      <!-- pointer to Polaris -->
+      <line x1="70" y1="165" x2="100" y2="35" stroke="#f2c200" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <circle cx="100" cy="35" r="3.6" fill="#fff2b0"/>
+      <text x="108" y="33" font-size="9.5" fill="#f2c200" font-weight="bold">Polárka</text>
+      <text x="108" y="45" font-size="10.5" fill="#ffffff" font-weight="bold">= SEVER</text>
+      <!-- Kasiopeja -->
+      <g fill="#ffffff" opacity="0.9">
+        <circle cx="175" cy="40" r="2.4"/><circle cx="195" cy="52" r="2.4"/><circle cx="215" cy="38" r="2.4"/><circle cx="235" cy="53" r="2.4"/><circle cx="255" cy="40" r="2.4"/>
+      </g>
+      <polyline points="175,40 195,52 215,38 235,53 255,40" stroke="#8fb4e0" stroke-width="1" fill="none" opacity="0.7"/>
+      <text x="200" y="72" font-size="8.5" fill="#9fb8dd">Kasiopeja („W")</text>
+    </svg>
+  </div>
+  <p class="small-note">Když Velký vůz zrovna nevidíš, na <b>opačné straně Polárky</b> hledej „W" —
+  souhvězdí <b>Kasiopeja</b>. Polárka je zhruba mezi nimi.</p>
+
+  <div class="method">
+    <h3>Podle měsíce</h3>
+    <ol>
+      <li>Spoj <b>cípy (rohy) srpku</b> čarou a <b>protáhni ji dolů k obzoru</b> — ukazuje přibližně
+        na <b>JIH</b> (na severní polokouli).</li>
+      <li><b>Dorůstající</b> měsíc (svítí <b>pravá</b> strana, tvar „D") je večer nad jihozápadem;
+        <b>couvající</b> („C", svítí levá strana) je k ránu nad jihovýchodem.</li>
+    </ol>
+  </div>
+  <div class="sky-fig">
+    <svg viewBox="0 0 300 150" width="300" height="150" font-family="DejaVu Sans">
+      <rect width="300" height="150" fill="#0f1e3a"/>
+      <!-- crescent moon (horns pointing left) -->
+      <g transform="translate(150,60)">
+        <circle cx="0" cy="0" r="28" fill="#fff2b0"/>
+        <circle cx="12" cy="0" r="26" fill="#0f1e3a"/>
+      </g>
+      <!-- horns and line to horizon -->
+      <circle cx="139" cy="35" r="2.5" fill="#fff"/>
+      <circle cx="139" cy="85" r="2.5" fill="#fff"/>
+      <line x1="139" y1="35" x2="139" y2="130" stroke="#f2c200" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <line x1="20" y1="130" x2="280" y2="130" stroke="#5b6b52" stroke-width="2"/>
+      <text x="146" y="126" font-size="11" fill="#f2c200" font-weight="bold">JIH</text>
+      <text x="30" y="145" font-size="8.5" fill="#9fb8dd">spojnice cípů srpku protažená k obzoru → jih</text>
+    </svg>
+  </div>
+</div>
+
+<!-- MERITKO -->
+<div class="page">
+  <div class="header-row">
+    <div class="icon-badge">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <rect x="15" y="42" width="70" height="16" fill="none" stroke="#fff" stroke-width="3"/>
+        <line x1="32" y1="42" x2="32" y2="58" stroke="#fff" stroke-width="2"/>
+        <line x1="50" y1="42" x2="50" y2="58" stroke="#fff" stroke-width="2"/>
+        <line x1="68" y1="42" x2="68" y2="58" stroke="#fff" stroke-width="2"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Měřítko mapy</h1>
+      <h2 class="dates">Jak z mapy zjistit skutečnou vzdálenost (UKAŽ SE 10)</h2>
+    </div>
+  </div>
+
+  <p class="body-text"><b>Co je měřítko?</b> Poměr mezi vzdáleností <b>na mapě</b> a <b>ve
+  skutečnosti</b>. Zapisuje se třeba <b>1 : 25 000</b> a čte se „jedna ku pětadvaceti tisícům".</p>
+
+  <div class="formula-box">1 : 25 000 → 1 cm na mapě = 25 000 cm = 250 m ve skutečnosti</div>
+
+  <p class="body-text"><b>Dva druhy měřítka:</b></p>
+  <table class="info">
+    <tr><th>Číselné</th><th>Grafické (proužkové)</th></tr>
+    <tr>
+      <td>Zlomek/poměr, např. <b>1 : 50 000</b>. Musíš počítat.</td>
+      <td>Nakreslené pravítko přímo na mapě — přeměříš a odečteš. <b>Funguje i po zvětšení/zmenšení
+      kopie</b> (proto ho mají turistické mapy).</td>
+    </tr>
+  </table>
+  <div class="sky-fig">
+    <svg viewBox="0 0 300 44" width="300" height="44" font-family="DejaVu Sans">
+      <line x1="10" y1="26" x2="250" y2="26" stroke="#333" stroke-width="2"/>
+      <g stroke="#333" stroke-width="2">
+        <line x1="10" y1="18" x2="10" y2="34"/><line x1="70" y1="18" x2="70" y2="34"/>
+        <line x1="130" y1="18" x2="130" y2="34"/><line x1="190" y1="18" x2="190" y2="34"/><line x1="250" y1="18" x2="250" y2="34"/>
+      </g>
+      <text x="6" y="14" font-size="8">0</text><text x="60" y="14" font-size="8">1 km</text>
+      <text x="120" y="14" font-size="8">2 km</text><text x="180" y="14" font-size="8">3 km</text><text x="240" y="14" font-size="8">4 km</text>
+      <text x="10" y="42" font-size="8" fill="#666">příklad grafického měřítka</text>
+    </svg>
+  </div>
+
+  <p class="body-text"><b>Nejčastější měřítka:</b></p>
+  <table class="info">
+    <tr><th>Měřítko</th><th>1 cm na mapě =</th><th>Kde ho potkáš</th></tr>
+    <tr><td>1 : 10 000</td><td>100 m</td><td>plán města, orientační běh</td></tr>
+    <tr><td>1 : 25 000</td><td>250 m</td><td>podrobná turistická mapa</td></tr>
+    <tr><td>1 : 50 000</td><td>500 m</td><td>turistická mapa KČT</td></tr>
+    <tr><td>1 : 100 000</td><td>1 km</td><td>přehledová / automapa</td></tr>
+  </table>
+
+  <div class="connect-box"><b>Rychlý postup:</b> naměřenou vzdálenost na mapě (v cm) vynásob číslem
+  za dvojtečkou → dostaneš skutečnost v cm; poděl 100 000 → kilometry. A obráceně: skutečnost
+  poděl měřítkem → kolik cm nakreslit na mapu.</div>
+</div>
+
+<!-- LEGENDA SYMBOLU -->
+<div class="page">
+  <div class="header-row">
+    <div class="icon-badge">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <rect x="22" y="18" width="56" height="64" rx="3" fill="none" stroke="#fff" stroke-width="3"/>
+        <line x1="32" y1="34" x2="68" y2="34" stroke="#fff" stroke-width="2"/>
+        <line x1="32" y1="50" x2="68" y2="50" stroke="#fff" stroke-width="2"/>
+        <line x1="32" y1="66" x2="58" y2="66" stroke="#fff" stroke-width="2"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Legenda mapových symbolů</h1>
+      <h2 class="dates">Klíč, který připojíš ke své mapě okolí (DOKAŽ TO A)</h2>
+    </div>
+  </div>
+
+  <p class="body-text">Když kreslíš mapu, potřebuje <b>legendu</b> — klíč, co který symbol znamená.
+  Tady jsou nejběžnější (přírodní i člověkem vytvořené prvky):</p>
+
+  <div class="symgrid">
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#e7f2e0"/><g fill="#2e7d32"><polygon points="12,26 8,26 10,18"/><polygon points="12,26 16,26 14,18"/><polygon points="24,28 19,28 21.5,18"/><polygon points="24,28 29,28 26.5,18"/><polygon points="36,26 32,26 34,18"/></g></svg><span>les (jehličnatý)</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#e7f2e0"/><g fill="#3ea34a"><circle cx="13" cy="20" r="6"/><circle cx="25" cy="22" r="7"/><circle cx="35" cy="19" r="5"/></g></svg><span>les (listnatý)</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#eef7d8"/><g stroke="#7ba428" stroke-width="1.4"><line x1="10" y1="24" x2="10" y2="14"/><line x1="18" y1="24" x2="18" y2="12"/><line x1="26" y1="24" x2="26" y2="14"/><line x1="34" y1="24" x2="34" y2="12"/></g></svg><span>louka</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#dff0fb"/><path d="M4,14 Q14,8 23,14 T42,14" fill="none" stroke="#2980b9" stroke-width="2"/><path d="M4,22 Q14,16 23,22 T42,22" fill="none" stroke="#2980b9" stroke-width="2"/></svg><span>vodní tok / řeka</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#dff0fb"/><ellipse cx="23" cy="17" rx="15" ry="9" fill="#7fb8dd" stroke="#2980b9" stroke-width="1.5"/></svg><span>rybník / jezero</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbfdff"/><rect x="15" y="12" width="16" height="13" fill="#c96a4a" stroke="#8a4023" stroke-width="1"/></svg><span>budova</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbfdff"/><rect x="18" y="14" width="10" height="12" fill="#8a8a8a"/><line x1="23" y1="14" x2="23" y2="6" stroke="#333" stroke-width="1.5"/><line x1="20" y1="9" x2="26" y2="9" stroke="#333" stroke-width="1.5"/></svg><span>kostel</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbfdff"/><line x1="4" y1="24" x2="42" y2="12" stroke="#d99a2b" stroke-width="4"/></svg><span>silnice</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbfdff"/><line x1="4" y1="24" x2="42" y2="12" stroke="#777" stroke-width="1.6" stroke-dasharray="4 3"/></svg><span>cesta / pěšina</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbfdff"/><line x1="4" y1="18" x2="42" y2="18" stroke="#333" stroke-width="2"/><g stroke="#333" stroke-width="1.4"><line x1="10" y1="13" x2="10" y2="23"/><line x1="18" y1="13" x2="18" y2="23"/><line x1="26" y1="13" x2="26" y2="23"/><line x1="34" y1="13" x2="34" y2="23"/></g></svg><span>železnice</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbf5ea"/><g fill="none" stroke="#b98a3e" stroke-width="1.3"><path d="M6,28 Q23,24 40,28"/><path d="M9,22 Q23,18 37,22"/><path d="M13,16 Q23,13 33,16"/></g></svg><span>vrstevnice</span></div>
+    <div class="sym"><svg viewBox="0 0 46 34"><rect width="46" height="34" fill="#fbfdff"/><circle cx="16" cy="18" r="2" fill="#333"/><text x="21" y="21" font-size="9" font-family="DejaVu Sans" fill="#333">△ 512</text></svg><span>kóta (výška v m)</span></div>
+  </div>
+  <p class="small-note">Tip: symboly si můžeš vymyslet i vlastní — hlavní je, aby byly v legendě
+  vysvětlené a na celé mapě stejné.</p>
+</div>
+
+</body>
+</html>

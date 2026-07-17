@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Karty: Poznávání mraků (párovací hra)</title>
+<style>
+  * { box-sizing: border-box; }
+  @page { size: A4; margin: 10mm; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; color: #222; font-size: 11pt; margin: 0; }
+  .bar { background: #1a4d6d; color: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 12px; }
+  .bar h1 { margin: 0; font-size: 17pt; }
+  .bar .sub { font-size: 10pt; opacity: 0.92; margin-top: 4px; }
+  .howto { background: #eef5f8; border: 1px solid #b8d4e3; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; font-size: 10pt; }
+  .howto b { color: #1a4d6d; }
+  .howto ol { margin: 4px 0 0 18px; padding: 0; }
+  .deck-title { font-size: 12pt; font-weight: bold; color: #1a4d6d; margin: 10px 0 6px; }
+
+  .deck { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  .pcard, .ncard { border: 1px dashed #888; border-radius: 4px; height: 46mm; page-break-inside: avoid; }
+  .pcard { overflow: hidden; position: relative; background: #eee; }
+  .pcard img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pcard .num { position: absolute; top: 4px; left: 5px; background: rgba(255,255,255,0.88); color: #1a4d6d; font-weight: bold; font-size: 9pt; padding: 0 6px; border-radius: 8px; }
+  .ncard { padding: 8px 10px; display: flex; flex-direction: column; }
+  .ncard .band { height: 6px; border-radius: 3px; margin: -2px -4px 7px; }
+  .ncard .nm { font-weight: bold; color: #1a4d6d; font-size: 12pt; line-height: 1.15; }
+  .ncard .abbr { color: #888; font-weight: normal; font-size: 10pt; }
+  .ncard .ds { font-size: 9pt; color: #333; margin-top: 5px; flex: 1; }
+  .ncard .alt { font-size: 8.5pt; color: #666; font-weight: bold; }
+
+  .pagebreak { page-break-before: always; }
+  .key { font-size: 9pt; color: #555; margin-top: 12px; border-top: 1px dotted #bbb; padding-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1>Karty: Poznávání mraků</h1>
+  <div class="sub">Párovací hra k aktivitě „Druhy oblaků" (UKAŽ SE 2) &middot; 1. sezení (úterý)</div>
+</div>
+
+<div class="howto">
+  <b>Jak hrát:</b>
+  <ol>
+    <li>Rozstříhej karty podél čárkovaných čar → dvě hromádky: <b>fotky</b> a <b>názvy</b>.</li>
+    <li>Fotky rozlož na stůl, hromádku názvů zamíchej.</li>
+    <li>Děti přiřazují správný název (a odhadují <b>patro</b> – barevný proužek: modrá = vysoké, zelená = střední, oranžová = nízké, červená = vertikální) ke každé fotce.</li>
+    <li>Kontrola podle kartičky <b>„10 druhů oblaků"</b> nebo podle klíče dole.</li>
+  </ol>
+</div>
+
+<div class="deck-title">Hromádka A — fotky (10 karet)</div>
+<div class="deck">
+  <div class="pcard"><span class="num">1</span><img src="clouds/cloud_cirrus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">2</span><img src="clouds/cloud_cirrocumulus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">3</span><img src="clouds/cloud_cirrostratus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">4</span><img src="clouds/cloud_altocumulus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">5</span><img src="clouds/cloud_altostratus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">6</span><img src="clouds/cloud_nimbostratus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">7</span><img src="clouds/cloud_stratocumulus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">8</span><img src="clouds/cloud_stratus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">9</span><img src="clouds/cloud_cumulus.jpg" alt=""></div>
+  <div class="pcard"><span class="num">10</span><img src="clouds/cloud_cumulonimbus.jpg" alt=""></div>
+</div>
+
+<div class="pagebreak"></div>
+<div class="deck-title">Hromádka B — názvy (10 karet) &middot; před hrou zamíchej</div>
+<div class="deck">
+  <div class="ncard"><div class="band" style="background:#9cc4d8;"></div><div class="nm">Cirrus <span class="abbr">(Ci)</span></div><div class="ds">Tenké, vláknité „peříčkové" mraky vysoko na obloze. Bývá jasno.</div><div class="alt">Vysoké &middot; 5–13 km</div></div>
+  <div class="ncard"><div class="band" style="background:#9cc4d8;"></div><div class="nm">Cirrocumulus <span class="abbr">(Cc)</span></div><div class="ds">Drobné bílé chuchvalce do vlnek — „rybí šupiny" na obloze.</div><div class="alt">Vysoké &middot; 5–13 km</div></div>
+  <div class="ncard"><div class="band" style="background:#9cc4d8;"></div><div class="nm">Cirrostratus <span class="abbr">(Cs)</span></div><div class="ds">Tenký bílý závoj přes oblohu, kolem Slunce/Měsíce bývá kruh (halo).</div><div class="alt">Vysoké &middot; 5–13 km</div></div>
+  <div class="ncard"><div class="band" style="background:#b7d39a;"></div><div class="nm">Altocumulus <span class="abbr">(Ac)</span></div><div class="ds">Bílé nebo šedé chuchvalce ve skupinách, jako ovčí vlna.</div><div class="alt">Střední &middot; 2–7 km</div></div>
+  <div class="ncard"><div class="band" style="background:#b7d39a;"></div><div class="nm">Altostratus <span class="abbr">(As)</span></div><div class="ds">Šedý souvislý závoj, Slunce skrz něj vidíš jen jako mlhavý kotouč.</div><div class="alt">Střední &middot; 2–7 km</div></div>
+  <div class="ncard"><div class="band" style="background:#e2a0a0;"></div><div class="nm">Nimbostratus <span class="abbr">(Ns)</span></div><div class="ds">Tmavě šedá souvislá vrstva, ze které trvale prší nebo sněží.</div><div class="alt">Nízké až střední &middot; 0–4 km</div></div>
+  <div class="ncard"><div class="band" style="background:#f0c489;"></div><div class="nm">Stratocumulus <span class="abbr">(Sc)</span></div><div class="ds">Šedé/bílé hrudkovité mraky v řadách či skupinách, nízko nad zemí.</div><div class="alt">Nízké &middot; 0–2 km</div></div>
+  <div class="ncard"><div class="band" style="background:#f0c489;"></div><div class="nm">Stratus <span class="abbr">(St)</span></div><div class="ds">Jednolitá šedá vrstva nízko nad zemí — jako mlha, co se nedotýká země.</div><div class="alt">Nízké &middot; 0–2 km</div></div>
+  <div class="ncard"><div class="band" style="background:#f0c489;"></div><div class="nm">Cumulus <span class="abbr">(Cu)</span></div><div class="ds">Bílé „kupovité" mraky s plochým dnem — hezké počasí.</div><div class="alt">Nízké &middot; 0,5–2 km</div></div>
+  <div class="ncard"><div class="band" style="background:#e2a0a0;"></div><div class="nm">Cumulonimbus <span class="abbr">(Cb)</span></div><div class="ds">Obří tmavá „bouřková věž", nahoře jako kovadlina. Bouřky, kroupy.</div><div class="alt">Vertikální &middot; 0,5–13 km</div></div>
+</div>
+
+<div class="key"><b>Klíč (pořadí fotek):</b> 1 Cirrus &middot; 2 Cirrocumulus &middot; 3 Cirrostratus &middot; 4 Altocumulus &middot; 5 Altostratus &middot; 6 Nimbostratus &middot; 7 Stratocumulus &middot; 8 Stratus &middot; 9 Cumulus &middot; 10 Cumulonimbus.</div>
+
+</body>
+</html>
